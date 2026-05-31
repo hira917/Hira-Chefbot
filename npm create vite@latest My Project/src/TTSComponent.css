@@ -1,0 +1,185 @@
+/* src/components/TTSComponent.css */
+
+.tts-card {
+    max-width: 550px;
+    margin: 20px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.tts-card:hover {
+    transform: translateY(-5px);
+}
+
+.tts-title {
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.tts-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.btn-example {
+    flex: 1;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-example:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+}
+
+.tts-textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    background: white;
+    resize: vertical;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.tts-textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.tts-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: white;
+    cursor: pointer;
+}
+
+.tts-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tts-btn:hover:not(:disabled) {
+    background: #45a049;
+    transform: scale(1.02);
+}
+
+.tts-btn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.tts-button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.tts-btn-stop {
+    flex: 1;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tts-btn-stop:hover {
+    background: #da190b;
+}
+
+.tts-note {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.tts-details {
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+}
+
+.tts-details summary {
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.tts-voice-list {
+    margin-top: 8px;
+    padding-left: 20px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .tts-card {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .tts-title {
+        font-size: 20px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .tts-button-group {
+        flex-direction: column;
+    }
+}
+
+/* Animation for loading state */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.tts-btn:disabled {
+    animation: pulse 1.5s ease-in-out infinite;
+}

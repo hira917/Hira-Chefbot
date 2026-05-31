@@ -1,0 +1,1262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8fafc;
+}
+
+/* ===== QUICK PAGE ===== */
+.quick-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+/* ===== HEADER ===== */
+.quick-header {
+  background: linear-gradient(135deg, #284a4b, #1d3a3b);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quick-header-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quick-page-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quick-page-description {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  max-height: 3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+/* ===== MAIN CONTENT ===== */
+.quick-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* ===== QUICK GRID ===== */
+.quick-grid-section {
+  width: 100%;
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Quick Card - SAME SHAPE AS SOUPS/MAIN COURSE */
+.quick-technique-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  height: 120px;
+  width: 100%;
+}
+
+.quick-technique-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  border-color: #284a4b;
+}
+
+.quick-card-image {
+  width: 120px;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  border-right: 1px solid #e2e8f0;
+}
+
+.quick-card-content {
+  padding: 15px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.quick-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.quick-card-description {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  max-height: 2.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* ===== BACK BUTTON CONTAINER ===== */
+.back-button-container {
+  max-width: 1400px;
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.back-home-btn {
+  background: #284a4b;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(40, 74, 75, 0.2);
+}
+
+.back-home-btn:hover {
+  background: #1d3a3b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(40, 74, 75, 0.3);
+}
+
+/* ===== MODAL ===== */
+.quick-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 15px;
+}
+
+.quick-modal {
+  border-radius: 15px;
+  width: 95%;
+  max-width: 1600px;
+  height: 90vh;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* Background image via inline style in JSX */
+}
+
+.quick-modal > * {
+  position: relative;
+  z-index: 2;
+}
+
+.quick-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #284a4b;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quick-modal-close:hover {
+  background: white;
+  color: #1d3a3b;
+  transform: rotate(90deg);
+}
+
+.quick-modal-header {
+  padding: 15px 25px 10px 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  /* Semi-transparent background for header */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  z-index: 5;
+}
+
+.quick-modal-title h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #284a4b;
+  margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 90%;
+  line-height: 1.3;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+/* ===== THREE COLUMN LAYOUT - SEMI-TRANSPARENT ===== */
+.quick-modal-content {
+  display: flex;
+  flex: 1;
+  padding: 15px 20px 20px 20px;
+  gap: 20px;
+  min-height: 0;
+  height: calc(100% - 70px);
+  overflow: visible;
+  position: relative;
+  z-index: 2;
+}
+
+/* COLUMN 1 - INGREDIENTS - SEMI-TRANSPARENT */
+.quick-modal-ingredients {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* Semi-transparent background - shows image through */
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  overflow: visible;
+  padding: 12px 12px 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.quick-modal-ingredients h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #284a4b;
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #284a4b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.quick-ingredients-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: visible;
+  padding-right: 3px;
+}
+
+.quick-ingredient-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  line-height: 1.4;
+  width: 100%;
+}
+
+.quick-ingredient-bullet {
+  color: black;
+  font-weight: bold;
+  min-width: 18px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.quick-ingredient-text {
+  font-size: 14px;
+  color: black;
+  flex: 1;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-weight: 500;
+  display: inline-block;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+/* COLUMN 2 - STEPS TO MAKE - SEMI-TRANSPARENT */
+.quick-modal-steps {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* Semi-transparent background - shows image through */
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  overflow: visible;
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.quick-modal-steps h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #284a4b;
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #284a4b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.quick-steps-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: visible;
+  padding-right: 3px;
+}
+
+.quick-step-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  line-height: 1.4;
+  width: 100%;
+}
+
+.quick-step-number {
+  font-weight: 700;
+  color: black;
+  min-width: 26px;
+  font-size: 14px;
+  display: inline-block;
+  text-align: right;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.quick-step-text {
+  flex: 1;
+  line-height: 1.4;
+  color: black;
+  font-size: 14px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: inline-block;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+/* COLUMN 3 - VOICE INSTRUCTIONS - SEMI-TRANSPARENT */
+.quick-modal-voice-container {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: visible;
+  padding-left: 5px;
+}
+
+.voice-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* Semi-transparent background - shows image through */
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 15px;
+  min-height: 0;
+  height: 100%;
+  overflow: visible;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.voice-panel h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #284a4b;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #284a4b;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.voice-panel h3 i {
+  font-size: 1.2rem;
+}
+
+/* Progress Bar - Semi-transparent */
+.voice-progress {
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #284a4b, #3d6b6c);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #1e293b;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+/* Voice Controls */
+.voice-main-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.voice-main-btn.play {
+  background: rgba(40, 74, 75, 0.9);
+  color: white;
+}
+
+.voice-main-btn.play:hover {
+  background: #284a4b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(40, 74, 75, 0.3);
+}
+
+.voice-main-btn.stop {
+  background: rgba(220, 38, 38, 0.9);
+  color: white;
+}
+
+.voice-main-btn.stop:hover {
+  background: rgb(185, 28, 28);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(220, 38, 38, 0.3);
+}
+
+.step-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.step-btn {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.8);
+  color: #284a4b;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.step-btn:hover:not(:disabled) {
+  background: #284a4b;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(40, 74, 75, 0.2);
+  border-color: transparent;
+}
+
+.step-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #666;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== RESPONSIVE DESIGN - EXACTLY LIKE SOUPS ===== */
+
+/* Large Desktop (1400px+) */
+@media (min-width: 1400px) {
+  .quick-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+  }
+  
+  .quick-modal {
+    max-width: 1700px;
+    height: 88vh;
+  }
+  
+  .quick-modal-content {
+    padding: 20px 30px 25px 30px;
+    gap: 25px;
+  }
+  
+  .quick-ingredient-text,
+  .quick-step-text {
+    font-size: 15px;
+  }
+}
+
+/* Desktop (1025px - 1399px) */
+@media (min-width: 1025px) and (max-width: 1399px) {
+  .quick-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .quick-modal-content {
+    gap: 15px;
+    padding: 12px 18px 18px 18px;
+  }
+  
+  .quick-ingredient-text,
+  .quick-step-text {
+    font-size: 13px;
+  }
+  
+  .quick-modal-ingredients h3,
+  .quick-modal-steps h3,
+  .voice-panel h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .quick-ingredients-list,
+  .quick-steps-list {
+    gap: 6px;
+  }
+  
+  .quick-ingredient-item,
+  .quick-step-item {
+    gap: 8px;
+  }
+  
+  .quick-ingredient-bullet {
+    min-width: 16px;
+    font-size: 13px;
+  }
+  
+  .quick-step-number {
+    min-width: 22px;
+    font-size: 13px;
+  }
+  
+  .voice-panel {
+    padding: 12px;
+  }
+  
+  .voice-main-btn {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .step-btn {
+    padding: 6px 8px;
+    font-size: 0.8rem;
+  }
+  
+  .step-controls {
+    gap: 8px;
+    margin-top: 3px;
+  }
+}
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .quick-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  .quick-technique-card {
+    height: 100px;
+  }
+  
+  .quick-card-image {
+    width: 90px;
+  }
+  
+  .quick-card-title {
+    font-size: 15px;
+  }
+  
+  .quick-card-description {
+    font-size: 12px;
+    max-height: 2.4em;
+  }
+  
+  .quick-modal {
+    height: 92vh;
+    width: 98%;
+  }
+  
+  .quick-modal-header {
+    padding: 12px 18px 8px 18px;
+  }
+  
+  .quick-modal-title h2 {
+    font-size: 1.5rem;
+  }
+  
+  .quick-modal-content {
+    padding: 10px 15px 15px 15px;
+    gap: 12px;
+  }
+  
+  .quick-modal-ingredients,
+  .quick-modal-steps,
+  .quick-modal-voice-container {
+    width: 33.33%;
+  }
+  
+  .quick-modal-steps {
+    padding: 0 8px;
+  }
+  
+  .quick-modal-ingredients h3,
+  .quick-modal-steps h3,
+  .voice-panel h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  .quick-ingredients-list,
+  .quick-steps-list {
+    gap: 5px;
+  }
+  
+  .quick-ingredient-item,
+  .quick-step-item {
+    gap: 6px;
+  }
+  
+  .quick-ingredient-bullet {
+    min-width: 14px;
+    font-size: 12px;
+  }
+  
+  .quick-ingredient-text,
+  .quick-step-text {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+  
+  .quick-step-number {
+    min-width: 20px;
+    font-size: 12px;
+  }
+  
+  .voice-panel {
+    padding: 10px;
+  }
+  
+  .voice-panel h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  .voice-progress {
+    margin-bottom: 10px;
+  }
+  
+  .progress-bar {
+    height: 5px;
+  }
+  
+  .progress-info {
+    font-size: 0.7rem;
+  }
+  
+  .voice-main-btn {
+    padding: 8px;
+    font-size: 0.8rem;
+    gap: 5px;
+  }
+  
+  .step-btn {
+    padding: 5px 6px;
+    font-size: 0.7rem;
+    gap: 3px;
+  }
+  
+  .step-controls {
+    gap: 6px;
+    margin-top: 3px;
+  }
+  
+  .back-home-btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Large (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .quick-header {
+    padding: 25px 15px;
+  }
+  
+  .quick-page-title {
+    font-size: 1.6rem;
+  }
+  
+  .quick-page-description {
+    font-size: 0.9rem;
+    max-height: 2.6em;
+  }
+  
+  .quick-main {
+    padding: 20px 15px;
+  }
+  
+  .quick-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .quick-technique-card {
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .quick-card-image {
+    width: 100%;
+    height: 120px;
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .quick-card-content {
+    padding: 10px;
+  }
+  
+  .quick-card-title {
+    font-size: 15px;
+    max-height: 2.2em;
+  }
+  
+  .quick-card-description {
+    font-size: 12px;
+    max-height: 2.2em;
+  }
+  
+  .quick-modal {
+    height: 94vh;
+    width: 98%;
+  }
+  
+  .quick-modal-header {
+    padding: 10px 15px 6px 15px;
+  }
+  
+  .quick-modal-title h2 {
+    font-size: 1.3rem;
+  }
+  
+  .quick-modal-close {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  
+  .quick-modal-content {
+    padding: 8px 12px 12px 12px;
+    gap: 10px;
+  }
+  
+  .quick-modal-ingredients,
+  .quick-modal-steps,
+  .quick-modal-voice-container {
+    width: 33.33%;
+  }
+  
+  .quick-modal-steps {
+    padding: 0 5px;
+  }
+  
+  .quick-modal-ingredients h3,
+  .quick-modal-steps h3,
+  .voice-panel h3 {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    padding-bottom: 3px;
+  }
+  
+  .quick-ingredients-list,
+  .quick-steps-list {
+    gap: 4px;
+  }
+  
+  .quick-ingredient-item,
+  .quick-step-item {
+    gap: 5px;
+  }
+  
+  .quick-ingredient-bullet {
+    min-width: 12px;
+    font-size: 11px;
+  }
+  
+  .quick-ingredient-text,
+  .quick-step-text {
+    font-size: 11px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  
+  .quick-step-number {
+    min-width: 18px;
+    font-size: 11px;
+  }
+  
+  .voice-panel {
+    padding: 8px;
+  }
+  
+  .voice-panel h3 {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    gap: 4px;
+  }
+  
+  .voice-panel h3 i {
+    font-size: 0.9rem;
+  }
+  
+  .voice-progress {
+    margin-bottom: 8px;
+  }
+  
+  .progress-bar {
+    height: 4px;
+  }
+  
+  .progress-info {
+    font-size: 0.65rem;
+  }
+  
+  .voice-main-btn {
+    padding: 6px;
+    font-size: 0.7rem;
+    gap: 4px;
+  }
+  
+  .step-btn {
+    padding: 4px 5px;
+    font-size: 0.65rem;
+    gap: 2px;
+  }
+  
+  .step-controls {
+    gap: 5px;
+    margin-top: 2px;
+  }
+  
+  .back-home-btn {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile Small (Below 576px) */
+@media (max-width: 575px) {
+  .quick-header {
+    padding: 20px 12px;
+  }
+  
+  .quick-page-title {
+    font-size: 1.4rem;
+  }
+  
+  .quick-page-description {
+    font-size: 0.8rem;
+    max-height: 2.4em;
+    margin-bottom: 10px;
+  }
+  
+  .quick-main {
+    padding: 15px 12px;
+  }
+  
+  .quick-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .quick-technique-card {
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .quick-card-image {
+    width: 100%;
+    height: 100px;
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .quick-card-content {
+    padding: 8px;
+  }
+  
+  .quick-card-title {
+    font-size: 13px;
+    max-height: 2.2em;
+  }
+  
+  .quick-card-description {
+    font-size: 11px;
+    max-height: 2.2em;
+  }
+  
+  .quick-modal {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .quick-modal-header {
+    padding: 8px 12px 5px 12px;
+  }
+  
+  .quick-modal-title h2 {
+    font-size: 1.2rem;
+    max-width: 80%;
+  }
+  
+  .quick-modal-close {
+    top: 6px;
+    right: 6px;
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+  
+  .quick-modal-content {
+    padding: 6px 10px 10px 10px;
+    gap: 8px;
+  }
+  
+  .quick-modal-ingredients,
+  .quick-modal-steps,
+  .quick-modal-voice-container {
+    width: 33.33%;
+  }
+  
+  .quick-modal-steps {
+    padding: 0 4px;
+  }
+  
+  .quick-modal-ingredients h3,
+  .quick-modal-steps h3,
+  .voice-panel h3 {
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    padding-bottom: 2px;
+  }
+  
+  .quick-ingredients-list,
+  .quick-steps-list {
+    gap: 3px;
+  }
+  
+  .quick-ingredient-item,
+  .quick-step-item {
+    gap: 4px;
+  }
+  
+  .quick-ingredient-bullet {
+    min-width: 10px;
+    font-size: 10px;
+  }
+  
+  .quick-ingredient-text,
+  .quick-step-text {
+    font-size: 10px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  
+  .quick-step-number {
+    min-width: 15px;
+    font-size: 10px;
+  }
+  
+  .voice-panel {
+    padding: 6px;
+  }
+  
+  .voice-panel h3 {
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    gap: 3px;
+  }
+  
+  .voice-panel h3 i {
+    font-size: 0.8rem;
+  }
+  
+  .voice-progress {
+    margin-bottom: 5px;
+  }
+  
+  .progress-bar {
+    height: 3px;
+  }
+  
+  .progress-info {
+    font-size: 0.6rem;
+  }
+  
+  .voice-main-btn {
+    padding: 5px;
+    font-size: 0.65rem;
+    gap: 3px;
+  }
+  
+  .step-btn {
+    padding: 3px 4px;
+    font-size: 0.6rem;
+    gap: 2px;
+  }
+  
+  .step-controls {
+    gap: 4px;
+    margin-top: 2px;
+  }
+  
+  .back-home-btn {
+    padding: 6px 15px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Extra Small Mobile (Below 400px) */
+@media (max-width: 399px) {
+  .quick-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .quick-technique-card {
+    height: auto;
+  }
+  
+  .quick-card-image {
+    height: 130px;
+  }
+  
+  .quick-card-title {
+    font-size: 15px;
+    max-height: 2.2em;
+  }
+  
+  .quick-modal-ingredients,
+  .quick-modal-steps,
+  .quick-modal-voice-container {
+    width: 33.33%;
+  }
+  
+  .quick-ingredient-text,
+  .quick-step-text {
+    font-size: 9px;
+  }
+  
+  .back-home-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.quick-technique-card {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+/* Animation delays for 80 cards */
+.quick-technique-card:nth-child(1) { animation-delay: 0.02s; }
+.quick-technique-card:nth-child(2) { animation-delay: 0.04s; }
+.quick-technique-card:nth-child(3) { animation-delay: 0.06s; }
+.quick-technique-card:nth-child(4) { animation-delay: 0.08s; }
+.quick-technique-card:nth-child(5) { animation-delay: 0.10s; }
+.quick-technique-card:nth-child(6) { animation-delay: 0.12s; }
+.quick-technique-card:nth-child(7) { animation-delay: 0.14s; }
+.quick-technique-card:nth-child(8) { animation-delay: 0.16s; }
+.quick-technique-card:nth-child(9) { animation-delay: 0.18s; }
+.quick-technique-card:nth-child(10) { animation-delay: 0.20s; }
+.quick-technique-card:nth-child(11) { animation-delay: 0.22s; }
+.quick-technique-card:nth-child(12) { animation-delay: 0.24s; }
+.quick-technique-card:nth-child(13) { animation-delay: 0.26s; }
+.quick-technique-card:nth-child(14) { animation-delay: 0.28s; }
+.quick-technique-card:nth-child(15) { animation-delay: 0.30s; }
+.quick-technique-card:nth-child(16) { animation-delay: 0.32s; }
+.quick-technique-card:nth-child(17) { animation-delay: 0.34s; }
+.quick-technique-card:nth-child(18) { animation-delay: 0.36s; }
+.quick-technique-card:nth-child(19) { animation-delay: 0.38s; }
+.quick-technique-card:nth-child(20) { animation-delay: 0.40s; }
+.quick-technique-card:nth-child(21) { animation-delay: 0.42s; }
+.quick-technique-card:nth-child(22) { animation-delay: 0.44s; }
+.quick-technique-card:nth-child(23) { animation-delay: 0.46s; }
+.quick-technique-card:nth-child(24) { animation-delay: 0.48s; }
+.quick-technique-card:nth-child(25) { animation-delay: 0.50s; }
+.quick-technique-card:nth-child(26) { animation-delay: 0.52s; }
+.quick-technique-card:nth-child(27) { animation-delay: 0.54s; }
+.quick-technique-card:nth-child(28) { animation-delay: 0.56s; }
+.quick-technique-card:nth-child(29) { animation-delay: 0.58s; }
+.quick-technique-card:nth-child(30) { animation-delay: 0.60s; }
+.quick-technique-card:nth-child(31) { animation-delay: 0.62s; }
+.quick-technique-card:nth-child(32) { animation-delay: 0.64s; }
+.quick-technique-card:nth-child(33) { animation-delay: 0.66s; }
+.quick-technique-card:nth-child(34) { animation-delay: 0.68s; }
+.quick-technique-card:nth-child(35) { animation-delay: 0.70s; }
+.quick-technique-card:nth-child(36) { animation-delay: 0.72s; }
+.quick-technique-card:nth-child(37) { animation-delay: 0.74s; }
+.quick-technique-card:nth-child(38) { animation-delay: 0.76s; }
+.quick-technique-card:nth-child(39) { animation-delay: 0.78s; }
+.quick-technique-card:nth-child(40) { animation-delay: 0.80s; }
+.quick-technique-card:nth-child(41) { animation-delay: 0.82s; }
+.quick-technique-card:nth-child(42) { animation-delay: 0.84s; }
+.quick-technique-card:nth-child(43) { animation-delay: 0.86s; }
+.quick-technique-card:nth-child(44) { animation-delay: 0.88s; }
+.quick-technique-card:nth-child(45) { animation-delay: 0.90s; }
+.quick-technique-card:nth-child(46) { animation-delay: 0.92s; }
+.quick-technique-card:nth-child(47) { animation-delay: 0.94s; }
+.quick-technique-card:nth-child(48) { animation-delay: 0.96s; }
+.quick-technique-card:nth-child(49) { animation-delay: 0.98s; }
+.quick-technique-card:nth-child(50) { animation-delay: 1.00s; }
+.quick-technique-card:nth-child(51) { animation-delay: 1.02s; }
+.quick-technique-card:nth-child(52) { animation-delay: 1.04s; }
+.quick-technique-card:nth-child(53) { animation-delay: 1.06s; }
+.quick-technique-card:nth-child(54) { animation-delay: 1.08s; }
+.quick-technique-card:nth-child(55) { animation-delay: 1.10s; }
+.quick-technique-card:nth-child(56) { animation-delay: 1.12s; }
+.quick-technique-card:nth-child(57) { animation-delay: 1.14s; }
+.quick-technique-card:nth-child(58) { animation-delay: 1.16s; }
+.quick-technique-card:nth-child(59) { animation-delay: 1.18s; }
+.quick-technique-card:nth-child(60) { animation-delay: 1.20s; }
+.quick-technique-card:nth-child(61) { animation-delay: 1.22s; }
+.quick-technique-card:nth-child(62) { animation-delay: 1.24s; }
+.quick-technique-card:nth-child(63) { animation-delay: 1.26s; }
+.quick-technique-card:nth-child(64) { animation-delay: 1.28s; }
+.quick-technique-card:nth-child(65) { animation-delay: 1.30s; }
+.quick-technique-card:nth-child(66) { animation-delay: 1.32s; }
+.quick-technique-card:nth-child(67) { animation-delay: 1.34s; }
+.quick-technique-card:nth-child(68) { animation-delay: 1.36s; }
+.quick-technique-card:nth-child(69) { animation-delay: 1.38s; }
+.quick-technique-card:nth-child(70) { animation-delay: 1.40s; }
+.quick-technique-card:nth-child(71) { animation-delay: 1.42s; }
+.quick-technique-card:nth-child(72) { animation-delay: 1.44s; }
+.quick-technique-card:nth-child(73) { animation-delay: 1.46s; }
+.quick-technique-card:nth-child(74) { animation-delay: 1.48s; }
+.quick-technique-card:nth-child(75) { animation-delay: 1.50s; }
+.quick-technique-card:nth-child(76) { animation-delay: 1.52s; }
+.quick-technique-card:nth-child(77) { animation-delay: 1.54s; }
+.quick-technique-card:nth-child(78) { animation-delay: 1.56s; }
+.quick-technique-card:nth-child(79) { animation-delay: 1.58s; }
+.quick-technique-card:nth-child(80) { animation-delay: 1.60s; }
+
+.quick-modal {
+  animation: modalFadeIn 0.3s ease-out;
+}

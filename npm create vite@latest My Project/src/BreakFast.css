@@ -1,0 +1,962 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Inter', 'Playfair Display', system-ui, sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* ===== BREAKFAST PAGE ===== */
+.breakfast-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  background-color: #f8fafc;
+}
+
+/* ===== HEADER ===== */
+.breakfast-header {
+  background: linear-gradient(135deg, #284a4b, #1d3a3b);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.breakfast-header-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.breakfast-page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+  color: white;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Playfair Display', serif;
+}
+
+.breakfast-page-description {
+  font-size: 1rem;
+  opacity: 0.95;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== PANTRY SUGGESTIONS ===== */
+.pantry-suggestions {
+  max-width: 1400px;
+  margin: 20px auto 0;
+  padding: 20px 20px 10px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.suggestions-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #284a4b;
+}
+
+.suggestions-header i {
+  font-size: 1.5rem;
+}
+
+.suggestions-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.suggestions-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.suggestions-grid.two-suggestions {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.suggestion-card {
+  display: flex;
+  background: #f8fafc;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.suggestion-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(40, 74, 75, 0.15);
+  border-color: #284a4b;
+}
+
+.suggestion-image {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.suggestion-content {
+  padding: 12px;
+  flex: 1;
+}
+
+.suggestion-content h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 4px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.3;
+}
+
+.suggestion-content p {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 4px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.4;
+}
+
+.match-info {
+  font-size: 11px;
+  color: #284a4b;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.suggestion-btn {
+  background: #284a4b;
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.suggestion-btn:hover {
+  background: #1d3a3b;
+  transform: translateY(-1px);
+}
+
+/* ===== MAIN CONTENT ===== */
+.breakfast-main {
+  flex: 1;
+  padding: 30px 20px;
+  overflow: visible;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ===== GRID ===== */
+.breakfast-grid-section {
+  width: 100%;
+}
+
+.breakfast-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Breakfast Card - Fixed for full text */
+.breakfast-technique-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  height: auto;
+  min-height: 120px;
+  width: 100%;
+}
+
+.breakfast-technique-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  border-color: #284a4b;
+}
+
+.breakfast-card-image {
+  width: 120px;
+  height: 120px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  border-right: 1px solid #e2e8f0;
+}
+
+.breakfast-card-content {
+  padding: 12px 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: visible;
+  height: 100%;
+  min-height: 120px;
+}
+
+.breakfast-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 6px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.3;
+  display: block;
+  max-width: 100%;
+}
+
+.breakfast-card-description {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.4;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: block;
+}
+
+/* ===== MODAL ===== */
+.breakfast-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 15px;
+}
+
+.breakfast-modal {
+  border-radius: 15px;
+  width: 95%;
+  max-width: 1400px;
+  height: 90vh;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.breakfast-modal > * {
+  position: relative;
+  z-index: 2;
+}
+
+.breakfast-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #284a4b;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.breakfast-modal-close:hover {
+  background: white;
+  color: #1d3a3b;
+  transform: rotate(90deg);
+}
+
+.breakfast-modal-header {
+  padding: 15px 25px 10px 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  z-index: 5;
+  flex-shrink: 0;
+}
+
+.breakfast-modal-title h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 90%;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== THREE COLUMN LAYOUT - FIXED SCROLLBAR ===== */
+.breakfast-modal-content {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+  min-height: 0;
+  height: calc(100% - 80px);
+  overflow: hidden;
+}
+
+/* Column 1 - Ingredients - Fixed */
+.breakfast-modal-ingredients {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 15px 10px 15px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+  overflow: hidden;
+}
+
+.breakfast-modal-ingredients h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+}
+
+.breakfast-ingredients-list {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Custom Scrollbar */
+.breakfast-ingredients-list::-webkit-scrollbar,
+.breakfast-steps-list::-webkit-scrollbar,
+.voice-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.breakfast-ingredients-list::-webkit-scrollbar-track,
+.breakfast-steps-list::-webkit-scrollbar-track,
+.voice-panel::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.breakfast-ingredients-list::-webkit-scrollbar-thumb,
+.breakfast-steps-list::-webkit-scrollbar-thumb,
+.voice-panel::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.breakfast-ingredients-list::-webkit-scrollbar-thumb:hover,
+.breakfast-steps-list::-webkit-scrollbar-thumb:hover,
+.voice-panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.breakfast-ingredient-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  line-height: 1.4;
+  width: 100%;
+}
+
+.breakfast-ingredient-bullet {
+  color: white;
+  font-weight: bold;
+  min-width: 18px;
+  font-size: 14px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.breakfast-ingredient-text {
+  font-size: 14px;
+  color: white;
+  flex: 1;
+  line-height: 1.4;
+  word-wrap: break-word;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Column 2 - Steps - Fixed */
+.breakfast-modal-steps {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 15px 10px 15px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+  overflow: hidden;
+}
+
+.breakfast-modal-steps h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+}
+
+.breakfast-steps-list {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.breakfast-step-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  line-height: 1.4;
+  width: 100%;
+}
+
+.breakfast-step-number {
+  font-weight: 700;
+  color: white;
+  min-width: 26px;
+  font-size: 14px;
+  text-align: right;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.breakfast-step-text {
+  flex: 1;
+  line-height: 1.4;
+  color: white;
+  font-size: 14px;
+  word-wrap: break-word;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Column 3 - Voice - Fixed */
+.breakfast-modal-voice-container {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  padding-left: 5px;
+}
+
+.voice-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 15px;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.voice-panel h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+}
+
+.voice-panel h3 i {
+  font-size: 1.2rem;
+}
+
+.voice-progress {
+  margin-bottom: 15px;
+  flex-shrink: 0;
+}
+
+.progress-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #284a4b, #3d6b6c);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.voice-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.voice-main-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.voice-main-btn.play {
+  background: rgba(40, 74, 75, 0.9);
+  color: white;
+}
+
+.voice-main-btn.play:hover {
+  background: #284a4b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(40, 74, 75, 0.4);
+}
+
+.voice-main-btn.stop {
+  background: rgba(220, 38, 38, 0.9);
+  color: white;
+}
+
+.voice-main-btn.stop:hover {
+  background: rgb(185, 28, 28);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(220, 38, 38, 0.4);
+}
+
+.step-controls {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.step-btn {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.step-btn:hover:not(:disabled) {
+  background: #284a4b;
+  color: white;
+  transform: translateY(-1px);
+  border-color: transparent;
+  box-shadow: 0 4px 10px rgba(40, 74, 75, 0.3);
+}
+
+.step-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.voice-hint {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.7rem;
+  margin-top: 10px;
+  font-style: italic;
+  flex-shrink: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .breakfast-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .breakfast-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .breakfast-technique-card {
+    min-height: 110px;
+  }
+  
+  .breakfast-card-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .breakfast-card-content {
+    min-height: 100px;
+    padding: 10px 12px;
+  }
+  
+  .breakfast-card-title {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  
+  .breakfast-card-description {
+    font-size: 12px;
+  }
+  
+  .suggestions-grid.two-suggestions {
+    grid-template-columns: 1fr;
+  }
+  
+  .breakfast-modal-content {
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .breakfast-modal-ingredients,
+  .breakfast-modal-steps,
+  .breakfast-modal-voice-container {
+    width: 100%;
+    min-height: 280px;
+    height: auto;
+    max-height: 350px;
+  }
+  
+  .breakfast-modal-header {
+    padding: 12px 20px 8px 20px;
+  }
+  
+  .breakfast-modal-title h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .breakfast-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .breakfast-technique-card {
+    min-height: 100px;
+    height: auto;
+  }
+  
+  .breakfast-card-image {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .breakfast-card-content {
+    min-height: 90px;
+    padding: 8px 10px;
+  }
+  
+  .breakfast-card-title {
+    font-size: 14px;
+    margin-bottom: 3px;
+    line-height: 1.2;
+  }
+  
+  .breakfast-card-description {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+  
+  .breakfast-page-title {
+    font-size: 2rem;
+  }
+  
+  .suggestion-content h4 {
+    font-size: 14px;
+  }
+  
+  .suggestion-content p {
+    font-size: 11px;
+  }
+  
+  .breakfast-modal {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .breakfast-modal-header {
+    padding: 10px 15px 6px 15px;
+  }
+  
+  .breakfast-modal-title h2 {
+    font-size: 1.3rem;
+    max-width: 85%;
+  }
+  
+  .breakfast-modal-content {
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  .breakfast-modal-ingredients,
+  .breakfast-modal-steps,
+  .breakfast-modal-voice-container {
+    min-height: 250px;
+    max-height: 300px;
+  }
+  
+  .breakfast-ingredient-text,
+  .breakfast-step-text {
+    font-size: 13px;
+  }
+  
+  .voice-panel {
+    padding: 12px;
+  }
+  
+  .voice-main-btn {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .step-btn {
+    padding: 6px 8px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 400px) {
+  .breakfast-card-title {
+    font-size: 13px;
+  }
+  
+  .breakfast-card-description {
+    font-size: 10px;
+  }
+  
+  .breakfast-card-image {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .breakfast-card-content {
+    padding: 6px 8px;
+    min-height: 80px;
+  }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.breakfast-technique-card {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.pantry-suggestions {
+  animation: slideIn 0.5s ease-out;
+}
+
+.breakfast-modal {
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+/* Animation delays for cards - 75 recipes */
+.breakfast-technique-card:nth-child(1) { animation-delay: 0.02s; }
+.breakfast-technique-card:nth-child(2) { animation-delay: 0.04s; }
+.breakfast-technique-card:nth-child(3) { animation-delay: 0.06s; }
+.breakfast-technique-card:nth-child(4) { animation-delay: 0.08s; }
+.breakfast-technique-card:nth-child(5) { animation-delay: 0.10s; }
+.breakfast-technique-card:nth-child(6) { animation-delay: 0.12s; }
+.breakfast-technique-card:nth-child(7) { animation-delay: 0.14s; }
+.breakfast-technique-card:nth-child(8) { animation-delay: 0.16s; }
+.breakfast-technique-card:nth-child(9) { animation-delay: 0.18s; }
+.breakfast-technique-card:nth-child(10) { animation-delay: 0.20s; }
+.breakfast-technique-card:nth-child(11) { animation-delay: 0.22s; }
+.breakfast-technique-card:nth-child(12) { animation-delay: 0.24s; }
+.breakfast-technique-card:nth-child(13) { animation-delay: 0.26s; }
+.breakfast-technique-card:nth-child(14) { animation-delay: 0.28s; }
+.breakfast-technique-card:nth-child(15) { animation-delay: 0.30s; }
+.breakfast-technique-card:nth-child(16) { animation-delay: 0.32s; }
+.breakfast-technique-card:nth-child(17) { animation-delay: 0.34s; }
+.breakfast-technique-card:nth-child(18) { animation-delay: 0.36s; }
+.breakfast-technique-card:nth-child(19) { animation-delay: 0.38s; }
+.breakfast-technique-card:nth-child(20) { animation-delay: 0.40s; }
+.breakfast-technique-card:nth-child(21) { animation-delay: 0.42s; }
+.breakfast-technique-card:nth-child(22) { animation-delay: 0.44s; }
+.breakfast-technique-card:nth-child(23) { animation-delay: 0.46s; }
+.breakfast-technique-card:nth-child(24) { animation-delay: 0.48s; }
+.breakfast-technique-card:nth-child(25) { animation-delay: 0.50s; }
+.breakfast-technique-card:nth-child(26) { animation-delay: 0.52s; }
+.breakfast-technique-card:nth-child(27) { animation-delay: 0.54s; }
+.breakfast-technique-card:nth-child(28) { animation-delay: 0.56s; }
+.breakfast-technique-card:nth-child(29) { animation-delay: 0.58s; }
+.breakfast-technique-card:nth-child(30) { animation-delay: 0.60s; }
+.breakfast-technique-card:nth-child(31) { animation-delay: 0.62s; }
+.breakfast-technique-card:nth-child(32) { animation-delay: 0.64s; }
+.breakfast-technique-card:nth-child(33) { animation-delay: 0.66s; }
+.breakfast-technique-card:nth-child(34) { animation-delay: 0.68s; }
+.breakfast-technique-card:nth-child(35) { animation-delay: 0.70s; }
+.breakfast-technique-card:nth-child(36) { animation-delay: 0.72s; }
+.breakfast-technique-card:nth-child(37) { animation-delay: 0.74s; }
+.breakfast-technique-card:nth-child(38) { animation-delay: 0.76s; }
+.breakfast-technique-card:nth-child(39) { animation-delay: 0.78s; }
+.breakfast-technique-card:nth-child(40) { animation-delay: 0.80s; }
+.breakfast-technique-card:nth-child(41) { animation-delay: 0.82s; }
+.breakfast-technique-card:nth-child(42) { animation-delay: 0.84s; }
+.breakfast-technique-card:nth-child(43) { animation-delay: 0.86s; }
+.breakfast-technique-card:nth-child(44) { animation-delay: 0.88s; }
+.breakfast-technique-card:nth-child(45) { animation-delay: 0.90s; }
+.breakfast-technique-card:nth-child(46) { animation-delay: 0.92s; }
+.breakfast-technique-card:nth-child(47) { animation-delay: 0.94s; }
+.breakfast-technique-card:nth-child(48) { animation-delay: 0.96s; }
+.breakfast-technique-card:nth-child(49) { animation-delay: 0.98s; }
+.breakfast-technique-card:nth-child(50) { animation-delay: 1.00s; }
+.breakfast-technique-card:nth-child(51) { animation-delay: 1.02s; }
+.breakfast-technique-card:nth-child(52) { animation-delay: 1.04s; }
+.breakfast-technique-card:nth-child(53) { animation-delay: 1.06s; }
+.breakfast-technique-card:nth-child(54) { animation-delay: 1.08s; }
+.breakfast-technique-card:nth-child(55) { animation-delay: 1.10s; }
+.breakfast-technique-card:nth-child(56) { animation-delay: 1.12s; }
+.breakfast-technique-card:nth-child(57) { animation-delay: 1.14s; }
+.breakfast-technique-card:nth-child(58) { animation-delay: 1.16s; }
+.breakfast-technique-card:nth-child(59) { animation-delay: 1.18s; }
+.breakfast-technique-card:nth-child(60) { animation-delay: 1.20s; }
+.breakfast-technique-card:nth-child(61) { animation-delay: 1.22s; }
+.breakfast-technique-card:nth-child(62) { animation-delay: 1.24s; }
+.breakfast-technique-card:nth-child(63) { animation-delay: 1.26s; }
+.breakfast-technique-card:nth-child(64) { animation-delay: 1.28s; }
+.breakfast-technique-card:nth-child(65) { animation-delay: 1.30s; }
+.breakfast-technique-card:nth-child(66) { animation-delay: 1.32s; }
+.breakfast-technique-card:nth-child(67) { animation-delay: 1.34s; }
+.breakfast-technique-card:nth-child(68) { animation-delay: 1.36s; }
+.breakfast-technique-card:nth-child(69) { animation-delay: 1.38s; }
+.breakfast-technique-card:nth-child(70) { animation-delay: 1.40s; }
+.breakfast-technique-card:nth-child(71) { animation-delay: 1.42s; }
+.breakfast-technique-card:nth-child(72) { animation-delay: 1.44s; }
+.breakfast-technique-card:nth-child(73) { animation-delay: 1.46s; }
+.breakfast-technique-card:nth-child(74) { animation-delay: 1.48s; }
+.breakfast-technique-card:nth-child(75) { animation-delay: 1.50s; }
