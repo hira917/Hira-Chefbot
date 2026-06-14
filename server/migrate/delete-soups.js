@@ -6,9 +6,7 @@ console.log('MONGO_URI:', process.env.MONGO_URI);
 console.log('=== END DEBUG ===');
 
 const mongoose = require('mongoose');
-const Recipe = require('../models/Recipe');
-
-// List of soup titles to delete
+const Recipe = require('../models/Recipe')
 const soupsToDelete = [
   "Cream of Mushroom Soup",
   "Creamy Noodles Soup",
@@ -57,13 +55,13 @@ async function deleteSoups() {
       throw new Error('MongoDB URI not found in environment variables');
     }
     
-    console.log('🔌 Connecting to MongoDB...');
+    console.log(' Connecting to MongoDB...');
     await mongoose.connect(mongoURI, {
       serverSelectionTimeoutMS: 10000,
       family: 4
     });
     
-    console.log('✅ Connected to MongoDB!');
+    console.log(' Connected to MongoDB!');
     
     let deleted = 0;
     let notFound = 0;
@@ -71,19 +69,19 @@ async function deleteSoups() {
     for (let title of soupsToDelete) {
       const result = await Recipe.deleteOne({ title: title });
       if (result.deletedCount > 0) {
-        console.log(`✅ Deleted: ${title}`);
+        console.log(` Deleted: ${title}`);
         deleted++;
       } else {
-        console.log(`❌ Not found: ${title}`);
+        console.log(` Not found: ${title}`);
         notFound++;
       }
     }
 
-    console.log('\n🎉 Deletion Complete!');
-    console.log(`📊 Deleted: ${deleted}, Not Found: ${notFound}`);
+    console.log('\n Deletion Complete!');
+    console.log(`Deleted: ${deleted}, Not Found: ${notFound}`);
     process.exit(0);
   } catch (error) {
-    console.error('❌ Error:', error);
+    console.error('Error:', error);
     process.exit(1);
   }
 }

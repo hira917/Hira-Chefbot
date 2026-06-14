@@ -10,25 +10,25 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/Cream-of-mushroom-soup.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "500g fresh mushrooms - sliced thin",
-      "1 onion - chopped small",
+      "500g fresh mushrooms - cut into thin pieces",
+      "1 onion - cut small",
       "2 garlic cloves - crushed",
       "2 cups vegetable stock",
       "1 cup cream",
       "2 tbsp butter",
       "2 tbsp flour",
       "1 tsp thyme",
-      "Salt to taste",
-      "Pepper to taste"
+      "Salt as needed",
+      "Pepper as needed"
     ],
     stepsRaw: [
-      "Heat butter in a big pot on medium heat",
+      "Heat butter in a big pot on medium flame",
       "Add onion and garlic, fry until soft (3-4 minutes)",
       "Add mushrooms and cook until they become soft and change color (8-10 minutes)",
       "Add flour and stir for 2 minutes",
       "Slowly add vegetable stock while stirring so no lumps form",
       "Add thyme, salt and pepper",
-      "Let it cook for 15 minutes on low heat",
+      "Let it cook for 15 minutes on low flame",
       "Add cream and mix well",
       "Cook for 5 more minutes and serve hot"
     ],
@@ -36,7 +36,7 @@ const recipesToMigrate = [
     cookingTime: 35,
     isActive: true,
     isHalal: true,
-    description: "Rich and creamy mushroom soup with a smooth texture - perfect for cold evenings",
+    description: "Rich and creamy mushroom soup with smooth texture - perfect for cold evenings",
     category: "Dinner",
     subCategory: "soups",
     dietType: "Vegetarian",
@@ -62,25 +62,25 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/Chicken-Corn-Soup.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "200g chicken - boiled and shredded",
+      "200g chicken - boil and shred into small pieces",
       "1 can cream style corn",
       "4 cups chicken stock",
       "2 tbsp cornflour",
       "1 egg white",
       "1 tsp ginger - grated",
       "2 spring onions - chopped",
-      "Salt to taste",
-      "White pepper to taste"
+      "Salt as needed",
+      "White pepper as needed"
     ],
     stepsRaw: [
       "Put chicken stock in a pot and bring to boil",
       "Add shredded chicken and ginger, cook for 10 minutes",
       "Add cream style corn and mix well",
       "Mix cornflour with half cup water to make a paste",
-      "Slowly add cornflour paste while stirring until soup thickens",
+      "Slowly add cornflour paste while stirring until soup becomes thick",
       "Slowly pour egg white while stirring in one direction",
       "Add salt and white pepper",
-      "Garnish with spring onions and serve hot"
+      "Put spring onions on top and serve hot"
     ],
     difficulty: "Easy",
     cookingTime: 25,
@@ -120,11 +120,11 @@ const recipesToMigrate = [
       "1 tsp sugar",
       "Few fresh basil leaves",
       "2 tbsp cream",
-      "Salt to taste",
-      "Pepper to taste"
+      "Salt as needed",
+      "Pepper as needed"
     ],
     stepsRaw: [
-      "Put tomatoes in hot water for 2 minutes, peel the skin and chop",
+      "Put tomatoes in hot water for 2 minutes, remove the skin and chop",
       "Heat oil in a pot and fry onion and garlic until soft",
       "Add tomatoes and tomato paste, cook for 10 minutes",
       "Add vegetable stock and cook for 15 minutes",
@@ -170,17 +170,17 @@ const recipesToMigrate = [
       "2 tomatoes - chopped",
       "1 tsp mixed herbs",
       "2 tbsp oil",
-      "Salt to taste",
-      "Pepper to taste"
+      "Salt as needed",
+      "Pepper as needed"
     ],
     stepsRaw: [
       "Heat oil in a pot and fry onion and garlic until soft (5 minutes)",
       "Add all vegetables and cook for 5 minutes",
       "Add tomatoes and cook until they become soft",
       "Add vegetable stock and mixed herbs",
-      "Bring to boil, then cook on low heat for 20 minutes",
+      "Bring to boil, then cook on low flame for 20 minutes",
       "Add salt and pepper",
-      "You can blend half the soup if you like it thick",
+      "You can blend half the soup if you want it thick",
       "Serve hot with bread"
     ],
     difficulty: "Easy",
@@ -216,11 +216,11 @@ const recipesToMigrate = [
       "200g chicken - cut into small pieces",
       "1 cup noodles",
       "4 cups chicken stock",
-      "1 carrot - chopped small",
+      "1 carrot - cut small",
       "1 onion - chopped",
       "2 garlic cloves",
       "1 tsp black pepper",
-      "Salt to taste",
+      "Salt as needed",
       "Fresh coriander for garnish"
     ],
     stepsRaw: [
@@ -230,7 +230,7 @@ const recipesToMigrate = [
       "Add carrot and cook for 5 minutes",
       "Add chicken stock and bring to boil",
       "Add salt and black pepper",
-      "Cook for 15 minutes on low heat",
+      "Cook for 15 minutes on low flame",
       "Add cooked noodles, mix well and serve hot with coriander"
     ],
     difficulty: "Easy",
@@ -271,17 +271,17 @@ const recipesToMigrate = [
       "1 tbsp chilli sauce",
       "2 tbsp cornflour",
       "1 egg - beaten",
-      "Salt to taste"
+      "Salt as needed"
     ],
     stepsRaw: [
       "Bring chicken stock to boil in a pot",
       "Add shredded chicken and mushrooms, cook for 8 minutes",
       "Add soy sauce, vinegar and chilli sauce",
       "Mix cornflour with half cup water to make paste",
-      "Slowly add cornflour paste while stirring until soup thickens",
+      "Slowly add cornflour paste while stirring until soup becomes thick",
       "Slowly pour beaten egg while stirring in one direction",
       "Cook for 2 more minutes",
-      "Serve hot with extra chilli sauce on side"
+      "Serve hot with extra chilli sauce on the side"
     ],
     difficulty: "Medium",
     cookingTime: 25,
@@ -315,13 +315,13 @@ const recipesToMigrate = [
     ingredientsRaw: [
       "1 cup brown lentils (masoor)",
       "1 onion - chopped",
-      "2 carrots - chopped small",
+      "2 carrots - cut small",
       "4 cups vegetable stock",
       "2 garlic cloves",
       "1 tsp cumin powder",
       "2 tbsp lemon juice",
-      "Salt to taste",
-      "Pepper to taste"
+      "Salt as needed",
+      "Pepper as needed"
     ],
     stepsRaw: [
       "Wash lentils and soak in water for 30 minutes, then drain",
@@ -329,7 +329,7 @@ const recipesToMigrate = [
       "Add carrots and garlic, cook for 5 minutes",
       "Add lentils and cumin powder",
       "Add vegetable stock and bring to boil",
-      "Cook on low heat for 35-40 minutes until lentils are soft",
+      "Cook on low flame for 35-40 minutes until lentils are soft",
       "Add lemon juice, salt and pepper",
       "You can blend half the soup for creamy texture"
     ],
@@ -371,8 +371,8 @@ const recipesToMigrate = [
       "4 cups chicken stock",
       "2 tomatoes - chopped",
       "1 tsp mixed herbs",
-      "Salt to taste",
-      "Pepper to taste"
+      "Salt as needed",
+      "Pepper as needed"
     ],
     stepsRaw: [
       "Heat oil in a pot and fry onion until golden",
@@ -380,7 +380,7 @@ const recipesToMigrate = [
       "Add carrots, potatoes and beans, cook for 5 minutes",
       "Add chicken stock and bring to boil",
       "Add tomatoes and mixed herbs",
-      "Cook on low heat for 30 minutes until vegetables are soft",
+      "Cook on low flame for 30 minutes until vegetables are soft",
       "Add salt and pepper",
       "Serve hot with bread"
     ],
@@ -414,25 +414,25 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/Pumpkin-Soup.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg pumpkin - peeled and cut into cubes",
+      "1 kg pumpkin - remove skin and cut into cubes",
       "1 onion - chopped",
       "2 garlic cloves",
       "4 cups vegetable stock",
       "1 cup coconut milk",
       "1 tsp cinnamon powder",
       "1/2 tsp nutmeg powder",
-      "Salt to taste",
-      "Pepper to taste"
+      "Salt as needed",
+      "Pepper as needed"
     ],
     stepsRaw: [
       "Put pumpkin cubes in oven at 200°C for 25 minutes to roast",
       "Heat oil in a pot and fry onion and garlic until soft",
       "Add roasted pumpkin and vegetable stock",
-      "Cook for 15 minutes on low heat",
+      "Cook for 15 minutes on low flame",
       "Blend the soup until very smooth",
       "Put back in pot and add coconut milk, cinnamon and nutmeg",
       "Heat through but do not boil",
-      "Serve hot with roasted pumpkin seeds on top if you have"
+      "Serve hot with roasted pumpkin seeds on top if you have them"
     ],
     difficulty: "Medium",
     cookingTime: 50,
@@ -465,23 +465,23 @@ const recipesToMigrate = [
     cuisine: "Chinese",
     ingredientsRaw: [
       "4 cups chicken stock",
-      "2 eggs - lightly beaten",
+      "2 eggs - beat lightly",
       "2 tbsp cornflour",
       "1 tsp soy sauce",
       "1/2 tsp ginger - grated",
       "2 spring onions - chopped",
       "1/4 tsp white pepper",
-      "Salt to taste"
+      "Salt as needed"
     ],
     stepsRaw: [
       "Bring chicken stock to boil in a pot",
       "Mix cornflour with half cup water to make paste",
       "Add soy sauce, ginger and white pepper to the stock",
       "Slowly add cornflour paste while stirring",
-      "Turn heat to low",
+      "Turn flame to low",
       "Slowly pour beaten eggs while stirring gently in one direction",
       "Cook for 1 minute until eggs make thin ribbons",
-      "Garnish with spring onions and serve immediately"
+      "Put spring onions on top and serve immediately"
     ],
     difficulty: "Easy",
     cookingTime: 15,
@@ -520,8 +520,8 @@ const recipesToMigrate = [
       "2 tbsp butter",
       "2 tbsp flour",
       "1 tsp thyme",
-      "Salt to taste",
-      "Pepper to taste"
+      "Salt as needed",
+      "Pepper as needed"
     ],
     stepsRaw: [
       "Boil chicken in stock for 15-20 minutes until cooked",
@@ -529,7 +529,7 @@ const recipesToMigrate = [
       "Melt butter in a pot and fry onion until soft",
       "Add flour and cook for 2 minutes while stirring",
       "Slowly add chicken stock while whisking so no lumps form",
-      "Cook for 10 minutes until soup thickens a little",
+      "Cook for 10 minutes until soup becomes a little thick",
       "Add shredded chicken and thyme",
       "Add cream, heat through but do not boil",
       "Add salt and pepper, serve hot"
@@ -570,16 +570,16 @@ const recipesToMigrate = [
       "3 cups vegetable stock",
       "1 cup milk",
       "2 tbsp butter",
-      "Pinch of nutmeg",
-      "Salt to taste",
-      "Pepper to taste"
+      "A little bit of nutmeg",
+      "Salt as needed",
+      "Pepper as needed"
     ],
     stepsRaw: [
       "Wash spinach very well in water",
       "Melt butter in a pot and fry onion and garlic until soft",
       "Add spinach and cook for 3-4 minutes until it becomes soft",
       "Add vegetable stock and bring to boil",
-      "Cook for 10 minutes on low heat",
+      "Cook for 10 minutes on low flame",
       "Blend until very smooth",
       "Put back in pot, add milk and nutmeg",
       "Heat through and serve"
@@ -624,19 +624,19 @@ const recipesToMigrate = [
       "2 green cardamom",
       "1 cinnamon stick",
       "1 bay leaf",
-      "Salt to taste",
+      "Salt as needed",
       "Fresh coriander for garnish"
     ],
     stepsRaw: [
       "Wash mutton very well",
       "Put mutton in a big pot with water",
       "Add onion, garlic, ginger and all whole spices",
-      "Bring to boil, then turn heat to low",
+      "Bring to boil, then turn flame to low",
       "Cook for 2-3 hours until mutton becomes very soft",
       "Remove foam that comes on top while cooking",
       "Add salt at the end",
       "You can strain the soup or serve with meat pieces",
-      "Garnish with fresh coriander and serve hot"
+      "Put fresh coriander on top and serve hot"
     ],
     difficulty: "Hard",
     cookingTime: 180,
@@ -676,15 +676,15 @@ const recipesToMigrate = [
       "1 tbsp chilli sauce",
       "2 tbsp cornflour",
       "Crispy noodles for topping",
-      "Salt to taste"
+      "Salt as needed"
     ],
     stepsRaw: [
       "Fry vegetables and tofu in a pot for 3-4 minutes",
       "Add vegetable stock and bring to boil",
       "Add soy sauce, vinegar and chilli sauce",
       "Mix cornflour with half cup water to make paste",
-      "Slowly add cornflour paste while stirring until soup thickens",
-      "Cook for 10 minutes on low heat",
+      "Slowly add cornflour paste while stirring until soup becomes thick",
+      "Cook for 10 minutes on low flame",
       "Deep fry noodles until golden brown and crispy",
       "Serve soup with lots of crispy noodles on top"
     ],
@@ -727,8 +727,8 @@ const recipesToMigrate = [
       "2 tbsp flour",
       "2 tbsp butter",
       "Fresh dill for garnish",
-      "Salt to taste",
-      "Pepper to taste"
+      "Salt as needed",
+      "Pepper as needed"
     ],
     stepsRaw: [
       "Melt butter in a pot and fry onion until soft",
@@ -739,7 +739,7 @@ const recipesToMigrate = [
       "Cook for 20 minutes until vegetables are soft",
       "Add milk and heat through but do not boil",
       "Add salt and pepper",
-      "Garnish with fresh dill and serve"
+      "Put fresh dill on top and serve"
     ],
     difficulty: "Medium",
     cookingTime: 45,
@@ -777,17 +777,17 @@ const recipesToMigrate = [
       "1 cup cream",
       "2 tbsp olive oil",
       "Fresh thyme",
-      "Salt to taste",
-      "Pepper to taste"
+      "Salt as needed",
+      "Pepper as needed"
     ],
     stepsRaw: [
       "Cut the tops off garlic bulbs",
-      "Drizzle with oil and wrap in foil",
+      "Put oil on them and wrap in foil",
       "Put in oven at 190°C for 45-60 minutes until soft",
       "Let cool, then squeeze out the soft garlic",
       "Heat oil in a pot and fry onion until soft",
       "Add roasted garlic and vegetable stock",
-      "Cook for 20 minutes on low heat",
+      "Cook for 20 minutes on low flame",
       "Blend until very smooth",
       "Add cream and fresh thyme",
       "Heat through and serve"
@@ -830,8 +830,8 @@ const recipesToMigrate = [
       "2 tbsp tomato paste",
       "1 tsp thyme",
       "2 tbsp olive oil",
-      "Salt to taste",
-      "Pepper to taste"
+      "Salt as needed",
+      "Pepper as needed"
     ],
     stepsRaw: [
       "Wash barley and soak in water for 30 minutes",
@@ -839,7 +839,7 @@ const recipesToMigrate = [
       "Add carrots and potatoes, cook for 5 minutes",
       "Add barley and vegetable stock",
       "Add tomato paste and thyme",
-      "Bring to boil, then turn heat to low",
+      "Bring to boil, then turn flame to low",
       "Cook for 50-60 minutes until barley is soft",
       "Add salt and pepper",
       "Serve hot with bread"
@@ -872,7 +872,7 @@ const recipesToMigrate = [
   {
     title: "Thai Soup",
     image: "http://localhost:5000/uploads/thai-soup.jpg",
-    cuisine: "Thai",
+    cuisine: "Chinese",
     ingredientsRaw: [
       "4 cups chicken stock",
       "2 stalks lemongrass",
@@ -892,7 +892,7 @@ const recipesToMigrate = [
       "Cook until shrimp turns pink (about 5 minutes)",
       "Take out lemongrass and galangal before serving",
       "Add fish sauce and lime juice",
-      "Garnish with fresh coriander and serve"
+      "Put fresh coriander on top and serve"
     ],
     difficulty: "Medium",
     cookingTime: 25,
@@ -932,18 +932,18 @@ const recipesToMigrate = [
       "1 tsp cumin powder",
       "2 tbsp lemon juice",
       "Fresh coriander for garnish",
-      "Salt to taste",
-      "Pepper to taste"
+      "Salt as needed",
+      "Pepper as needed"
     ],
     stepsRaw: [
       "Dry roast oats in a pan for 2-3 minutes until you smell them",
       "Heat oil in a pot and fry onion and garlic until soft",
       "Add grated carrot and cook for 2 minutes",
       "Add roasted oats and vegetable stock",
-      "Bring to boil, then turn heat to low",
+      "Bring to boil, then turn flame to low",
       "Cook for 15 minutes until oats are soft",
       "Add cumin powder, lemon juice, salt and pepper",
-      "Garnish with fresh coriander and serve hot"
+      "Put fresh coriander on top and serve hot"
     ],
     difficulty: "Easy",
     cookingTime: 25,
@@ -978,14 +978,14 @@ const recipesToMigrate = [
       "1 cup red lentils (masoor)",
       "1 onion - chopped",
       "2 carrots - chopped",
-      "2 apples - peeled and chopped",
+      "2 apples - remove skin and chop",
       "4 cups vegetable stock",
       "2 tbsp curry powder",
       "1 tsp turmeric",
       "1 tsp cumin",
       "2 tbsp coconut milk",
-      "Salt to taste",
-      "Pepper to taste"
+      "Salt as needed",
+      "Pepper as needed"
     ],
     stepsRaw: [
       "Wash lentils and soak in water for 30 minutes, then drain",
@@ -1035,17 +1035,17 @@ const recipesToMigrate = [
       "1 onion - cut into 4 pieces",
       "4 garlic cloves",
       "1 inch ginger - sliced",
-      "Salt to taste"
+      "Salt as needed"
     ],
     stepsRaw: [
       "Put chicken in a pot with cold water",
       "Bring to boil, then remove the foam that comes on top",
       "Add all vegetables and aromatics",
-      "Turn heat to low and cook for 40 minutes",
+      "Turn flame to low and cook for 40 minutes",
       "Take out chicken and shred the meat",
       "Strain the soup through a cloth for clear liquid",
       "Put the shredded chicken back in the clear soup",
-      "Add salt lightly and serve"
+      "Add a little salt and serve"
     ],
     difficulty: "Medium",
     cookingTime: 50,
@@ -1085,8 +1085,8 @@ const recipesToMigrate = [
       "2 celery stalks - chopped",
       "1 onion - chopped",
       "2 tbsp olive oil",
-      "Salt to taste",
-      "Pepper to taste"
+      "Salt as needed",
+      "Pepper as needed"
     ],
     stepsRaw: [
       "Wash all grains well under water",
@@ -1094,7 +1094,7 @@ const recipesToMigrate = [
       "Add carrots and celery, cook for 5 minutes",
       "Add all grains and cook for 2 minutes while stirring",
       "Add vegetable stock and bring to boil",
-      "Turn heat to low and cover",
+      "Turn flame to low and cover",
       "Cook for 45 minutes until all grains are soft",
       "Add salt and pepper",
       "Serve hot with bread"
@@ -1145,7 +1145,7 @@ const recipesToMigrate = [
       "Add soy sauce and sesame oil",
       "Put cooked noodles in serving bowls",
       "Pour hot soup with vegetables over the noodles",
-      "Garnish with spring onions",
+      "Put spring onions on top",
       "Add chilli flakes if you like and serve"
     ],
     difficulty: "Easy",
@@ -1189,13 +1189,13 @@ const recipesToMigrate = [
     ],
     stepsRaw: [
       "Cook noodles in water until soft, drain and keep aside",
-      "Heat stock in a pot on low heat",
+      "Heat stock in a pot on low flame",
       "Add ginger and vegetables",
       "Cook for 8 minutes until vegetables are soft",
       "Add fish pieces carefully to the pot",
       "Cook for 5 minutes until fish is done (it will become white and flaky)",
       "Add noodles, fish sauce and lime juice",
-      "Garnish with fresh coriander and serve"
+      "Put fresh coriander on top and serve"
     ],
     difficulty: "Medium",
     cookingTime: 25,
@@ -1235,7 +1235,7 @@ const recipesToMigrate = [
       "1 tbsp red chili powder",
       "1 tsp turmeric",
       "Fresh ginger for garnish",
-      "Salt to taste"
+      "Salt as needed"
     ],
     stepsRaw: [
       "Clean trotters very well, wash many times",
@@ -1281,18 +1281,18 @@ const recipesToMigrate = [
       "2 kg chicken bones",
       "12 cups water",
       "2 onions - cut into 4 pieces",
-      "3 carrots - chopped big",
+      "3 carrots - cut big",
       "4 celery stalks",
       "4 garlic cloves - smashed",
       "2 bay leaves",
       "1 tsp black pepper whole",
-      "Salt to taste"
+      "Salt as needed"
     ],
     stepsRaw: [
       "Put chicken bones in a big pot with water",
       "Bring to boil, remove the foam that comes on top",
       "Add all vegetables and spices",
-      "Turn heat to low and cover partly",
+      "Turn flame to low and cover partly",
       "Cook for 3 hours",
       "Strain through a fine sieve or cloth",
       "Let it cool, then put in fridge",
@@ -1345,9 +1345,9 @@ const recipesToMigrate = [
       "Add capsicum and corn, cook for 3 minutes",
       "Add tikka masala and cook for 2 minutes",
       "Add chicken stock and bring to boil",
-      "Cook for 15 minutes on low heat",
+      "Cook for 15 minutes on low flame",
       "Add cream and heat through but do not boil",
-      "Garnish with fresh coriander and serve"
+      "Put fresh coriander on top and serve"
     ],
     difficulty: "Medium",
     cookingTime: 30,
@@ -1386,7 +1386,7 @@ const recipesToMigrate = [
       "2 tbsp butter",
       "2 tbsp flour",
       "1 tsp black pepper",
-      "Salt to taste"
+      "Salt as needed"
     ],
     stepsRaw: [
       "Cook noodles in water until soft, drain and keep aside",
@@ -1431,13 +1431,13 @@ const recipesToMigrate = [
       "200g chicken - cut into small pieces",
       "1 cup macaroni",
       "1 cup sweet corn",
-      "1 carrot - chopped small",
+      "1 carrot - cut small",
       "4 cups chicken stock",
       "1 onion - chopped",
       "2 garlic cloves",
       "2 tbsp soy sauce",
       "1 tsp black pepper",
-      "Salt to taste"
+      "Salt as needed"
     ],
     stepsRaw: [
       "Heat oil in a pot and fry onion and garlic until soft",
@@ -1487,7 +1487,7 @@ const recipesToMigrate = [
       "1 tbsp chilli garlic sauce",
       "2 tbsp cornflour",
       "1 cup mixed vegetables",
-      "Salt to taste"
+      "Salt as needed"
     ],
     stepsRaw: [
       "Cook macaroni in water until soft, drain and keep aside",
@@ -1495,9 +1495,9 @@ const recipesToMigrate = [
       "Add chicken and vegetables, cook for 10 minutes",
       "Add soy sauce, vinegar and chilli garlic sauce",
       "Mix cornflour with half cup water to make paste",
-      "Slowly add cornflour paste while stirring until soup thickens",
+      "Slowly add cornflour paste while stirring until soup becomes thick",
       "Add cooked macaroni and heat through",
-      "Serve hot with extra chilli sauce on side"
+      "Serve hot with extra chilli sauce on the side"
     ],
     difficulty: "Medium",
     cookingTime: 30,
@@ -1537,8 +1537,8 @@ const recipesToMigrate = [
       "1 cup milk",
       "2 tbsp flour",
       "Puff pastry sheets for topping",
-      "Salt to taste",
-      "Pepper to taste"
+      "Salt as needed",
+      "Pepper as needed"
     ],
     stepsRaw: [
       "Fry chicken in a pot until cooked, take out and keep aside",
@@ -1588,8 +1588,8 @@ const recipesToMigrate = [
       "2 tbsp butter",
       "2 tbsp flour",
       "1 tsp mixed herbs",
-      "Salt to taste",
-      "Pepper to taste"
+      "Salt as needed",
+      "Pepper as needed"
     ],
     stepsRaw: [
       "Cook macaroni in water until soft, drain and keep aside",
@@ -1598,7 +1598,7 @@ const recipesToMigrate = [
       "Add flour and cook for 2 minutes",
       "Slowly add chicken stock while whisking",
       "Add chicken and mixed herbs",
-      "Cook for 15 minutes on low heat",
+      "Cook for 15 minutes on low flame",
       "Add cream and cooked macaroni",
       "Heat through and serve"
     ],
@@ -1638,12 +1638,12 @@ const recipesToMigrate = [
       "15g dried longan",
       "10g dried Chinese yam",
       "2 liters water",
-      "Salt to taste (very little)"
+      "Very little salt if you want"
     ],
     stepsRaw: [
       "Put chicken in boiling water for 5 minutes, then wash",
       "Put all ingredients in a big pot with water",
-      "Bring to boil, then turn heat to low",
+      "Bring to boil, then turn flame to low",
       "Cook for 1.5 to 2 hours until chicken is very soft",
       "Remove any foam that comes on top",
       "Add very little salt if you want",

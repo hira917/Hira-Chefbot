@@ -3,41 +3,36 @@ dns.setServers(['8.8.8.8', '1.1.1.1']);
 require('dotenv').config({ path: '../.env' });
 const mongoose = require('mongoose');
 const Recipe = require('../models/Recipe');
-
 const recipesToMigrate = [
-  // ==================== ALOO BASED RECIPES ====================
   {
     title: "Aloo Ki Sabzi",
-   
     image: "http://localhost:5000/uploads/aloo-ki-sabzi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "4 medium potatoes - boiled, peeled, and cut into cubes",
-      "2 medium tomatoes - finely chopped",
-      "1 medium onion - finely chopped",
-      "2 green chilies - slit lengthwise",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 teaspoon coriander powder",
-      "2 tablespoons cooking oil",
+      "4 potatoes - boiled, peeled, cut into cubes",
+      "2 tomatoes - finely chopped",
+      "1 onion - finely chopped",
+      "2 green chilies - slit",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp coriander powder",
+      "2 tbsp oil",
       "Salt to taste",
-      "Fresh coriander leaves for garnish"
+      "Fresh coriander for garnish"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle for about 30 seconds until fragrant.",
-      "Add chopped onions and sauté for 5-7 minutes until they turn golden brown.",
-      "Add green chilies and chopped tomatoes. Cook for 5-6 minutes until tomatoes become soft and mushy.",
-      "Add turmeric powder, red chili powder, coriander powder, and salt. Mix well and cook for 2 minutes until spices are fragrant.",
-      "Add boiled potato cubes and mix gently with the masala. Be careful not to break the potatoes.",
-      "Cover the pan and cook on low heat for 5-7 minutes, stirring occasionally to prevent sticking.",
-      "Garnish with fresh coriander leaves. Serve hot with roti, paratha, or puri."
+      "Heat oil in a pan. Add cumin seeds and onion. Fry until golden.",
+      "Add green chilies and tomatoes. Cook until tomatoes are soft.",
+      "Add turmeric, red chili, coriander powder, and salt. Cook for 2 minutes.",
+      "Add potatoes and mix gently. Cover and cook on low heat for 5-7 minutes.",
+      "Garnish with fresh coriander. Serve with roti or paratha."
     ],
     difficulty: "Easy",
     cookingTime: 20,
     isActive: true,
     isHalal: true,
-    description: "A classic Pakistani potato curry that's simple, flavorful, and perfect with roti or rice.",
+    description: "Simple Pakistani potato curry. Tastes great with roti or paratha.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -59,38 +54,34 @@ const recipesToMigrate = [
   },
   {
     title: "Aloo Matar",
-    
     image: "http://localhost:5000/uploads/aloo_matar.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "3 medium potatoes - peeled and cut into cubes",
+      "3 potatoes - cut into cubes",
       "1 cup green peas (fresh or frozen)",
-      "2 medium onions - finely chopped",
-      "2 medium tomatoes - made into puree",
-      "1 tablespoon ginger-garlic paste",
-      "1 teaspoon cumin seeds",
-      "1 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 teaspoon garam masala",
-      "2 tablespoons cooking oil",
+      "2 onions - finely chopped",
+      "2 tomatoes - make puree",
+      "1 tbsp ginger-garlic paste",
+      "1 tsp cumin seeds",
+      "1 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp garam masala",
+      "2 tbsp oil",
       "Salt to taste",
-      "Fresh coriander leaves for garnish"
+      "Fresh coriander"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle.",
-      "Add chopped onions and sauté for 5-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until the raw smell goes away.",
-      "Add tomato puree and cook for 5-7 minutes until oil separates from the masala.",
-      "Add turmeric powder, red chili powder, and salt. Mix well and cook for 2 minutes.",
-      "Add potatoes and green peas. Stir well to coat with the masala.",
-      "Add 1 cup of warm water. Cover and cook for 15-20 minutes until potatoes are tender.",
-      "Sprinkle garam masala and garnish with fresh coriander. Serve hot with naan or roti."
+      "Heat oil. Add cumin seeds and onions. Fry until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes. Add tomato puree and cook until oil separates.",
+      "Add turmeric, red chili, and salt. Cook for 2 minutes. Add potatoes and peas. Mix well.",
+      "Add 1 cup warm water. Cover and cook for 15-20 minutes until potatoes are tender.",
+      "Sprinkle garam masala and fresh coriander. Serve with naan or roti."
     ],
     difficulty: "Medium",
     cookingTime: 35,
     isActive: true,
     isHalal: true,
-    description: "A delicious Pakistani potato and peas curry that's rich, flavorful, and pairs perfectly with naan or roti.",
+    description: "Tasty potato and peas curry. Perfect with naan or roti.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -103,7 +94,7 @@ const recipesToMigrate = [
     ageGroup: ["adults", "kids", "seniors"],
     patientFriendly: ["general", "diabetes", "heart", "bp"],
     pantryKeywords: ["potato", "peas", "onion", "tomato", "ginger", "garlic", "cumin", "turmeric", "red chili", "garam masala", "oil", "salt"],
-    searchKeywords: ["aloo matar", "potato peas curry", "pakistani curry", "vegetarian curry", "aloo matar ki sabzi"],
+    searchKeywords: ["aloo matar", "potato peas curry", "pakistani curry", "vegetarian"],
     isFeatured: false,
     averageRating: 0,
     totalRatings: 0,
@@ -112,36 +103,33 @@ const recipesToMigrate = [
   },
   {
     title: "Aloo Baingan",
-   
     image: "http://localhost:5000/uploads/baingan-aloo.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "2 medium potatoes - peeled and cut into cubes",
-      "2 medium eggplants (baingan) - cut into cubes",
-      "1 medium onion - finely chopped",
-      "2 medium tomatoes - finely chopped",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 teaspoon coriander powder",
-      "2 tablespoons cooking oil",
+      "2 potatoes - cut into cubes",
+      "2 eggplants (baingan) - cut into cubes",
+      "1 onion - finely chopped",
+      "2 tomatoes - finely chopped",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp coriander powder",
+      "2 tbsp oil",
       "Salt to taste",
-      "Fresh coriander leaves for garnish"
+      "Fresh coriander"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle for 30 seconds.",
-      "Add chopped onions and sauté for 5-6 minutes until golden brown.",
-      "Add chopped tomatoes and cook for 5-7 minutes until they become soft and mushy.",
-      "Add turmeric powder, red chili powder, coriander powder, and salt. Mix well and cook for 2 minutes.",
-      "Add potato cubes and cook for 5 minutes, stirring occasionally.",
-      "Add eggplant cubes and mix gently to avoid breaking them. Cover and cook on low heat for 15-20 minutes until both vegetables are tender.",
-      "Garnish with fresh coriander. Serve hot with roti or paratha."
+      "Heat oil. Add cumin seeds and onions. Fry until golden.",
+      "Add tomatoes and cook until soft. Add turmeric, red chili, coriander powder, and salt. Cook for 2 minutes.",
+      "Add potatoes and cook for 5 minutes. Then add eggplants and mix gently.",
+      "Cover and cook on low heat for 15-20 minutes until both are tender.",
+      "Garnish with fresh coriander. Serve with roti."
     ],
     difficulty: "Medium",
     cookingTime: 30,
     isActive: true,
     isHalal: true,
-    description: "A flavorful Pakistani potato and eggplant curry that's hearty, delicious, and perfect with roti or paratha.",
+    description: "Hearty potato and eggplant curry. Great with roti or paratha.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -163,33 +151,31 @@ const recipesToMigrate = [
   },
   {
     title: "Aloo Shimla Mirch",
-    
     image: "http://localhost:5000/uploads/aloo-shimla-mirch.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "3 medium potatoes - thinly sliced",
+      "3 potatoes - thinly sliced",
       "2 bell peppers (capsicum) - sliced into strips",
-      "1 medium onion - sliced",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 teaspoon dry mango powder (amchur)",
-      "2 tablespoons cooking oil",
+      "1 onion - sliced",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp dry mango powder (amchur)",
+      "2 tbsp oil",
       "Salt to taste"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle.",
-      "Add sliced onions and sauté for 3-4 minutes until translucent.",
-      "Add sliced potatoes and cook for 8-10 minutes until they are half cooked.",
-      "Add sliced bell peppers, turmeric powder, red chili powder, and salt. Mix well.",
-      "Continue cooking for 8-10 minutes until potatoes and peppers are fully tender.",
-      "Sprinkle amchur powder and mix well. Serve hot as a side dish with dal and rice."
+      "Heat oil. Add cumin seeds and onions. Fry for 3-4 minutes.",
+      "Add potatoes and cook for 8-10 minutes until half done.",
+      "Add bell peppers, turmeric, red chili, and salt. Mix well.",
+      "Cook for 8-10 minutes until vegetables are tender.",
+      "Sprinkle amchur powder and mix. Serve with dal and rice."
     ],
     difficulty: "Easy",
     cookingTime: 25,
     isActive: true,
     isHalal: true,
-    description: "A delicious Pakistani potato and bell pepper stir-fry that's quick, flavorful, and perfect as a side dish with dal and rice.",
+    description: "Quick potato and bell pepper stir-fry. Great side dish with dal chawal.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -201,7 +187,7 @@ const recipesToMigrate = [
     calories: 160,
     ageGroup: ["adults", "kids", "seniors"],
     patientFriendly: ["general", "diabetes", "heart", "bp"],
-    pantryKeywords: ["potato", "bell pepper", "capsicum", "shimla mirch", "onion", "cumin", "turmeric", "red chili", "amchur", "dry mango powder", "oil", "salt"],
+    pantryKeywords: ["potato", "bell pepper", "capsicum", "shimla mirch", "onion", "cumin", "turmeric", "red chili", "amchur", "oil", "salt"],
     searchKeywords: ["aloo shimla mirch", "potato bell pepper stir fry", "capsicum aloo", "pakistani sabzi", "vegetarian", "easy", "quick"],
     isFeatured: false,
     averageRating: 0,
@@ -211,37 +197,34 @@ const recipesToMigrate = [
   },
   {
     title: "Aloo Gobhi",
-   
     image: "http://localhost:5000/uploads/aloo-ghobi.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "2 medium potatoes - peeled and cut into cubes",
-      "1 medium cauliflower - cut into small florets",
-      "1 medium onion - finely chopped",
-      "2 medium tomatoes - finely chopped",
-      "1 teaspoon ginger-garlic paste",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 teaspoon coriander powder",
-      "2 tablespoons cooking oil",
+      "2 potatoes - cut into cubes",
+      "1 cauliflower - cut into small florets",
+      "1 onion - finely chopped",
+      "2 tomatoes - finely chopped",
+      "1 tsp ginger-garlic paste",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp coriander powder",
+      "2 tbsp oil",
       "Salt to taste",
-      "Fresh coriander leaves for garnish"
+      "Fresh coriander"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and onions. Sauté for 5-7 minutes until onions are golden brown.",
-      "Add ginger-garlic paste and cook for 1 minute until fragrant.",
-      "Add chopped tomatoes and cook for 5-6 minutes until soft and mushy.",
-      "Add turmeric powder, red chili powder, coriander powder, and salt. Mix well and cook for 2 minutes.",
-      "Add potato cubes and cauliflower florets. Mix gently to coat with masala.",
-      "Cover and cook on low heat for 15-20 minutes, stirring occasionally. Do not overcook the cauliflower.",
-      "Garnish with fresh coriander. Serve hot with roti."
+      "Heat oil. Add cumin seeds and onions. Fry until golden brown.",
+      "Add ginger-garlic paste and cook for 1 minute. Add tomatoes and cook until soft.",
+      "Add turmeric, red chili, coriander powder, and salt. Cook for 2 minutes.",
+      "Add potatoes and cauliflower. Mix gently to coat with masala.",
+      "Cover and cook on low heat for 15-20 minutes. Garnish with coriander. Serve with roti."
     ],
     difficulty: "Medium",
     cookingTime: 35,
     isActive: true,
     isHalal: true,
-    description: "A classic Pakistani potato and cauliflower dry curry that's aromatic, flavorful, and perfect with roti or paratha.",
+    description: "Classic potato and cauliflower dry curry. Perfect with roti or paratha.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -266,32 +249,31 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/aloo-palak.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "3 medium potatoes - peeled and cut into cubes",
-      "500g fresh spinach (palak) - blanched and blended into puree",
-      "1 medium onion - finely chopped",
-      "2 medium tomatoes - finely chopped",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 teaspoon garam masala",
-      "2 tablespoons cooking oil",
+      "3 potatoes - cut into cubes",
+      "500g fresh spinach (palak) - blanched and blended",
+      "1 onion - finely chopped",
+      "2 tomatoes - finely chopped",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp garam masala",
+      "2 tbsp oil",
       "Salt to taste",
-      "2 tablespoons fresh cream (optional)"
+      "2 tbsp fresh cream (optional)"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and onions. Sauté for 5-6 minutes until onions are golden brown.",
-      "Add chopped tomatoes and cook for 5 minutes until soft.",
-      "Add turmeric powder, red chili powder, and salt. Mix well and cook for 2 minutes.",
-      "Add potato cubes and cook for 10 minutes, stirring occasionally.",
-      "Add spinach puree and mix well. Add 1/2 cup water if needed for desired consistency.",
-      "Cover and simmer for 10-15 minutes until potatoes are completely tender.",
-      "Sprinkle garam masala and add a drizzle of fresh cream if desired. Serve hot with roti or naan."
+      "Heat oil. Add cumin seeds and onions. Fry until golden brown.",
+      "Add tomatoes and cook until soft. Add turmeric, red chili, and salt. Cook for 2 minutes.",
+      "Add potatoes and cook for 10 minutes.",
+      "Add spinach puree and mix well. Add 1/2 cup water if needed.",
+      "Cover and simmer for 10-15 minutes until potatoes are tender.",
+      "Sprinkle garam masala and cream if using. Serve with roti or naan."
     ],
     difficulty: "Medium",
     cookingTime: 30,
     isActive: true,
     isHalal: true,
-    description: "A healthy and flavorful Pakistani potato and spinach curry that's packed with iron and perfect with roti or naan.",
+    description: "Healthy potato and spinach curry. Full of iron, tastes great with roti or naan.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -313,35 +295,33 @@ const recipesToMigrate = [
   },
   {
     title: "Aloo Tamatar",
-    
     image: "http://localhost:5000/uploads/aloo-tamatar.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "3 medium potatoes - peeled and cut into cubes",
-      "4 medium tomatoes - finely chopped",
-      "1 medium onion - finely chopped",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 teaspoon coriander powder",
-      "2 tablespoons cooking oil",
+      "3 potatoes - cut into cubes",
+      "4 tomatoes - finely chopped",
+      "1 onion - finely chopped",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp coriander powder",
+      "2 tbsp oil",
       "Salt to taste",
-      "Fresh coriander leaves for garnish"
+      "Fresh coriander"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and onions. Sauté until onions are golden brown, about 5-6 minutes.",
-      "Add chopped tomatoes and cook for 8-10 minutes until they turn mushy.",
-      "Add turmeric powder, red chili powder, coriander powder, and salt. Mix well and cook for 2-3 minutes.",
-      "Add potato cubes and 1 cup of warm water. Stir well to combine.",
+      "Heat oil. Add cumin seeds and onions. Fry until golden brown.",
+      "Add tomatoes and cook for 8-10 minutes until mushy.",
+      "Add turmeric, red chili, coriander powder, and salt. Cook for 2-3 minutes.",
+      "Add potatoes and 1 cup warm water. Mix well.",
       "Cover and cook for 15-20 minutes until potatoes are tender.",
-      "Mash some potatoes with the back of a spoon to thicken the gravy.",
-      "Garnish with fresh coriander. Serve hot with roti or paratha."
+      "Mash some potatoes to thicken the gravy. Garnish with coriander. Serve with roti."
     ],
     difficulty: "Easy",
     cookingTime: 30,
     isActive: true,
     isHalal: true,
-    description: "A tangy and delicious Pakistani potato tomato curry that's simple to make and pairs perfectly with roti or paratha.",
+    description: "Tangy potato tomato curry. Simple and delicious with roti or paratha.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -363,35 +343,32 @@ const recipesToMigrate = [
   },
   {
     title: "Aloo Beans",
-   
-    
     image: "http://localhost:5000/uploads/aloo-beans.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "2 medium potatoes - thinly sliced",
-      "200g fresh green beans - washed and chopped into 1-inch pieces",
-      "1 medium onion - sliced",
-      "1 teaspoon mustard seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 tablespoon cooking oil",
+      "2 potatoes - thinly sliced",
+      "200g fresh green beans - cut into 1-inch pieces",
+      "1 onion - sliced",
+      "1 tsp mustard seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tbsp oil",
       "Salt to taste",
-      "2 tablespoons fresh grated coconut (optional)"
+      "2 tbsp fresh grated coconut (optional)"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add mustard seeds and let them crackle for 30 seconds.",
-      "Add sliced onions and sauté for 3-4 minutes until translucent.",
-      "Add potatoes and beans. Stir well to combine.",
-      "Add turmeric powder, red chili powder, and salt. Mix well.",
-      "Cover and cook on low heat for 15 minutes, stirring occasionally to prevent sticking.",
-      "Check if vegetables are tender. Cook for 2-3 more minutes if needed.",
-      "Garnish with fresh grated coconut if desired. Serve as a side dish with dal and rice."
+      "Heat oil. Add mustard seeds and let them crackle.",
+      "Add onions and fry for 3-4 minutes.",
+      "Add potatoes and beans. Mix well.",
+      "Add turmeric, red chili, and salt. Mix well.",
+      "Cover and cook on low heat for 15 minutes.",
+      "Garnish with coconut if using. Serve with dal and rice."
     ],
     difficulty: "Easy",
     cookingTime: 25,
     isActive: true,
     isHalal: true,
-    description: "A quick and healthy Pakistani potato and green beans stir-fry that's perfect as a side dish with dal and rice.",
+    description: "Quick potato and green beans stir-fry. Great side dish with dal chawal.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -413,33 +390,32 @@ const recipesToMigrate = [
   },
   {
     title: "Aloo Karela",
-    
     image: "http://localhost:5000/uploads/aloo-karela.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "2 medium potatoes - peeled and cut into cubes",
-      "2 medium karela (bitter gourd) - thinly sliced",
-      "1 medium onion - finely chopped",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 teaspoon dry mango powder (amchur)",
-      "2 tablespoons cooking oil",
+      "2 potatoes - cut into cubes",
+      "2 karela (bitter gourd) - thinly sliced",
+      "1 onion - finely chopped",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp dry mango powder (amchur)",
+      "2 tbsp oil",
       "Salt to taste"
     ],
     stepsRaw: [
-      "Rub karela slices with 1 teaspoon salt and keep aside for 30 minutes to reduce bitterness. Rinse well with water and squeeze out the bitter juice completely.",
-      "Heat oil in a pan over medium heat. Add cumin seeds and onions. Sauté for 5-6 minutes until onions are golden brown.",
+      "Rub karela slices with 1 tsp salt. Keep for 30 minutes. Rinse well and squeeze out the bitter juice.",
+      "Heat oil. Add cumin seeds and onions. Fry until golden brown.",
       "Add karela slices and fry for 5-7 minutes until lightly browned.",
-      "Add potato cubes, turmeric powder, red chili powder, and salt. Mix well.",
-      "Cover and cook on low heat for 15-20 minutes until both vegetables are tender.",
-      "Sprinkle amchur powder and mix well. Serve hot with roti."
+      "Add potatoes, turmeric, red chili, and salt. Mix well.",
+      "Cover and cook on low heat for 15-20 minutes until tender.",
+      "Sprinkle amchur powder and mix. Serve with roti."
     ],
     difficulty: "Hard",
     cookingTime: 45,
     isActive: true,
     isHalal: true,
-    description: "A traditional Pakistani bitter gourd and potato curry that's known for its unique flavor and health benefits, especially for diabetes.",
+    description: "Traditional bitter gourd and potato curry. Good for diabetes.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -451,7 +427,7 @@ const recipesToMigrate = [
     calories: 145,
     ageGroup: ["adults", "seniors"],
     patientFriendly: ["general", "diabetes"],
-    pantryKeywords: ["potato", "karela", "bitter gourd", "onion", "cumin", "turmeric", "red chili", "amchur", "dry mango powder", "oil", "salt"],
+    pantryKeywords: ["potato", "karela", "bitter gourd", "onion", "cumin", "turmeric", "red chili", "amchur", "oil", "salt"],
     searchKeywords: ["aloo karela", "potato bitter gourd curry", "karela aloo", "pakistani sabzi", "vegetarian", "diabetes friendly"],
     isFeatured: false,
     averageRating: 0,
@@ -461,32 +437,31 @@ const recipesToMigrate = [
   },
   {
     title: "Aloo Methi",
-   
     image: "http://localhost:5000/uploads/aloo-maithi.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "3 medium potatoes - peeled and cut into cubes",
-      "1 large bunch fresh fenugreek leaves (methi) - washed and finely chopped",
-      "1 medium onion - finely chopped",
+      "3 potatoes - cut into cubes",
+      "1 large bunch fresh fenugreek leaves (methi) - washed and chopped",
+      "1 onion - finely chopped",
       "2 green chilies - finely chopped",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "2 tablespoons cooking oil",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "2 tbsp oil",
       "Salt to taste"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and onions. Sauté for 5-6 minutes until onions are golden brown.",
-      "Add green chilies and chopped methi leaves. Cook for 3-4 minutes until leaves wilt and reduce in volume.",
-      "Add potato cubes, turmeric powder, red chili powder, and salt. Mix well.",
+      "Heat oil. Add cumin seeds and onions. Fry until golden brown.",
+      "Add green chilies and chopped methi. Cook for 3-4 minutes until methi wilts.",
+      "Add potatoes, turmeric, red chili, and salt. Mix well.",
       "Cover and cook on low heat for 15-20 minutes until potatoes are tender.",
-      "Stir occasionally to prevent sticking. Serve hot with roti or paratha."
+      "Serve with roti or paratha."
     ],
     difficulty: "Medium",
     cookingTime: 30,
     isActive: true,
     isHalal: true,
-    description: "A nutritious and flavorful Pakistani potato and fenugreek leaves curry that's slightly bitter yet delicious with roti or paratha.",
+    description: "Nutritious potato and fenugreek curry. Slightly bitter but tasty with roti.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -508,33 +483,30 @@ const recipesToMigrate = [
   },
   {
     title: "Aloo Pyaz",
-   
     image: "http://localhost:5000/uploads/aloo-pyaz.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "3 medium potatoes - thinly sliced",
-      "2 large onions - thinly sliced",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 teaspoon coriander powder",
-      "2 tablespoons cooking oil",
+      "3 potatoes - thinly sliced",
+      "2 onions - thinly sliced",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp coriander powder",
+      "2 tbsp oil",
       "Salt to taste"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle.",
-      "Add sliced onions and sauté for 4-5 minutes until light golden.",
-      "Add sliced potatoes, turmeric powder, red chili powder, coriander powder, and salt.",
-      "Mix well and cover with a lid.",
-      "Cook on low heat for 15 minutes, stirring occasionally to ensure even cooking.",
-      "Cook until potatoes are tender and slightly crispy on the edges.",
+      "Heat oil. Add cumin seeds.",
+      "Add onions and fry for 4-5 minutes until light golden.",
+      "Add potatoes, turmeric, red chili, coriander powder, and salt. Mix well.",
+      "Cover and cook on low heat for 15 minutes, stirring occasionally.",
       "Serve as a side dish with dal and rice."
     ],
     difficulty: "Easy",
     cookingTime: 25,
     isActive: true,
     isHalal: true,
-    description: "A simple and crispy Pakistani potato and onion stir-fry that's quick to make and perfect as a side dish with dal and rice.",
+    description: "Simple crispy potato and onion stir-fry. Great with dal chawal.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -556,35 +528,32 @@ const recipesToMigrate = [
   },
   {
     title: "Bhindi Masala",
-  
     image: "http://localhost:5000/uploads/Bhindi-Masala.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "500g fresh bhindi (okra) - washed, dried, and sliced into rounds",
-      "1 medium onion - finely chopped",
-      "2 medium tomatoes - finely chopped",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 teaspoon coriander powder",
-      "1 teaspoon dry mango powder (amchur)",
-      "2 tablespoons cooking oil",
+      "500g fresh bhindi (okra) - washed, dried, sliced",
+      "1 onion - finely chopped",
+      "2 tomatoes - finely chopped",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp coriander powder",
+      "1 tsp dry mango powder (amchur)",
+      "2 tbsp oil",
       "Salt to taste"
     ],
     stepsRaw: [
-      "Wash bhindi and dry completely with a kitchen towel before slicing. This prevents stickiness while cooking.",
-      "Heat oil in a pan over medium heat. Add cumin seeds and onions. Sauté for 5-6 minutes until onions are golden brown.",
-      "Add chopped tomatoes and cook for 5-6 minutes until soft and mushy.",
-      "Add turmeric powder, red chili powder, coriander powder, and salt. Mix well and cook for 2 minutes.",
-      "Add sliced bhindi and mix gently to coat with masala.",
-      "Cover and cook on low heat for 10-12 minutes, stirring occasionally to prevent sticking.",
-      "Sprinkle amchur powder and cook uncovered for 2 more minutes. Serve hot with roti."
+      "Wash bhindi and dry completely before slicing (this stops stickiness).",
+      "Heat oil. Add cumin seeds and onions. Fry until golden brown.",
+      "Add tomatoes and cook until soft. Add turmeric, red chili, coriander powder, and salt. Cook for 2 minutes.",
+      "Add bhindi and mix gently. Cover and cook on low heat for 10-12 minutes.",
+      "Sprinkle amchur powder and cook for 2 more minutes. Serve with roti."
     ],
     difficulty: "Medium",
     cookingTime: 30,
     isActive: true,
     isHalal: true,
-    description: "A classic Pakistani spicy okra stir-fry that's crispy, flavorful, and perfect with roti or paratha.",
+    description: "Classic spicy okra stir-fry. Crispy and flavorful with roti.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -606,35 +575,31 @@ const recipesToMigrate = [
   },
   {
     title: "Bhindi Do Pyaza",
-  
     image: "http://localhost:5000/uploads/bhindi-do-pyaz.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "500g fresh bhindi (okra) - washed, dried, and sliced",
-      "2 large onions - thinly sliced (divided)",
-      "2 medium tomatoes - finely chopped",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 teaspoon garam masala",
-      "2 tablespoons cooking oil",
+      "500g fresh bhindi (okra) - washed, dried, sliced",
+      "2 onions - thinly sliced (divided)",
+      "2 tomatoes - finely chopped",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp garam masala",
+      "2 tbsp oil",
       "Salt to taste"
     ],
     stepsRaw: [
-      "Wash and dry bhindi completely before slicing to prevent stickiness.",
-      "Heat oil in a pan over medium heat. Add cumin seeds and half of the sliced onions.",
-      "Sauté for 5-6 minutes until onions are golden brown.",
-      "Add chopped tomatoes and cook for 5 minutes until soft.",
-      "Add turmeric powder, red chili powder, and salt. Mix well and cook for 2 minutes.",
-      "Add sliced bhindi and mix gently.",
-      "Cover and cook for 10 minutes on low heat, stirring occasionally.",
-      "Add remaining raw onions and garam masala. Cook for 2 more minutes and serve hot."
+      "Wash and dry bhindi completely before slicing.",
+      "Heat oil. Add cumin seeds and half of the onions. Fry until golden brown.",
+      "Add tomatoes and cook until soft. Add turmeric, red chili, and salt. Cook for 2 minutes.",
+      "Add bhindi and mix gently. Cover and cook for 10 minutes.",
+      "Add remaining raw onions and garam masala. Cook for 2 more minutes. Serve hot."
     ],
     difficulty: "Medium",
     cookingTime: 30,
     isActive: true,
     isHalal: true,
-    description: "A delicious Pakistani okra curry with double the onions, giving it a unique sweet and savory flavor.",
+    description: "Okra curry with double onions. Sweet and savory flavor.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -656,36 +621,33 @@ const recipesToMigrate = [
   },
   {
     title: "Bhindi Salan",
-   
     image: "http://localhost:5000/uploads/bhindi-salan.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g fresh bhindi (okra) - whole, stems removed",
-      "1 cup plain yogurt - beaten well until smooth",
-      "1 medium onion - finely chopped",
-      "2 tablespoons cooking oil",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 teaspoon coriander powder",
+      "1 cup plain yogurt - beaten well",
+      "1 onion - finely chopped",
+      "2 tbsp oil",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp coriander powder",
       "Salt to taste",
-      "Fresh coriander leaves for garnish"
+      "Fresh coriander"
     ],
     stepsRaw: [
-      "Wash and dry bhindi completely. Remove stems but keep the bhindi whole.",
-      "Heat 1 tablespoon oil in a pan over medium heat. Fry bhindi for 5-7 minutes until tender. Remove and set aside.",
-      "In the same pan, add remaining oil and cumin seeds. Add onions and sauté for 5 minutes until golden.",
-      "Add turmeric powder, red chili powder, coriander powder, and salt. Cook for 1 minute.",
-      "Reduce heat to low and add beaten yogurt slowly, stirring continuously to prevent curdling.",
-      "Cook for 5 minutes until oil separates from the gravy.",
-      "Add fried bhindi and mix gently. Simmer for 5 more minutes.",
-      "Garnish with fresh coriander. Serve hot with roti or rice."
+      "Wash and dry bhindi completely. Heat 1 tbsp oil and fry bhindi for 5-7 minutes. Remove and set aside.",
+      "In the same pan, add remaining oil and cumin seeds. Add onions and fry for 5 minutes until golden.",
+      "Add turmeric, red chili, coriander powder, and salt. Cook for 1 minute.",
+      "Lower heat and add beaten yogurt slowly, stirring continuously so it doesn't curdle.",
+      "Cook for 5 minutes until oil separates. Add fried bhindi and mix gently. Simmer for 5 more minutes.",
+      "Garnish with coriander. Serve with roti or rice."
     ],
     difficulty: "Medium",
     cookingTime: 35,
     isActive: true,
     isHalal: true,
-    description: "A creamy and tangy Pakistani okra curry made with yogurt gravy, perfect with roti or rice.",
+    description: "Creamy tangy okra curry made with yogurt gravy. Great with roti or rice.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -705,42 +667,36 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-
- 
   {
     title: "Baingan Bharta",
     image: "http://localhost:5000/uploads/baingan-bharta.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "2 large eggplants (baingan) - preferably long and shiny",
-      "1 medium onion - finely chopped",
-      "2 medium tomatoes - finely chopped",
+      "2 large eggplants (baingan)",
+      "1 onion - finely chopped",
+      "2 tomatoes - finely chopped",
       "2 green chilies - finely chopped",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 teaspoon garam masala",
-      "2 tablespoons cooking oil",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp garam masala",
+      "2 tbsp oil",
       "Salt to taste",
-      "Fresh coriander leaves - chopped"
+      "Fresh coriander"
     ],
     stepsRaw: [
-      "Wash eggplants and pat dry. Apply a little oil and roast directly on gas flame. Turn occasionally for even roasting, about 10-15 minutes until the skin is charred and flesh is soft.",
-      "Let them cool completely, then peel off the charred skin carefully.",
-      "Mash the soft pulp with a fork or hands. Set aside.",
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle.",
-      "Add chopped onions and sauté for 5-6 minutes until golden brown.",
-      "Add chopped tomatoes and green chilies. Cook for 5 minutes until tomatoes are soft.",
-      "Add turmeric powder, red chili powder, and salt. Mix well and cook for 2 minutes.",
-      "Add mashed eggplant and mix thoroughly.",
-      "Cook for 8-10 minutes, stirring occasionally to blend the flavors.",
-      "Sprinkle garam masala and fresh coriander. Serve hot with roti."
+      "Roast eggplants directly on gas flame until skin is charred and flesh is soft (about 10-15 minutes).",
+      "Let cool, then peel off the skin. Mash the pulp with a fork.",
+      "Heat oil. Add cumin seeds and onions. Fry until golden brown.",
+      "Add tomatoes and green chilies. Cook until tomatoes are soft.",
+      "Add turmeric, red chili, and salt. Cook for 2 minutes. Add mashed eggplant and mix well.",
+      "Cook for 8-10 minutes. Sprinkle garam masala and fresh coriander. Serve with roti."
     ],
     difficulty: "Medium",
     cookingTime: 35,
     isActive: true,
     isHalal: true,
-    description: "A smoky and flavorful Pakistani mashed eggplant dish that's roasted to perfection and pairs wonderfully with roti.",
+    description: "Smoky mashed eggplant dish. Roasted to perfection, great with roti.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -762,36 +718,34 @@ const recipesToMigrate = [
   },
   {
     title: "Baingan Masala",
-  
     image: "http://localhost:5000/uploads/baingan-masala.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "2 medium eggplants (baingan) - cut into cubes",
-      "1 medium onion - finely chopped",
-      "2 medium tomatoes - blended into puree",
-      "1 tablespoon ginger-garlic paste",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 teaspoon coriander powder",
-      "2 tablespoons cooking oil",
+      "2 medium eggplants - cut into cubes",
+      "1 onion - finely chopped",
+      "2 tomatoes - blended into puree",
+      "1 tbsp ginger-garlic paste",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp coriander powder",
+      "2 tbsp oil",
       "Salt to taste",
-      "Fresh coriander leaves for garnish"
+      "Fresh coriander"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and onions. Sauté for 5-6 minutes until onions are golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until the raw smell disappears.",
-      "Add tomato puree and cook for 5-7 minutes until oil separates from the masala.",
-      "Add turmeric powder, red chili powder, coriander powder, and salt. Mix well and cook for 2 minutes.",
-      "Add cubed eggplants and mix gently to coat with masala.",
-      "Add 1/2 cup warm water. Cover and cook on medium heat for 15-20 minutes until eggplants are tender.",
-      "Garnish with fresh coriander. Serve hot with roti or rice."
+      "Heat oil. Add cumin seeds and onions. Fry until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes.",
+      "Add tomato puree and cook until oil separates.",
+      "Add turmeric, red chili, coriander powder, and salt. Cook for 2 minutes.",
+      "Add eggplants and mix gently. Add 1/2 cup warm water. Cover and cook for 15-20 minutes.",
+      "Garnish with coriander. Serve with roti or rice."
     ],
     difficulty: "Medium",
     cookingTime: 30,
     isActive: true,
     isHalal: true,
-    description: "A spicy and tangy Pakistani eggplant curry that's rich in flavor and perfect with roti or rice.",
+    description: "Spicy tangy eggplant curry. Rich flavor, great with roti or rice.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -813,38 +767,36 @@ const recipesToMigrate = [
   },
   {
     title: "Baingan Ka Salan",
-   
     image: "http://localhost:5000/uploads/baingan-ka-salan.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "2 medium eggplants (baingan) - slit lengthwise but not cut through",
-      "1 medium onion - finely chopped",
-      "2 tablespoons roasted peanuts",
-      "1 tablespoon white sesame seeds",
-      "1 tablespoon desiccated coconut",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 teaspoon coriander powder",
-      "2 tablespoons cooking oil",
+      "2 medium eggplants - slit lengthwise but not cut through",
+      "1 onion - finely chopped",
+      "2 tbsp roasted peanuts",
+      "1 tbsp white sesame seeds",
+      "1 tbsp desiccated coconut",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp coriander powder",
+      "2 tbsp oil",
       "Salt to taste",
-      "1 tablespoon tamarind pulp (optional)"
+      "1 tbsp tamarind pulp (optional)"
     ],
     stepsRaw: [
-      "Make a fine paste of roasted peanuts, sesame seeds, and coconut with a little water. Set aside.",
-      "Heat oil in a pan over medium heat. Fry slit eggplants for 5-7 minutes until soft. Remove and set aside.",
-      "In the same oil, add cumin seeds and onions. Sauté for 5-6 minutes until onions are golden brown.",
-      "Add turmeric powder, red chili powder, coriander powder, and salt. Cook for 1 minute.",
+      "Make a fine paste of peanuts, sesame seeds, and coconut with a little water. Set aside.",
+      "Heat oil. Fry slit eggplants for 5-7 minutes until soft. Remove and set aside.",
+      "In the same oil, add cumin seeds and onions. Fry until golden brown.",
+      "Add turmeric, red chili, coriander powder, and salt. Cook for 1 minute.",
       "Add the peanut-sesame paste and cook for 5 minutes until oil separates.",
-      "Add 1 cup warm water and bring to a boil.",
-      "Add fried eggplants and tamarind pulp if using.",
-      "Simmer for 10 minutes until the gravy thickens. Serve hot with rice or roti."
+      "Add 1 cup warm water and bring to a boil. Add fried eggplants and tamarind if using.",
+      "Simmer for 10 minutes. Serve with rice or roti."
     ],
     difficulty: "Hard",
     cookingTime: 40,
     isActive: true,
     isHalal: true,
-    description: "A rich and flavorful Hyderabadi-style Pakistani eggplant curry with a peanut and sesame seed gravy.",
+    description: "Rich Hyderabadi-style eggplant curry with peanut and sesame gravy.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -869,33 +821,32 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/bharwa-baingan.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "8 small eggplants (baingan) - slit crosswise, keeping stem intact",
-      "1 medium onion - finely chopped",
-      "2 tablespoons roasted peanuts - crushed",
-      "1 tablespoon white sesame seeds",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 teaspoon coriander powder",
-      "1 teaspoon dry mango powder (amchur)",
-      "2 tablespoons cooking oil",
+      "8 small eggplants - slit crosswise, keep stem intact",
+      "1 onion - finely chopped",
+      "2 tbsp roasted peanuts - crushed",
+      "1 tbsp white sesame seeds",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp coriander powder",
+      "1 tsp dry mango powder (amchur)",
+      "2 tbsp oil",
       "Salt to taste",
-      "Fresh coriander leaves for garnish"
+      "Fresh coriander"
     ],
     stepsRaw: [
-      "Mix crushed peanuts, sesame seeds, turmeric powder, red chili powder, coriander powder, amchur powder, and salt to make the stuffing.",
-      "Carefully stuff this mixture into the slit eggplants, keeping them intact.",
-      "Heat oil in a wide pan over medium heat. Add cumin seeds and chopped onions. Sauté for 4-5 minutes until onions are golden.",
-      "Gently place the stuffed eggplants in the pan in a single layer.",
-      "Cover and cook on very low heat for 20-25 minutes, turning occasionally to cook evenly on all sides.",
-      "Cook until eggplants are tender and the masala is dry.",
-      "Garnish with fresh coriander. Serve hot with roti."
+      "Mix crushed peanuts, sesame seeds, turmeric, red chili, coriander powder, amchur, and salt to make stuffing.",
+      "Stuff this mixture into the slit eggplants carefully.",
+      "Heat oil in a wide pan. Add cumin seeds and onions. Fry for 4-5 minutes.",
+      "Gently place stuffed eggplants in the pan in a single layer.",
+      "Cover and cook on very low heat for 20-25 minutes, turning occasionally.",
+      "Cook until eggplants are tender. Garnish with coriander. Serve with roti."
     ],
     difficulty: "Hard",
     cookingTime: 35,
     isActive: true,
     isHalal: true,
-    description: "A delicious Pakistani stuffed eggplant dish filled with a spicy peanut and sesame masala, cooked to perfection.",
+    description: "Stuffed eggplant with spicy peanut and sesame masala. Delicious with roti.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -917,29 +868,28 @@ const recipesToMigrate = [
   },
   {
     title: "Aloo Zeera",
-   
     image: "http://localhost:5000/uploads/aloo-zeera.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "4 medium potatoes - boiled and cubed",
-      "2 teaspoons cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "2 tablespoons cooking oil",
+      "4 potatoes - boiled and cubed",
+      "2 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "2 tbsp oil",
       "Salt to taste",
-      "Fresh coriander leaves for garnish"
+      "Fresh coriander"
     ],
     stepsRaw: [
-      "Heat oil in a pan. Add cumin seeds and let them crackle until fragrant.",
-      "Add boiled potatoes, turmeric powder, red chili powder, and salt.",
-      "Stir fry for 5-7 minutes until potatoes are lightly golden and coated with spices.",
-      "Garnish with fresh coriander leaves and serve hot."
+      "Heat oil. Add cumin seeds and let them crackle.",
+      "Add boiled potatoes, turmeric, red chili, and salt.",
+      "Stir fry for 5-7 minutes until potatoes are lightly golden.",
+      "Garnish with coriander. Serve hot."
     ],
     difficulty: "Easy",
     cookingTime: 15,
     isActive: true,
     isHalal: true,
-    description: "A simple and aromatic potato stir-fry where cumin seeds take center stage.",
+    description: "Simple potato stir-fry where cumin is the star flavor.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -959,38 +909,34 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-  
- 
   {
     title: "Aloo Rasedar",
-    
     image: "http://localhost:5000/uploads/aloo-rasedar.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "4 medium potatoes - cut into cubes",
+      "4 potatoes - cut into cubes",
       "2 tomatoes - pureed",
       "1 onion - finely chopped",
-      "1 teaspoon ginger-garlic paste",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "2 tablespoons cooking oil",
+      "1 tsp ginger-garlic paste",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "2 tbsp oil",
       "Salt to taste",
-      "Fresh coriander leaves"
+      "Fresh coriander"
     ],
     stepsRaw: [
-      "Heat oil in a pan. Add cumin seeds and onions. Sauté until golden.",
+      "Heat oil. Add cumin seeds and onions. Fry until golden.",
       "Add ginger-garlic paste and cook for 1 minute.",
       "Add tomato puree and cook until oil separates.",
-      "Add spices and cook for 1 minute.",
-      "Add potatoes and 2 cups water. Cover and cook until potatoes are tender.",
-      "Garnish with coriander and serve with rice or roti."
+      "Add spices and cook for 1 minute. Add potatoes and 2 cups water.",
+      "Cover and cook until potatoes are tender. Garnish with coriander. Serve with rice or roti."
     ],
     difficulty: "Easy",
     cookingTime: 25,
     isActive: true,
     isHalal: true,
-    description: "A comforting potato curry with a thin, flavorful gravy, perfect for soaking up with rice or roti.",
+    description: "Comforting potato curry with thin gravy. Great for soaking up with rice or roti.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1010,33 +956,29 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-  
-  // ==================== RECIPE 21: Aloo Hari Mirch ====================
   {
     title: "Aloo Hari Mirch",
-   
     image: "http://localhost:5000/uploads/aloo-hari-mirch.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "4 medium potatoes - boiled and cubed",
+      "4 potatoes - boiled and cubed",
       "4-5 green chilies - slit",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "2 tablespoons cooking oil",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "2 tbsp oil",
       "Salt to taste"
     ],
     stepsRaw: [
-      "Heat oil in a pan. Add cumin seeds and let them crackle.",
-      "Add green chilies and sauté for 1 minute.",
+      "Heat oil. Add cumin seeds and let them crackle.",
+      "Add green chilies and fry for 1 minute.",
       "Add boiled potatoes, turmeric, and salt.",
-      "Stir fry for 5-7 minutes until potatoes are well coated.",
-      "Serve hot with roti or paratha."
+      "Stir fry for 5-7 minutes. Serve with roti or paratha."
     ],
     difficulty: "Easy",
     cookingTime: 15,
     isActive: true,
     isHalal: true,
-    description: "A fiery and simple potato dish for those who love spice, made with fresh green chilies.",
+    description: "Spicy potato dish for those who love heat. Made with fresh green chilies.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1056,37 +998,32 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-  
-
   {
     title: "Aloo Adraki",
-   
     image: "http://localhost:5000/uploads/aloo-adraki.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "4 medium potatoes - cubed",
-      "2 tablespoons ginger - julienned",
+      "4 potatoes - cubed",
+      "2 tbsp ginger - julienned",
       "1 onion - finely chopped",
       "1 tomato - chopped",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "2 tablespoons cooking oil",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "2 tbsp oil",
       "Salt to taste"
     ],
     stepsRaw: [
-      "Heat oil in a pan. Add cumin seeds and onions. Sauté until golden.",
-      "Add ginger and cook for 1 minute.",
-      "Add tomatoes and cook until soft.",
-      "Add spices and cook for 1 minute.",
-      "Add potatoes and 1 cup water. Cover and cook until tender.",
-      "Serve hot with roti."
+      "Heat oil. Add cumin seeds and onions. Fry until golden.",
+      "Add ginger and cook for 1 minute. Add tomatoes and cook until soft.",
+      "Add spices and cook for 1 minute. Add potatoes and 1 cup water.",
+      "Cover and cook until tender. Serve with roti."
     ],
     difficulty: "Medium",
     cookingTime: 30,
     isActive: true,
     isHalal: true,
-    description: "A warming potato curry with the distinct and refreshing flavor of fresh ginger.",
+    description: "Warming potato curry with fresh ginger flavor.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1106,34 +1043,31 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-  
   {
     title: "Bhindi Fry",
-    
     image: "http://localhost:5000/uploads/bhindi-fry.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g fresh bhindi - sliced into rounds",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "1 teaspoon chaat masala",
-      "3 tablespoons cooking oil",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp chaat masala",
+      "3 tbsp oil",
       "Salt to taste"
     ],
     stepsRaw: [
       "Wash and dry bhindi thoroughly.",
-      "Heat oil in a pan. Add cumin seeds and let them crackle.",
-      "Add sliced bhindi and fry on medium heat for 10-12 minutes until crispy.",
-      "Add turmeric, red chili powder, chaat masala, and salt.",
-      "Mix well and fry for 2-3 more minutes.",
+      "Heat oil. Add cumin seeds and let them crackle.",
+      "Add bhindi and fry on medium heat for 10-12 minutes until crispy.",
+      "Add turmeric, red chili, chaat masala, and salt. Mix well and fry for 2-3 more minutes.",
       "Serve hot as a side dish."
     ],
     difficulty: "Easy",
     cookingTime: 20,
     isActive: true,
     isHalal: true,
-    description: "The simplest and most delicious way to enjoy okra, fried until crispy with basic spices.",
+    description: "Simple and delicious crispy fried okra with basic spices.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1153,35 +1087,33 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-
   {
     title: "Bhindi Tomato",
     image: "http://localhost:5000/uploads/bindhi-tomato.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g fresh bhindi - sliced",
-      "3 medium tomatoes - finely chopped",
+      "3 tomatoes - finely chopped",
       "1 onion - finely chopped",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon red chili powder",
-      "2 tablespoons cooking oil",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "2 tbsp oil",
       "Salt to taste",
-      "Fresh coriander leaves"
+      "Fresh coriander"
     ],
     stepsRaw: [
-      "Heat oil in a pan. Add cumin seeds and onions. Sauté until golden.",
+      "Heat oil. Add cumin seeds and onions. Fry until golden.",
       "Add tomatoes and cook until soft and mushy.",
-      "Add turmeric, red chili powder, and salt. Cook for 2 minutes.",
-      "Add sliced bhindi and mix gently.",
-      "Cover and cook for 10-12 minutes until bhindi is tender.",
-      "Garnish with fresh coriander and serve hot."
+      "Add turmeric, red chili, and salt. Cook for 2 minutes.",
+      "Add bhindi and mix gently. Cover and cook for 10-12 minutes.",
+      "Garnish with coriander. Serve hot."
     ],
     difficulty: "Medium",
     cookingTime: 25,
     isActive: true,
     isHalal: true,
-    description: "A tangy and flavorful okra curry where the tomatoes shine through.",
+    description: "Tangy okra curry where tomatoes shine through.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1201,35 +1133,31 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-  
-  // ==================== RECIPE 25: Baingan Fry ====================
   {
     title: "Baingan Fry",
-   
     image: "http://localhost:5000/uploads/baingan-fry.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "2 medium eggplants - sliced into rounds",
       "1/2 cup gram flour (besan)",
-      "1 teaspoon red chili powder",
-      "1/2 teaspoon turmeric powder",
-      "1 teaspoon chaat masala",
+      "1 tsp red chili powder",
+      "1/2 tsp turmeric powder",
+      "1 tsp chaat masala",
       "Oil for shallow frying",
       "Salt to taste"
     ],
     stepsRaw: [
-      "In a bowl, mix gram flour, red chili powder, turmeric, chaat masala, and salt.",
+      "Mix gram flour, red chili, turmeric, chaat masala, and salt in a bowl.",
       "Add water to make a thick batter.",
       "Dip eggplant slices in the batter to coat well.",
-      "Heat oil in a shallow pan. Shallow fry coated eggplant slices until golden and crispy on both sides.",
-      "Remove and drain on paper towels.",
+      "Heat oil in a pan. Shallow fry coated slices until golden and crispy on both sides.",
       "Serve hot as a snack or side dish."
     ],
     difficulty: "Easy",
     cookingTime: 20,
     isActive: true,
     isHalal: true,
-    description: "Crispy, golden-fried eggplant slices coated in a spiced gram flour batter.",
+    description: "Crispy golden fried eggplant slices in spiced gram flour batter.",
     category: "Snacks",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1249,37 +1177,34 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
- 
   {
     title: "Baingan Tamatar",
-   
     image: "http://localhost:5000/uploads/baingan-tamatar.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "2 medium eggplants - cubed",
-      "3 medium tomatoes - pureed",
+      "3 tomatoes - pureed",
       "1 onion - finely chopped",
-      "1 teaspoon ginger-garlic paste",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric",
-      "1 teaspoon red chili powder",
-      "2 tablespoons oil",
+      "1 tsp ginger-garlic paste",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric",
+      "1 tsp red chili powder",
+      "2 tbsp oil",
       "Salt to taste",
       "Fresh coriander"
     ],
     stepsRaw: [
-      "Heat oil. Add cumin seeds and onions. Sauté until golden.",
+      "Heat oil. Add cumin seeds and onions. Fry until golden.",
       "Add ginger-garlic paste and cook for 1 minute.",
       "Add tomato puree and cook until oil separates.",
-      "Add spices and cook for 2 minutes.",
-      "Add eggplant cubes and 1/2 cup water. Cover and cook until tender.",
-      "Garnish with coriander and serve hot."
+      "Add spices and cook for 2 minutes. Add eggplants and 1/2 cup water.",
+      "Cover and cook until tender. Garnish with coriander. Serve hot."
     ],
     difficulty: "Medium",
     cookingTime: 25,
     isActive: true,
     isHalal: true,
-    description: "A simple and tangy eggplant curry where the tomato gravy is the star.",
+    description: "Simple tangy eggplant curry with tomato gravy.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1299,8 +1224,6 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-  
- 
   {
     title: "Mix Vegetable Curry",
     image: "http://localhost:5000/uploads/mix-vegetable-curry.png",
@@ -1312,27 +1235,27 @@ const recipesToMigrate = [
       "1 cup potato cubes",
       "2 onions - finely chopped",
       "2 tomatoes - pureed",
-      "2 tablespoons ginger-garlic paste",
-      "1 teaspoon cumin seeds",
-      "1 teaspoon turmeric",
-      "2 teaspoons red chili powder",
-      "1 teaspoon garam masala",
-      "1/2 cup cooking oil",
+      "2 tbsp ginger-garlic paste",
+      "1 tsp cumin seeds",
+      "1 tsp turmeric",
+      "2 tsp red chili powder",
+      "1 tsp garam masala",
+      "1/2 cup oil",
       "Salt to taste"
     ],
     stepsRaw: [
-      "Heat oil. Add cumin seeds and onions. Sauté until golden.",
+      "Heat oil. Add cumin seeds and onions. Fry until golden.",
       "Add ginger-garlic paste and cook for 2 minutes.",
       "Add tomato puree and cook until oil separates.",
-      "Add turmeric, red chili powder, and salt. Cook for 2 minutes.",
-      "Add all vegetables and 1 cup water. Cover and cook for 20 minutes until tender.",
-      "Sprinkle garam masala and serve hot with roti or rice."
+      "Add turmeric, red chili, and salt. Cook for 2 minutes.",
+      "Add all vegetables and 1 cup water. Cover and cook for 20 minutes.",
+      "Sprinkle garam masala. Serve with roti or rice."
     ],
     difficulty: "Medium",
     cookingTime: 35,
     isActive: true,
     isHalal: true,
-    description: "A hearty and wholesome curry made with a medley of seasonal vegetables.",
+    description: "Hearty curry made with a mix of seasonal vegetables.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1352,11 +1275,8 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-  
-  // ==================== RECIPE 28: Vegetable Jalfrezi ====================
   {
     title: "Vegetable Jalfrezi",
-    
     image: "http://localhost:5000/uploads/vegetable-jalfrezi.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
@@ -1364,26 +1284,26 @@ const recipesToMigrate = [
       "1 cup onion strips",
       "1 cup tomato wedges",
       "1 cup cauliflower florets",
-      "2 tablespoons ginger-garlic paste",
-      "1 teaspoon cumin seeds",
-      "1 teaspoon red chili powder",
-      "1 teaspoon garam masala",
-      "1 tablespoon soy sauce",
-      "3 tablespoons oil",
+      "2 tbsp ginger-garlic paste",
+      "1 tsp cumin seeds",
+      "1 tsp red chili powder",
+      "1 tsp garam masala",
+      "1 tbsp soy sauce",
+      "3 tbsp oil",
       "Salt to taste"
     ],
     stepsRaw: [
       "Heat oil in a wok. Add cumin seeds and ginger-garlic paste.",
       "Add all vegetables and stir-fry on high heat for 5-7 minutes.",
-      "Add red chili powder, garam masala, soy sauce, and salt.",
+      "Add red chili, garam masala, soy sauce, and salt.",
       "Stir-fry for 3-4 more minutes until vegetables are tender-crisp.",
-      "Serve hot with roti or naan."
+      "Serve with roti or naan."
     ],
     difficulty: "Medium",
     cookingTime: 20,
     isActive: true,
     isHalal: true,
-    description: "A quick, Indo-Chinese style stir-fry with crisp vegetables in a spicy, tangy sauce.",
+    description: "Quick Indo-Chinese style stir-fry with crisp vegetables in spicy sauce.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1403,35 +1323,32 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-
   {
     title: "Tava Vegetable",
-  
     image: "http://localhost:5000/uploads/tawa-vegetable.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "2 cups mixed diced vegetables (potato, cauliflower, capsicum)",
       "1 onion - sliced",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric",
-      "1 teaspoon red chili powder",
-      "1 teaspoon dry mango powder",
-      "3 tablespoons oil",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric",
+      "1 tsp red chili powder",
+      "1 tsp dry mango powder",
+      "3 tbsp oil",
       "Salt to taste"
     ],
     stepsRaw: [
       "Heat oil on a tava/griddle. Add cumin seeds.",
-      "Add onions and sauté for 2 minutes.",
+      "Add onions and fry for 2 minutes.",
       "Add all vegetables and stir-fry for 15-20 minutes until cooked.",
-      "Add all spices and mix well.",
-      "Cook for 5 more minutes until dry and roasted.",
-      "Serve hot with roti or paratha."
+      "Add all spices and mix well. Cook for 5 more minutes until dry and roasted.",
+      "Serve with roti or paratha."
     ],
     difficulty: "Easy",
     cookingTime: 25,
     isActive: true,
     isHalal: true,
-    description: "A simple, dry-roasted vegetable dish made on a griddle, perfect for a light meal.",
+    description: "Simple dry-roasted vegetable dish made on a griddle.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1453,7 +1370,6 @@ const recipesToMigrate = [
   },
   {
     title: "Kadai Vegetable",
-   
     image: "http://localhost:5000/uploads/kadai-vegetable.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
@@ -1461,27 +1377,26 @@ const recipesToMigrate = [
       "2 tomatoes - chopped",
       "1 capsicum - sliced",
       "1 onion - sliced",
-      "2 tablespoons ginger-garlic paste",
-      "1 teaspoon cumin seeds",
-      "1 teaspoon coriander seeds - crushed",
-      "1 teaspoon red chili powder",
-      "1 teaspoon garam masala",
-      "3 tablespoons oil",
+      "2 tbsp ginger-garlic paste",
+      "1 tsp cumin seeds",
+      "1 tsp coriander seeds - crushed",
+      "1 tsp red chili powder",
+      "1 tsp garam masala",
+      "3 tbsp oil",
       "Salt to taste"
     ],
     stepsRaw: [
       "Heat oil in a kadai/wok. Add cumin seeds and crushed coriander.",
-      "Add onions and sauté for 3 minutes.",
-      "Add ginger-garlic paste and cook for 1 minute.",
+      "Add onions and fry for 3 minutes. Add ginger-garlic paste and cook for 1 minute.",
       "Add tomatoes and capsicum. Cook for 5 minutes.",
       "Add all vegetables and spices. Stir-fry for 10-12 minutes.",
-      "Sprinkle garam masala and serve hot with naan."
+      "Sprinkle garam masala. Serve with naan."
     ],
     difficulty: "Medium",
     cookingTime: 25,
     isActive: true,
     isHalal: true,
-    description: "A restaurant-style dish where vegetables are cooked in a wok with a distinct, aromatic masala.",
+    description: "Restaurant-style vegetables cooked in a wok with aromatic masala.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1501,11 +1416,8 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-  
- 
   {
     title: "Matar Paneer",
-   
     image: "http://localhost:5000/uploads/matar-paneer.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
@@ -1513,29 +1425,28 @@ const recipesToMigrate = [
       "1 cup green peas",
       "2 onions - finely chopped",
       "2 tomatoes - pureed",
-      "2 tablespoons ginger-garlic paste",
-      "1 teaspoon cumin seeds",
-      "1 teaspoon turmeric",
-      "2 teaspoons red chili powder",
-      "1 teaspoon garam masala",
+      "2 tbsp ginger-garlic paste",
+      "1 tsp cumin seeds",
+      "1 tsp turmeric",
+      "2 tsp red chili powder",
+      "1 tsp garam masala",
       "1/2 cup cream",
-      "3 tablespoons oil",
+      "3 tbsp oil",
       "Salt to taste"
     ],
     stepsRaw: [
-      "Heat oil. Add cumin seeds and onions. Sauté until golden.",
+      "Heat oil. Add cumin seeds and onions. Fry until golden.",
       "Add ginger-garlic paste and cook for 2 minutes.",
       "Add tomato puree and cook until oil separates.",
-      "Add turmeric, red chili powder, and salt. Cook for 2 minutes.",
+      "Add turmeric, red chili, and salt. Cook for 2 minutes.",
       "Add peas and 1/2 cup water. Cook for 5 minutes.",
-      "Add paneer cubes and cream. Simmer for 5 minutes.",
-      "Sprinkle garam masala and serve hot with naan or rice."
+      "Add paneer and cream. Simmer for 5 minutes. Sprinkle garam masala. Serve with naan or rice."
     ],
     difficulty: "Medium",
     cookingTime: 30,
     isActive: true,
     isHalal: true,
-    description: "A classic North Indian dish of soft paneer and green peas in a rich, creamy tomato gravy.",
+    description: "Classic dish of soft paneer and peas in creamy tomato gravy.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1555,40 +1466,36 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-  
-  
   {
     title: "Shimla Mirch Masala",
-    
     image: "http://localhost:5000/uploads/shimla-mirch-masala.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "4 large capsicums - sliced into strips",
       "2 onions - finely chopped",
       "2 tomatoes - pureed",
-      "1 tablespoon ginger-garlic paste",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric",
-      "1 teaspoon red chili powder",
-      "1 teaspoon garam masala",
+      "1 tbsp ginger-garlic paste",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric",
+      "1 tsp red chili powder",
+      "1 tsp garam masala",
       "1/4 cup cream",
-      "3 tablespoons oil",
+      "3 tbsp oil",
       "Salt to taste"
     ],
     stepsRaw: [
-      "Heat oil. Add cumin seeds and onions. Sauté until golden.",
+      "Heat oil. Add cumin seeds and onions. Fry until golden.",
       "Add ginger-garlic paste and cook for 2 minutes.",
       "Add tomato puree and cook until oil separates.",
-      "Add turmeric, red chili powder, and salt. Cook for 2 minutes.",
+      "Add turmeric, red chili, and salt. Cook for 2 minutes.",
       "Add capsicum strips and stir-fry for 5 minutes.",
-      "Add cream and 1/2 cup water. Simmer for 10 minutes.",
-      "Sprinkle garam masala and serve hot with naan."
+      "Add cream and 1/2 cup water. Simmer for 10 minutes. Sprinkle garam masala. Serve with naan."
     ],
     difficulty: "Medium",
     cookingTime: 25,
     isActive: true,
     isHalal: true,
-    description: "A creamy and flavorful capsicum curry that's perfect with naan or roti.",
+    description: "Creamy capsicum curry that's perfect with naan or roti.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1614,31 +1521,29 @@ const recipesToMigrate = [
     cuisine: "Pakistani",
     ingredientsRaw: [
       "2 cups lauki (bottle gourd) - peeled and cubed",
-      "1/2 cup chana dal (Bengal gram) - soaked for 2 hours",
+      "1/2 cup chana dal - soaked for 2 hours",
       "1 onion - finely chopped",
       "2 tomatoes - finely chopped",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric",
-      "1 teaspoon red chili powder",
-      "1 teaspoon garam masala",
-      "2 tablespoons oil",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric",
+      "1 tsp red chili powder",
+      "1 tsp garam masala",
+      "2 tbsp oil",
       "Salt to taste",
-      "Fresh coriander for garnish"
+      "Fresh coriander"
     ],
     stepsRaw: [
       "Pressure cook chana dal with 2 cups water for 3 whistles. Set aside.",
-      "Heat oil. Add cumin seeds and onions. Sauté until golden.",
-      "Add tomatoes and cook until soft.",
-      "Add spices and cook for 2 minutes.",
-      "Add lauki cubes and cook for 5 minutes.",
-      "Add cooked chana dal and 1 cup water. Simmer for 10 minutes.",
-      "Sprinkle garam masala and garnish with coriander. Serve with rice."
+      "Heat oil. Add cumin seeds and onions. Fry until golden.",
+      "Add tomatoes and cook until soft. Add spices and cook for 2 minutes.",
+      "Add lauki and cook for 5 minutes. Add cooked dal and 1 cup water. Simmer for 10 minutes.",
+      "Sprinkle garam masala and coriander. Serve with rice."
     ],
     difficulty: "Medium",
     cookingTime: 30,
     isActive: true,
     isHalal: true,
-    description: "A healthy and nutritious curry made with bottle gourd and Bengal gram.",
+    description: "Healthy and nutritious curry with bottle gourd and Bengal gram.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1658,36 +1563,33 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-  
   {
     title: "Tori Ki Sabzi",
-  
     image: "http://localhost:5000/uploads/tori-ki-sabzi.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "4 medium tori (ridge gourd) - peeled and sliced",
       "1 onion - finely chopped",
       "2 tomatoes - finely chopped",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric",
-      "1 teaspoon red chili powder",
-      "1 teaspoon coriander powder",
-      "2 tablespoons oil",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric",
+      "1 tsp red chili powder",
+      "1 tsp coriander powder",
+      "2 tbsp oil",
       "Salt to taste"
     ],
     stepsRaw: [
-      "Heat oil. Add cumin seeds and onions. Sauté until golden.",
+      "Heat oil. Add cumin seeds and onions. Fry until golden.",
       "Add tomatoes and cook until soft.",
       "Add spices and cook for 2 minutes.",
-      "Add tori slices and mix well.",
-      "Cover and cook for 10-12 minutes until tender.",
-      "Serve hot with roti."
+      "Add tori slices and mix well. Cover and cook for 10-12 minutes.",
+      "Serve with roti."
     ],
     difficulty: "Easy",
     cookingTime: 20,
     isActive: true,
     isHalal: true,
-    description: "A simple and light ridge gourd stir-fry that's perfect for a healthy meal.",
+    description: "Simple light ridge gourd stir-fry. Perfect for a healthy meal.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1707,35 +1609,32 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-  
-  
   {
     title: "Karela Fry",
-   
     image: "http://localhost:5000/uploads/karela-fry.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "4 medium karela (bitter gourd) - thinly sliced",
       "1 onion - thinly sliced",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric",
-      "1 teaspoon red chili powder",
-      "1 teaspoon amchur powder",
-      "3 tablespoons oil",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric",
+      "1 tsp red chili powder",
+      "1 tsp amchur powder",
+      "3 tbsp oil",
       "Salt to taste"
     ],
     stepsRaw: [
       "Rub karela slices with salt and keep for 30 minutes. Rinse and squeeze out bitter juice.",
-      "Heat oil. Add cumin seeds and onions. Sauté until golden.",
+      "Heat oil. Add cumin seeds and onions. Fry until golden.",
       "Add karela slices and fry for 10-12 minutes until crispy.",
-      "Add turmeric, red chili powder, amchur, and salt. Mix well.",
-      "Fry for 2-3 more minutes and serve hot."
+      "Add turmeric, red chili, amchur, and salt. Mix well. Fry for 2-3 more minutes.",
+      "Serve hot."
     ],
     difficulty: "Medium",
     cookingTime: 25,
     isActive: true,
     isHalal: true,
-    description: "Crispy fried bitter gourd that's perfect for diabetes management.",
+    description: "Crispy fried bitter gourd. Good for diabetes management.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1755,35 +1654,33 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-
   {
     title: "Ghia Rasedar",
-  
     image: "http://localhost:5000/uploads/ghia-rasedar.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "3 cups lauki (bottle gourd) - peeled and grated",
       "1 onion - finely chopped",
       "2 tomatoes - pureed",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric",
-      "1 teaspoon red chili powder",
-      "2 tablespoons oil",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric",
+      "1 tsp red chili powder",
+      "2 tbsp oil",
       "Salt to taste",
       "Fresh coriander"
     ],
     stepsRaw: [
-      "Heat oil. Add cumin seeds and onions. Sauté until golden.",
+      "Heat oil. Add cumin seeds and onions. Fry until golden.",
       "Add tomato puree and cook until oil separates.",
       "Add spices and cook for 2 minutes.",
       "Add grated lauki and 1 cup water. Cook for 10-15 minutes.",
-      "Garnish with coriander and serve with rice."
+      "Garnish with coriander. Serve with rice."
     ],
     difficulty: "Easy",
     cookingTime: 20,
     isActive: true,
     isHalal: true,
-    description: "A light and comforting bottle gourd curry with thin gravy, perfect with rice.",
+    description: "Light comforting bottle gourd curry with thin gravy. Perfect with rice.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1803,10 +1700,8 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-  
   {
     title: "Palak Dal",
-    
     image: "http://localhost:5000/uploads/palak-daal.png",
     cuisine: "Pakistani",
     ingredientsRaw: [
@@ -1814,26 +1709,25 @@ const recipesToMigrate = [
       "2 cups fresh spinach - chopped",
       "1 onion - finely chopped",
       "2 tomatoes - finely chopped",
-      "1 teaspoon cumin seeds",
-      "1/2 teaspoon turmeric",
-      "1 teaspoon red chili powder",
-      "1 teaspoon garam masala",
-      "2 tablespoons ghee or oil",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric",
+      "1 tsp red chili powder",
+      "1 tsp garam masala",
+      "2 tbsp ghee or oil",
       "Salt to taste"
     ],
     stepsRaw: [
       "Pressure cook dal with 3 cups water for 3 whistles.",
-      "Heat ghee. Add cumin seeds and onions. Sauté until golden.",
-      "Add tomatoes and cook until soft.",
-      "Add spinach and cook for 2-3 minutes until wilted.",
+      "Heat ghee. Add cumin seeds and onions. Fry until golden.",
+      "Add tomatoes and cook until soft. Add spinach and cook for 2-3 minutes until wilted.",
       "Add spices and cooked dal. Simmer for 5-10 minutes.",
-      "Sprinkle garam masala and serve with rice or roti."
+      "Sprinkle garam masala. Serve with rice or roti."
     ],
     difficulty: "Medium",
     cookingTime: 25,
     isActive: true,
     isHalal: true,
-    description: "A protein-packed spinach and lentil curry that's healthy and delicious.",
+    description: "Protein-packed spinach and lentil curry. Healthy and delicious.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1853,42 +1747,39 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-  
-  
   {
     title: "Chana Masala",
-   
     image: "http://localhost:5000/uploads/chana-masala.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "2 cups chickpeas (chana) - soaked overnight",
       "2 onions - finely chopped",
       "2 tomatoes - pureed",
-      "1 tablespoon ginger-garlic paste",
-      "1 teaspoon cumin seeds",
-      "1 teaspoon coriander powder",
-      "1 teaspoon red chili powder",
-      "1/2 teaspoon turmeric",
-      "1 teaspoon garam masala",
-      "1 teaspoon chana masala powder",
-      "3 tablespoons oil",
+      "1 tbsp ginger-garlic paste",
+      "1 tsp cumin seeds",
+      "1 tsp coriander powder",
+      "1 tsp red chili powder",
+      "1/2 tsp turmeric",
+      "1 tsp garam masala",
+      "1 tsp chana masala powder",
+      "3 tbsp oil",
       "Salt to taste",
       "Fresh coriander"
     ],
     stepsRaw: [
       "Pressure cook chickpeas with salt for 4-5 whistles.",
-      "Heat oil. Add cumin seeds and onions. Sauté until golden.",
+      "Heat oil. Add cumin seeds and onions. Fry until golden.",
       "Add ginger-garlic paste and cook for 2 minutes.",
       "Add tomato puree and cook until oil separates.",
       "Add all spices and cook for 2 minutes.",
       "Add cooked chickpeas with water. Simmer for 10-15 minutes.",
-      "Garnish with coriander and serve with naan or rice."
+      "Garnish with coriander. Serve with naan or rice."
     ],
     difficulty: "Medium",
     cookingTime: 40,
     isActive: true,
     isHalal: true,
-    description: "A classic spicy chickpea curry that's hearty, protein-rich, and perfect with naan or rice.",
+    description: "Classic spicy chickpea curry. Hearty, protein-rich, perfect with naan or rice.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1908,40 +1799,38 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-  
   {
     title: "Rajma",
-   
     image: "http://localhost:5000/uploads/rajma.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "2 cups rajma (red kidney beans) - soaked overnight",
       "2 onions - finely chopped",
       "2 tomatoes - pureed",
-      "1 tablespoon ginger-garlic paste",
-      "1 teaspoon cumin seeds",
-      "1 teaspoon coriander powder",
-      "1 teaspoon red chili powder",
-      "1/2 teaspoon turmeric",
-      "1 teaspoon garam masala",
-      "3 tablespoons oil",
+      "1 tbsp ginger-garlic paste",
+      "1 tsp cumin seeds",
+      "1 tsp coriander powder",
+      "1 tsp red chili powder",
+      "1/2 tsp turmeric",
+      "1 tsp garam masala",
+      "3 tbsp oil",
       "Salt to taste",
       "Fresh coriander"
     ],
     stepsRaw: [
       "Pressure cook rajma with salt for 5-6 whistles until soft.",
-      "Heat oil. Add cumin seeds and onions. Sauté until golden.",
+      "Heat oil. Add cumin seeds and onions. Fry until golden.",
       "Add ginger-garlic paste and cook for 2 minutes.",
       "Add tomato puree and cook until oil separates.",
       "Add all spices and cook for 2 minutes.",
       "Add cooked rajma with water. Mash some beans for thick gravy.",
-      "Simmer for 10-15 minutes. Garnish with coriander and serve with rice."
+      "Simmer for 10-15 minutes. Garnish with coriander. Serve with rice."
     ],
     difficulty: "Medium",
     cookingTime: 45,
     isActive: true,
     isHalal: true,
-    description: "A comforting North Indian style red kidney bean curry that's perfect with steamed rice.",
+    description: "Comforting red kidney bean curry. Perfect with steamed rice.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -1961,11 +1850,8 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   },
-  
- 
   {
     title: "Vegetable Pulao",
- 
     image: "http://localhost:5000/uploads/vegetable-pulao.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
@@ -1973,28 +1859,27 @@ const recipesToMigrate = [
       "1 cup mixed vegetables (carrots, peas, cauliflower, beans)",
       "1 onion - thinly sliced",
       "2 green chilies - slit",
-      "1 teaspoon cumin seeds",
+      "1 tsp cumin seeds",
       "2-3 cloves",
       "1 inch cinnamon",
       "2 cardamom pods",
       "1 bay leaf",
-      "2 tablespoons oil or ghee",
+      "2 tbsp oil or ghee",
       "Salt to taste",
-      "Fresh coriander and mint for garnish"
+      "Fresh coriander and mint"
     ],
     stepsRaw: [
       "Heat oil in a pot. Add whole spices and cumin seeds.",
-      "Add onions and sauté until golden.",
-      "Add green chilies and mixed vegetables. Sauté for 2-3 minutes.",
+      "Add onions and fry until golden. Add green chilies and vegetables. Fry for 2-3 minutes.",
       "Add soaked rice and 3.5 cups water. Add salt.",
       "Cover and cook until rice is done and water is absorbed (about 15-20 minutes).",
-      "Garnish with fresh coriander and mint. Serve hot with raita."
+      "Garnish with coriander and mint. Serve hot with raita."
     ],
     difficulty: "Medium",
     cookingTime: 30,
     isActive: true,
     isHalal: true,
-    description: "A fragrant and flavorful rice dish loaded with mixed vegetables, perfect for a complete meal.",
+    description: "Fragrant rice dish loaded with mixed vegetables. Perfect for a complete meal.",
     category: "Lunch",
     subCategory: "plain-vegetables",
     dietType: "Vegetarian",
@@ -2024,14 +1909,14 @@ async function migrate() {
       throw new Error('MongoDB URI not found in environment variables');
     }
     
-    console.log('🔌 Connecting to MongoDB...');
+    console.log('Connecting to MongoDB...');
     
     await mongoose.connect(mongoURI, {
       serverSelectionTimeoutMS: 10000,
       family: 4
     });
     
-    console.log('✅ Connected to MongoDB!');
+    console.log('Connected to MongoDB!');
 
     let added = 0;
     let skipped = 0;
@@ -2040,20 +1925,20 @@ async function migrate() {
       const existing = await Recipe.findOne({ title: recipe.title });
       if (!existing) {
         await Recipe.create(recipe);
-        console.log(`✅ Added: ${recipe.title}`);
+        console.log(`Added: ${recipe.title}`);
         added++;
       } else {
-        console.log(`⚠️ Skipped: ${recipe.title} (already exists)`);
+        console.log(`Skipped: ${recipe.title} (already exists)`);
         skipped++;
       }
     }
 
-    console.log('\n🎉 Migration Complete!');
-    console.log(`📊 Added: ${added}, Skipped: ${skipped}`);
-    console.log(`📊 Total Plain Vegetable Recipes: ${added + skipped}`);
+    console.log('\nMigration Complete!');
+    console.log(`Added: ${added}, Skipped: ${skipped}`);
+    console.log(`Total Plain Vegetable Recipes: ${added + skipped}`);
     process.exit(0);
   } catch (error) {
-    console.error('❌ Error:', error);
+    console.error('Error:', error);
     process.exit(1);
   }
 }
