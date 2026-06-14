@@ -6,7 +6,6 @@ const VegMutton = () => {
   const navigate = useNavigate();
   const [vegMuttonRecipes, setVegMuttonRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [showDetailPanel, setShowDetailPanel] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -14,15 +13,9 @@ const VegMutton = () => {
   const [progress, setProgress] = useState(0);
   const speechSynthesisRef = useRef(null);
 
-  // ✅ FETCH ONLY MUTTON RECIPES (filter by title starting with "Mutton")
   useEffect(() => {
     fetch('http://localhost:5000/api/recipes/subCategory/plain-vegetables?limit=200')
-      .then(res => {
-        if (!res.ok) {
-          throw new Error('Failed to fetch mutton recipes');
-        }
-        return res.json();
-      })
+      .then(res => res.json())
       .then(data => {
         // Filter: Only show recipes that start with "Mutton"
         const muttonOnly = (data.recipes || []).filter(recipe => 
@@ -33,13 +26,11 @@ const VegMutton = () => {
       })
       .catch(error => {
         console.error('Error fetching mutton recipes:', error);
-        setError(error.message);
         setLoading(false);
       });
   }, []);
 
-  // Voice instructions handler
-  const speakInstructions = (steps, stepIndex = 0) => {
+  const speakInstructions = (instructions, stepIndex = 0) => {
     if ('speechSynthesis' in window) {
       if (speechSynthesisRef.current && isPlaying) {
         window.speechSynthesis.cancel();
@@ -49,32 +40,17 @@ const VegMutton = () => {
         speechSynthesisRef.current = null;
         return;
       }
-
-      if (stepIndex >= 0 && stepIndex < steps.length) {
+      if (stepIndex >= 0 && stepIndex < instructions.length) {
         const utterance = new SpeechSynthesisUtterance();
-        utterance.text = `Step ${stepIndex + 1}: ${steps[stepIndex]}`;
+        utterance.text = `Step ${stepIndex + 1}: ${instructions[stepIndex]}`;
         utterance.rate = 1.0;
         utterance.pitch = 1;
         utterance.volume = 1;
-        
         setCurrentStep(stepIndex + 1);
-        const stepProgress = ((stepIndex + 1) / steps.length) * 100;
-        setProgress(stepProgress);
-        
-        utterance.onstart = () => {
-          setIsPlaying(true);
-        };
-        
-        utterance.onend = () => {
-          setIsPlaying(false);
-          speechSynthesisRef.current = null;
-        };
-        
-        utterance.onerror = () => {
-          setIsPlaying(false);
-          speechSynthesisRef.current = null;
-        };
-        
+        setProgress(((stepIndex + 1) / instructions.length) * 100);
+        utterance.onstart = () => setIsPlaying(true);
+        utterance.onend = () => { setIsPlaying(false); speechSynthesisRef.current = null; };
+        utterance.onerror = () => { setIsPlaying(false); speechSynthesisRef.current = null; };
         speechSynthesisRef.current = utterance;
         window.speechSynthesis.speak(utterance);
       }
@@ -124,11 +100,6 @@ const VegMutton = () => {
     setProgress(0);
   };
 
-  const handleGoBack = () => {
-    navigate('/');
-  };
-
-  // Loading state
   if (loading) {
     return (
       <div className="veg-mutton-page">
@@ -140,20 +111,9 @@ const VegMutton = () => {
     );
   }
 
-  // Error state
-  if (error) {
-    return (
-      <div className="veg-mutton-page">
-        <div className="error-container">
-          <p>Error loading recipes: {error}</p>
-          <button onClick={() => window.location.reload()}>Try Again</button>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="veg-mutton-page">
+
       {/* Header */}
       <header className="veg-mutton-header">
         <div className="veg-mutton-header-content">
@@ -164,136 +124,149 @@ const VegMutton = () => {
         </div>
       </header>
 
-      {/* Recipes Grid */}
+      {/* Grid */}
       <main className="veg-mutton-main">
         <div className="veg-mutton-grid-section">
           <div className="veg-mutton-grid">
-            {vegMuttonRecipes.length === 0 ? (
-              <div className="no-recipes-message">
-                <p>No mutton recipes found.</p>
-              </div>
-            ) : (
-              vegMuttonRecipes.map(recipe => (
-                <div 
-                  key={recipe._id} 
-                  className="veg-mutton-technique-card"
-                  onClick={() => handleRecipeSelect(recipe)}
-                >
-                  <div 
-                    className="veg-mutton-card-image"
-                    style={{ backgroundImage: `url(${recipe.image})` }}
-                  ></div>
-                  
-                  <div className="veg-mutton-card-content">
-                    <h3 className="veg-mutton-card-title">{recipe.title}</h3>
-                    <p className="veg-mutton-card-description">{recipe.tagline || 'A flavorful mutton curry'}</p>
-                  </div>
+            {vegMuttonRecipes.map(recipe => (
+              <div
+                key={recipe._id}
+                className="veg-mutton-card"
+                onClick={() => handleRecipeSelect(recipe)}
+              >
+                <div
+                  className="veg-mutton-card-image"
+                  style={{ backgroundImage: `url(${recipe.image})` }}
+                ></div>
+                <div className="veg-mutton-card-content">
+                  <h3 className="veg-mutton-card-title">{recipe.title}</h3>
+                  {/* ✅ Subtitle removed - sirf title show hoga */}
                 </div>
-              ))
-            )}
+              </div>
+            ))}
           </div>
         </div>
       </main>
 
-      {/* Back to Home Button */}
+      {/* Back Button */}
       <div className="back-button-container">
-        <button className="back-home-btn" onClick={handleGoBack}>
-          <i className="fas fa-arrow-left"></i> Back to Home
+        <button className="back-home-btn" onClick={() => navigate('/')}>
+          <span>←</span> Back to Home
         </button>
       </div>
 
-      {/* DETAIL MODAL with SELECTED RECIPE IMAGE as Background */}
+      {/* MODAL */}
       {showDetailPanel && selectedRecipe && (
         <div className="veg-mutton-modal-overlay" onClick={closeDetailPanel}>
-          <div 
-            className="veg-mutton-modal" 
-            onClick={(e) => e.stopPropagation()}
-            style={{
-              backgroundImage: `url(${selectedRecipe.image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
-            }}
-          >
-            <button className="veg-mutton-modal-close" onClick={closeDetailPanel}>×</button>
-            
-            <div className="veg-mutton-modal-header">
-              <div className="veg-mutton-modal-title">
-                <h2>{selectedRecipe.title}</h2>
+          <div className="veg-mutton-modal" onClick={e => e.stopPropagation()}>
+
+            {/* ── HERO: left = text info, right = full image ── */}
+            <div className="veg-mutton-modal-hero">
+
+              {/* LEFT side: dark bg with text */}
+              <div className="veg-mutton-modal-hero-left">
+                <span className="veg-mutton-modal-tag">Mutton Recipe</span>
+                <h2 className="veg-mutton-modal-hero-title">{selectedRecipe.title}</h2>
+                {selectedRecipe.tagline && (
+                  <p className="veg-mutton-modal-hero-tagline">{selectedRecipe.tagline}</p>
+                )}
               </div>
+
+              {/* RIGHT side: image displayed fully */}
+              <div className="veg-mutton-modal-hero-right">
+                <img
+                  src={selectedRecipe.image}
+                  alt={selectedRecipe.title}
+                  className="veg-mutton-modal-hero-img"
+                />
+              </div>
+
+              {/* Close button — sits on top right corner of the whole hero */}
+              <button className="veg-mutton-modal-close" onClick={closeDetailPanel}>×</button>
+
             </div>
 
-            <div className="veg-mutton-modal-content">
-              {/* COLUMN 1 - INGREDIENTS */}
-              <div className="veg-mutton-modal-ingredients">
-                <h3>Ingredients</h3>
-                <div className="veg-mutton-ingredients-list">
+            {/* ── BODY: ingredients + steps side by side ── */}
+            <div className="veg-mutton-modal-body">
+
+              {/* INGREDIENTS */}
+              <div className="veg-mutton-modal-col">
+                <div className="veg-mutton-modal-col-header">
+                  <i className="fas fa-list-ul"></i>
+                  <h3>Ingredients</h3>
+                </div>
+                <div className="veg-mutton-modal-scroll">
                   {selectedRecipe.ingredientsRaw?.map((ingredient, idx) => (
                     <div key={idx} className="veg-mutton-ingredient-item">
-                      <span className="veg-mutton-ingredient-bullet">•</span>
+                      <span className="veg-mutton-ingredient-dot"></span>
                       <span className="veg-mutton-ingredient-text">{ingredient}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* COLUMN 2 - STEPS TO MAKE */}
-              <div className="veg-mutton-modal-steps">
-                <h3>Steps to Make</h3>
-                <div className="veg-mutton-steps-list">
+              {/* STEPS */}
+              <div className="veg-mutton-modal-col veg-mutton-modal-col--steps">
+                <div className="veg-mutton-modal-col-header">
+                  <i className="fas fa-shoe-prints"></i>
+                  <h3>Steps to Make</h3>
+                </div>
+                <div className="veg-mutton-modal-scroll">
                   {selectedRecipe.stepsRaw?.map((step, idx) => (
                     <div key={idx} className="veg-mutton-step-item">
-                      <span className="veg-mutton-step-number">{idx + 1}.</span>
+                      <span className="veg-mutton-step-num">{idx + 1}</span>
                       <span className="veg-mutton-step-text">{step}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* COLUMN 3 - VOICE INSTRUCTIONS */}
-              <div className="veg-mutton-modal-voice-container">
-                <div className="voice-panel">
-                  <h3><i className="fas fa-volume-up"></i> Voice Instructions</h3>
-                  
-                  <div className="voice-progress">
-                    <div className="progress-bar">
-                      <div className="progress-fill" style={{width: `${progress}%`}}></div>
-                    </div>
-                    <div className="progress-info">
-                      <span>Step {currentStep} of {selectedRecipe.stepsRaw?.length || 0}</span>
-                      <span>{Math.round(progress)}%</span>
-                    </div>
-                  </div>
+            </div>
 
-                  <div className="voice-controls">
-                    <button 
-                      className={`voice-main-btn ${isPlaying ? 'stop' : 'play'}`}
-                      onClick={() => isPlaying ? stopSpeaking() : speakInstructions(selectedRecipe.stepsRaw)}
-                    >
-                      <i className={`fas fa-${isPlaying ? 'stop' : 'play'}`}></i>
-                      {isPlaying ? ' Stop' : ' Start Voice Guide'}
-                    </button>
+            {/* ── VOICE BAR (pinned bottom) ── */}
+            <div className="veg-mutton-voice-bar">
+              <div className="veg-mutton-voice-left">
+                <i className="fas fa-volume-up veg-mutton-voice-icon"></i>
+                <span className="veg-mutton-voice-label">Voice Guide</span>
+              </div>
 
-                    <div className="step-controls">
-                      <button 
-                        className="step-btn prev"
-                        onClick={speakPreviousStep}
-                        disabled={currentStep <= 1}
-                      >
-                        <i className="fas fa-backward"></i> Prev
-                      </button>
-                      <button 
-                        className="step-btn next"
-                        onClick={speakNextStep}
-                        disabled={currentStep >= (selectedRecipe.stepsRaw?.length || 0)}
-                      >
-                        Next <i className="fas fa-forward"></i>
-                      </button>
-                    </div>
-                  </div>
+              <div className="veg-mutton-voice-progress">
+                <div className="veg-mutton-progress-track">
+                  <div className="veg-mutton-progress-fill" style={{ width: `${progress}%` }}></div>
+                </div>
+                <div className="veg-mutton-progress-info">
+                  <span>Step {currentStep} of {selectedRecipe.stepsRaw?.length || 0}</span>
+                  <span>{Math.round(progress)}%</span>
                 </div>
               </div>
+
+              <div className="veg-mutton-voice-controls">
+                <button
+                  className="veg-mutton-step-btn"
+                  onClick={speakPreviousStep}
+                  disabled={currentStep <= 1}
+                >
+                  <i className="fas fa-step-backward"></i> Prev
+                </button>
+                <button
+                  className={`veg-mutton-voice-main-btn ${isPlaying ? 'stop' : 'play'}`}
+                  onClick={() => isPlaying ? stopSpeaking() : speakInstructions(selectedRecipe.stepsRaw)}
+                >
+                  {isPlaying
+                    ? <><i className="fas fa-stop"></i> Stop</>
+                    : <><i className="fas fa-play"></i> Start</>
+                  }
+                </button>
+                <button
+                  className="veg-mutton-step-btn"
+                  onClick={speakNextStep}
+                  disabled={currentStep >= (selectedRecipe.stepsRaw?.length || 0)}
+                >
+                  Next <i className="fas fa-step-forward"></i>
+                </button>
+              </div>
             </div>
+
           </div>
         </div>
       )}

@@ -142,17 +142,17 @@
 
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-// import Soups from './Soups'
+import Soups from './Soups'
 // import VegMutton from './VegMutton'
-import PlainVegetable from './PlainVegetable'
+// import RecipePlainVegetables from './RecipePlainVegetables'
 import './App.css'
 
 function App() {
   return (
     <div className="app">
-      {/* <Soups/> */}
+      <Soups/>
     {/* <VegMutton/> */}
-    <PlainVegetable/>
+    {/* <RecipePlainVegetables/> */}
    </div>
   )
 }
