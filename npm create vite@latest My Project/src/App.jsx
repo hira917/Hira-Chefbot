@@ -145,7 +145,9 @@ import { Routes, Route } from 'react-router-dom'
 // import Soups from './Soups'
 // import VegMutton from './VegMutton'
 // import RecipePlainVegetables from './RecipePlainVegetables'
-import RecipesVegChicken from './RecipesVegChicken'
+// import RecipesVegChicken from './RecipesVegChicken'
+
+import RecipesPureMutton from './RecipesPureMutton'
 import './App.css'
 
 function App() {
@@ -154,7 +156,9 @@ function App() {
       {/* <Soups/> */}
     {/* <VegMutton/> */}
     {/* <RecipePlainVegetables/> */}
-    <RecipesVegChicken/>
+    {/* <RecipesVegChicken/> */}
+    
+     < RecipesPureMutton/>
    </div>
   )
 }
