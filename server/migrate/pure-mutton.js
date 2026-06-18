@@ -1,12 +1,13 @@
-// 04-pure-mutton.js
+const dns = require('dns');
+dns.setServers(['8.8.8.8', '1.1.1.1']);
 const mongoose = require('mongoose');
 const Recipe = require('../models/Recipe');
 require('dotenv').config({ path: '../.env' });
+
 const recipesToMigrate = [
   {
     title: "Mutton Curry",
-    tagline: "Classic Pakistani mutton curry - rich and flavorful",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-curry.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces with bones",
@@ -42,7 +43,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A classic and rich Pakistani mutton curry that's perfect for special occasions and pairs wonderfully with naan or rice.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -62,8 +63,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Karahi",
-    tagline: "Traditional karahi style mutton - bold and spicy",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-karahi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -95,7 +95,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A bold and spicy traditional Pakistani karahi mutton that's perfect for those who love intense flavors.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -115,8 +115,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Handi",
-    tagline: "Slow-cooked creamy mutton - rich and flavorful",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-handi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -150,7 +149,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A slow-cooked creamy mutton handi that's rich, flavorful, and perfect for a royal dining experience.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -170,8 +169,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Qorma",
-    tagline: "Rich and creamy mutton qorma - royal dish",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-qorma.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -207,7 +205,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A rich and creamy royal mutton qorma that's perfect for weddings and special occasions.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -227,8 +225,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Rogan Josh",
-    tagline: "Kashmiri style mutton rogan josh - aromatic and rich",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-rogan-josh.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -262,7 +259,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "An aromatic and rich Kashmiri-style mutton rogan josh that's perfect for a royal dining experience.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -282,8 +279,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Do Pyaza",
-    tagline: "Mutton with double onions - sweet and savory",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-do-pyaz.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -316,7 +312,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A delicious mutton do pyaza with double the onions, offering a perfect balance of sweet and savory flavors.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -336,8 +332,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Bhuna",
-    tagline: "Dry bhuna mutton - thick and spicy",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-bhuna.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -370,7 +365,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A thick and spicy dry bhuna mutton where the masala clings to every piece, perfect with naan.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -390,8 +385,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Jalfrezi",
-    tagline: "Spicy mutton with thick gravy - restaurant style",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-jalfrezi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - boneless, cut into cubes",
@@ -425,7 +419,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A restaurant-style spicy mutton jalfrezi with thick gravy and crunchy capsicum, perfect for special cravings.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -445,8 +439,7 @@ const recipesToMigrate = [
   },
   {
     title: "White Mutton Karahi",
-    tagline: "Creamy white karahi - mild and rich",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/white-mutton-karahi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -476,7 +469,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A mild and rich creamy white mutton karahi that's perfect for those who prefer less spicy curries.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -496,8 +489,7 @@ const recipesToMigrate = [
   },
   {
     title: "Peshawari Mutton Karahi",
-    tagline: "Peshawar style karahi - rustic and flavorful",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/peshawari-mutton-karahi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -526,7 +518,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A rustic and flavorful Peshawari-style mutton karahi that's cooked without water for intense taste.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -546,8 +538,7 @@ const recipesToMigrate = [
   },
   {
     title: "Spicy Mutton Karahi",
-    tagline: "Extra spicy karahi - for heat lovers",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/spicy-mutton-karahi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -576,7 +567,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "An extra spicy mutton karahi for heat lovers, packed with bold and intense flavors.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -596,8 +587,7 @@ const recipesToMigrate = [
   },
   {
     title: "Dry Mutton Karahi",
-    tagline: "Dry karahi with no gravy - perfect with naan",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/dry-mutton-karahi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -624,7 +614,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A dry mutton karahi with no gravy, where the masala coats every piece perfectly - ideal with naan.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -644,8 +634,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Masala",
-    tagline: "Spicy mutton masala - bold and aromatic",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-masala.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -679,7 +668,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A bold and aromatic spicy mutton masala that's perfect for those who love rich, flavorful curries.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -699,8 +688,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Tikka Masala",
-    tagline: "Restaurant style tikka masala - creamy and rich",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-tikka-masala.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g mutton tikka pieces - pre-cooked",
@@ -733,7 +721,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A creamy and rich restaurant-style mutton tikka masala that's perfect for special occasions.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -753,8 +741,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Butter Masala",
-    tagline: "Creamy butter mutton - rich and indulgent",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-butter-masala.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - boneless, cut into cubes",
@@ -787,7 +774,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A rich and indulgent creamy butter mutton that's perfect for a royal dining experience.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -807,8 +794,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Lababdar",
-    tagline: "Rich and creamy lababdar - royal Mughlai dish",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-lababdar.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -840,7 +826,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A rich and creamy royal Mughlai mutton lababdar that's perfect for special occasions.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -860,8 +846,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Kolhapuri",
-    tagline: "Spicy Kolhapuri style mutton - very hot and flavorful",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-kolhapuri.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -891,7 +876,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A very hot and flavorful Kolhapuri-style mutton curry that's perfect for spice lovers.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -911,8 +896,7 @@ const recipesToMigrate = [
   },
   {
     title: "Kashmiri Rogan Josh",
-    tagline: "Authentic Kashmiri rogan josh - aromatic and red",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-rogan-josh.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -944,7 +928,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "An authentic aromatic Kashmiri rogan josh with a beautiful red color and rich flavors.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -964,8 +948,7 @@ const recipesToMigrate = [
   },
   {
     title: "Easy Rogan Josh",
-    tagline: "Simple rogan josh recipe - quick and delicious",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/easy-rogan-josh.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -995,7 +978,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A quick and delicious easy rogan josh recipe that doesn't compromise on authentic flavors.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1015,8 +998,7 @@ const recipesToMigrate = [
   },
   {
     title: "Pressure Cooker Rogan Josh",
-    tagline: "Quick pressure cooker version - saves time",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/pressure-cooker-rogan-josh.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -1045,7 +1027,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A quick pressure cooker version of rogan josh that saves time without sacrificing flavor.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1065,8 +1047,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Kofta Curry",
-    tagline: "Meatballs in spicy gravy - delicious and unique",
-    image: "https://images.unsplash.com/photo-1599059813005-11265ba4b4ce",
+    image: "http://localhost:5000/uploads/mutton-kofta-curry.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g mutton mince (keema)",
@@ -1101,7 +1082,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A delicious and unique mutton kofta curry with tender meatballs in a spicy gravy.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1121,8 +1102,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Kofta in Yogurt Gravy",
-    tagline: "Kofta in creamy yogurt sauce - mild and rich",
-    image: "https://images.unsplash.com/photo-1599059813005-11265ba4b4ce",
+    image: "http://localhost:5000/uploads/mutton-kofta-in-yogurt-gravy.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g mutton mince",
@@ -1155,7 +1135,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A mild and rich mutton kofta curry in a creamy yogurt sauce, perfect for those who prefer less spice.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1175,8 +1155,7 @@ const recipesToMigrate = [
   },
   {
     title: "Nargisi Kofta",
-    tagline: "Stuffed kofta with boiled eggs - royal dish",
-    image: "https://images.unsplash.com/photo-1599059813005-11265ba4b4ce",
+    image: "http://localhost:5000/uploads/nargisi-kofta.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g mutton mince",
@@ -1210,7 +1189,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A royal nargisi kofta dish with boiled eggs stuffed inside mutton mince, perfect for special occasions.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1230,8 +1209,7 @@ const recipesToMigrate = [
   },
   {
     title: "Malai Kofta",
-    tagline: "Creamy kofta curry - rich and indulgent",
-    image: "https://images.unsplash.com/photo-1599059813005-11265ba4b4ce",
+    image: "http://localhost:5000/uploads/malai-kofta.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g mutton mince",
@@ -1264,7 +1242,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A rich and indulgent creamy malai kofta curry that's perfect for a royal dining experience.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1284,8 +1262,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Rara",
-    tagline: "Mutton with mince gravy - double meat delight",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-rara.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g mutton pieces - with bones",
@@ -1317,7 +1294,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A double meat delight mutton rara with both pieces and mince, offering rich texture and flavor.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1337,8 +1314,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Rara Masala",
-    tagline: "Spicy rara masala - bold and flavorful",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-rara-masala.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g mutton - boneless cubes",
@@ -1370,7 +1346,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A bold and flavorful spicy mutton rara masala with a perfect blend of pieces and mince.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1390,8 +1366,7 @@ const recipesToMigrate = [
   },
   {
     title: "Hyderabadi Mutton",
-    tagline: "Hyderabadi style mutton curry - rich and aromatic",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/hyderabadi-mutton.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -1423,7 +1398,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A rich and aromatic Hyderabadi-style mutton curry that's perfect for a royal meal.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1443,8 +1418,7 @@ const recipesToMigrate = [
   },
   {
     title: "Punjabi Mutton",
-    tagline: "Punjabi style mutton curry - rich and buttery",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/punjabi-mutton.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -1476,7 +1450,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A rich and buttery Punjabi-style mutton curry that's full of flavor and perfect with naan.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1496,8 +1470,7 @@ const recipesToMigrate = [
   },
   {
     title: "Kerala Mutton Curry",
-    tagline: "Kerala style coconut mutton - creamy and aromatic",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/karela-mutton-curry.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -1530,7 +1503,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A creamy and aromatic Kerala-style coconut mutton curry that's perfect with steamed rice.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1550,8 +1523,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chettinad Mutton",
-    tagline: "Spicy Chettinad mutton - very aromatic",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/Chettinad-Mutton.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -1583,7 +1555,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A very aromatic and spicy Chettinad-style mutton curry that's packed with bold flavors.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1603,8 +1575,7 @@ const recipesToMigrate = [
   },
   {
     title: "Goan Mutton Curry",
-    tagline: "Goan style coconut curry - tangy and spicy",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/goan-mutton-curry.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - curry cut pieces",
@@ -1637,7 +1608,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A tangy and spicy Goan-style coconut mutton curry that's perfect with steamed rice.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1657,8 +1628,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Chops Curry",
-    tagline: "Curry with mutton chops - flavorful and tender",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-chops-curry.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton chops",
@@ -1689,7 +1659,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A flavorful and tender mutton chops curry that's perfect for a special meal.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1709,8 +1679,7 @@ const recipesToMigrate = [
   },
   {
     title: "Mutton Chops Karahi",
-    tagline: "Karahi style chops - bold and spicy",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/mutton-chops-karahi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton chops",
@@ -1737,7 +1706,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A bold and spicy karahi-style mutton chops that's packed with intense flavors.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1757,8 +1726,7 @@ const recipesToMigrate = [
   },
   {
     title: "Grilled Mutton Chops",
-    tagline: "Oven grilled chops - perfect for parties",
-    image: "https://images.unsplash.com/photo-1545247181-516773c7e8a2",
+    image: "http://localhost:5000/uploads/grilled-mutton-chops.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton chops",
@@ -1787,7 +1755,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "Perfectly grilled mutton chops that are tender and flavorful, ideal for parties and gatherings.",
     category: "Lunch",
-    subCategory: "mutton",
+    subCategory: "pure-mutton",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1805,10 +1773,10 @@ const recipesToMigrate = [
     timesSuggested: 0,
     timesUsedInPlans: 0
   }
-]
+];
+
 async function migrate() {
   try {
-    // Check which environment variable is available
     const mongoURI = process.env.MONGO_URI || process.env.MONGODB_URI || process.env.MONGOURI;
     
     console.log('🔍 MONGODB_URI:', process.env.MONGODB_URI);
