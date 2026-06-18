@@ -1,12 +1,12 @@
-// 05-pure-chicken.js
+const dns = require('dns');
+dns.setServers(['8.8.8.8', '1.1.1.1']);
 const mongoose = require('mongoose');
 const Recipe = require('../models/Recipe');
 require('dotenv').config({ path: '../.env' });
 const recipesToMigrate = [
   {
     title: "Chicken Curry",
-    tagline: "Classic Pakistani chicken curry",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-curry.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken, curry cut",
@@ -40,7 +40,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A classic Pakistani chicken curry that's rich, flavorful, and pairs perfectly with naan or rice.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -60,8 +60,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Karahi",
-    tagline: "Traditional karahi style chicken",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-karahi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -92,7 +91,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A traditional karahi-style chicken that's bold, spicy, and perfect for a hearty meal with naan.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -112,8 +111,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Handi",
-    tagline: "Slow-cooked creamy chicken",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-handi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -145,7 +143,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A slow-cooked creamy chicken handi that's rich, flavorful, and perfect for a royal dining experience.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -165,8 +163,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Qorma",
-    tagline: "Rich and creamy chicken qorma",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-qorma.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -199,7 +196,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A rich and creamy chicken qorma that's perfect for special occasions and family gatherings.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -219,8 +216,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Jalfrezi",
-    tagline: "Spicy chicken with thick gravy",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-jalfrezi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken, boneless cubes",
@@ -252,7 +248,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A spicy and flavorful chicken jalfrezi with thick gravy and crunchy capsicum, perfect with naan or rice.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -273,7 +269,7 @@ const recipesToMigrate = [
   {
     title: "Chicken Lahori",
     tagline: "Lahori style spicy chicken",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-lahori.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -305,7 +301,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A spicy Lahori-style chicken curry with a tangy kick from vinegar, perfect for those who love bold flavors.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -325,8 +321,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Mughlai",
-    tagline: "Royal Mughlai chicken",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-mughlai.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -359,7 +354,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A royal Mughlai chicken curry with a rich, creamy gravy that's perfect for special occasions.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -379,8 +374,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Do Pyaza",
-    tagline: "Chicken with double onions",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-do-pyaz.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -410,7 +404,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A delicious chicken do pyaza with double the onions, offering a perfect balance of sweet and savory flavors.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -430,8 +424,7 @@ const recipesToMigrate = [
   },
   {
     title: "White Chicken Karahi",
-    tagline: "Creamy white karahi",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/white-chicken-karahi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -459,7 +452,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A mild and creamy white chicken karahi that's perfect for those who prefer less spicy curries.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -479,8 +472,7 @@ const recipesToMigrate = [
   },
   {
     title: "Peshawari Chicken Karahi",
-    tagline: "Peshawar style karahi",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/peshawari-chicken-karahi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -508,7 +500,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A rustic and flavorful Peshawari-style chicken karahi that's cooked without water for intense taste.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -528,8 +520,7 @@ const recipesToMigrate = [
   },
   {
     title: "Spicy Chicken Karahi",
-    tagline: "Extra spicy karahi",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/spicy-chicken-karahi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -556,7 +547,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "An extra spicy chicken karahi for heat lovers, packed with bold and intense flavors.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -576,8 +567,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Karahi with Gravy",
-    tagline: "Karahi with extra gravy",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-karahi-with-gravy.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -604,7 +594,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A chicken karahi with extra gravy, perfect for those who love more sauce with their naan.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -624,8 +614,7 @@ const recipesToMigrate = [
   },
   {
     title: "Dry Chicken Karahi",
-    tagline: "Dry karahi with no gravy",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/dry-chicken-karahi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -650,7 +639,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A dry chicken karahi with no gravy, where the masala coats every piece perfectly - ideal with naan.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -670,8 +659,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Masala",
-    tagline: "Spicy chicken masala",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-masala.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -702,7 +690,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A spicy and aromatic chicken masala that's perfect for those who love rich, flavorful curries.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -722,8 +710,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Tikka Masala",
-    tagline: "Restaurant style tikka masala",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-tikka-masala.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g chicken tikka pieces",
@@ -753,7 +740,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A creamy and rich restaurant-style chicken tikka masala that's perfect for special occasions.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -773,8 +760,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Butter Masala",
-    tagline: "Creamy butter chicken",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-butter-masala.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g chicken, boneless",
@@ -803,7 +789,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A rich and indulgent creamy butter chicken that's perfect for a royal dining experience.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -823,8 +809,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Lababdar",
-    tagline: "Rich and creamy lababdar",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-lababdar.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -853,7 +838,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A rich and creamy chicken lababdar that's perfect for a royal dining experience.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -873,8 +858,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Kolhapuri",
-    tagline: "Spicy Kolhapuri style chicken",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-kolhapuri.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -903,7 +887,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A spicy Kolhapuri-style chicken curry with coconut, perfect for those who love bold and intense flavors.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -923,8 +907,7 @@ const recipesToMigrate = [
   },
   {
     title: "Oven Roasted Chicken",
-    tagline: "Whole roasted chicken",
-    image: "https://images.unsplash.com/photo-1604908176997-125f25c813e5",
+    image: "http://localhost:5000/uploads/oven-roasted-chicken.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 whole chicken",
@@ -955,7 +938,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A perfectly roasted whole chicken that's juicy, flavorful, and perfect for special occasions.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -975,8 +958,7 @@ const recipesToMigrate = [
   },
   {
     title: "Tandoori Chicken",
-    tagline: "Classic tandoori chicken",
-    image: "https://images.unsplash.com/photo-1604908176997-125f25c813e5",
+    image: "http://localhost:5000/uploads/tandoori-chicken.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 whole chicken",
@@ -1006,7 +988,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A classic tandoori chicken with a vibrant red color and smoky flavor, perfect for parties.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1026,8 +1008,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Roast with Gravy",
-    tagline: "Roasted chicken in gravy",
-    image: "https://images.unsplash.com/photo-1604908176997-125f25c813e5",
+    image: "http://localhost:5000/uploads/chicken-roast-with-gravy.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 whole chicken",
@@ -1054,7 +1035,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A delicious roasted chicken served in a flavorful gravy, perfect for a hearty meal.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1074,8 +1055,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Boneless Curry",
-    tagline: "Boneless chicken curry",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-boneless-curry.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g boneless chicken cubes",
@@ -1104,7 +1084,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A quick and easy boneless chicken curry that's perfect for a busy weekday dinner.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1124,8 +1104,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Malai Boti",
-    tagline: "Creamy chicken cubes",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-malai-boti.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g boneless chicken cubes",
@@ -1151,7 +1130,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "Creamy and tender chicken malai boti that's perfect as an appetizer or main course with naan.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1171,8 +1150,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Kali Mirch",
-    tagline: "Black pepper chicken",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-kali-mirch.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g boneless chicken",
@@ -1198,7 +1176,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A bold and peppery black pepper chicken that's perfect for those who love intense flavors.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1218,8 +1196,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Hariyali",
-    tagline: "Green masala chicken",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-hariyali.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g boneless chicken",
@@ -1244,7 +1221,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A vibrant green masala chicken that's fresh, herby, and packed with flavor.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1264,8 +1241,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Handi Traditional",
-    tagline: "Traditional handi chicken",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-handi-traditional.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -1293,7 +1269,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A traditional chicken handi with a perfect balance of spices and creamy yogurt gravy.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1313,8 +1289,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Handi with Cream",
-    tagline: "Creamy handi chicken",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-handi-with cream.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -1343,7 +1318,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A creamy and rich chicken handi with the addition of cream for extra indulgence.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1363,8 +1338,7 @@ const recipesToMigrate = [
   },
   {
     title: "Spicy Chicken Handi",
-    tagline: "Extra spicy handi",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/spicy-chicken-handi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -1392,7 +1366,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "An extra spicy chicken handi for heat lovers, packed with bold and intense flavors.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1412,8 +1386,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Bhuna",
-    tagline: "Dry bhuna chicken",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-bhuna.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -1442,7 +1415,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A dry bhuna chicken where the masala clings to every piece, perfect with naan or roti.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],
@@ -1462,8 +1435,7 @@ const recipesToMigrate = [
   },
   {
     title: "Chicken Bhuna Masala",
-    tagline: "Spicy bhuna masala",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    image: "http://localhost:5000/uploads/chicken-bhuna-masala.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg chicken",
@@ -1492,7 +1464,7 @@ const recipesToMigrate = [
     isHalal: true,
     description: "A spicy and aromatic chicken bhuna masala that's perfect for those who love dry curries.",
     category: "Lunch",
-    subCategory: "chicken",
+    subCategory: "pure-chicken",
     dietType: "Non-Vegetarian",
     suitableForMeals: ["Lunch", "Dinner"],
     allergens: ["none"],

@@ -10,9 +10,9 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/mutton-curry.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces with bones",
-      "2 medium onions - finely chopped",
-      "2 medium tomatoes - finely chopped",
+      "1 kg mutton - cut into pieces with bones",
+      "2 medium onions - chopped small",
+      "2 medium tomatoes - chopped small",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
       "1 teaspoon turmeric powder",
@@ -20,22 +20,22 @@ const recipesToMigrate = [
       "1 teaspoon coriander powder",
       "1 teaspoon garam masala",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "Fresh coriander leaves for garnish",
-      "2 green chilies - slit lengthwise",
+      "2 green chilies - cut long",
       "2 cups warm water"
     ],
     stepsRaw: [
-      "Heat oil in a large heavy-bottomed pot over medium heat. Add cumin seeds and let them crackle for 30 seconds until fragrant.",
-      "Add finely chopped onions and sauté for 6-7 minutes until they turn golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until the raw smell disappears.",
-      "Add mutton pieces and fry on high heat for 8-10 minutes until the mutton is well-browned on all sides.",
-      "Add chopped tomatoes and cook for 6-7 minutes until they become soft and mushy.",
-      "Add turmeric powder, red chili powder, coriander powder, and salt. Mix well and cook for 2-3 minutes until the spices are fragrant.",
-      "Add 2 cups of warm water and bring to a boil. Stir well to combine.",
-      "Cover the pot and cook on medium-low heat for 45-50 minutes until the mutton is completely tender.",
-      "Sprinkle garam masala and garnish with fresh coriander leaves and green chilies.",
-      "Serve hot with naan, roti, or steamed rice."
+      "Put oil in a big heavy pot on medium heat. Add cumin seeds and cook for 30 seconds until they pop.",
+      "Add chopped onions and fry for 6-7 minutes until they turn golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until the raw smell goes away.",
+      "Add mutton pieces and fry on high heat for 8-10 minutes until the meat is brown on all sides.",
+      "Add chopped tomatoes and cook for 6-7 minutes until they become soft.",
+      "Add turmeric, red chili powder, coriander powder, and salt. Mix well and cook for 2-3 minutes until the spices smell good.",
+      "Add 2 cups of warm water and bring to a boil. Stir well.",
+      "Cover the pot and cook on medium-low heat for 45-50 minutes until the mutton is very soft.",
+      "Sprinkle garam masala and put fresh coriander leaves and green chilies on top.",
+      "Serve hot with naan, roti, or rice."
     ],
     difficulty: "Hard",
     cookingTime: 70,
@@ -66,28 +66,28 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/mutton-karahi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
-      "4 medium tomatoes - finely chopped",
-      "2 tablespoons ginger - julienned",
-      "2 tablespoons garlic - finely chopped",
-      "4 green chilies - slit lengthwise",
+      "1 kg mutton - cut into pieces",
+      "4 medium tomatoes - chopped small",
+      "2 tablespoons ginger - cut into thin strips",
+      "2 tablespoons garlic - chopped small",
+      "4 green chilies - cut long",
       "1 teaspoon cumin seeds",
       "1 teaspoon red chili flakes",
       "1 teaspoon black pepper powder",
       "1 teaspoon salt",
       "1/2 cup cooking oil",
       "Fresh coriander leaves for garnish",
-      "1 lemon - juiced"
+      "1 lemon - juice"
     ],
     stepsRaw: [
-      "Heat oil in a wok (karahi) over high heat. Add mutton pieces and fry for 8-10 minutes until the mutton changes color and is well-browned.",
-      "Add julienned ginger, chopped garlic, and slit green chilies. Cook for 2-3 minutes until fragrant.",
-      "Add chopped tomatoes and cook for 8-10 minutes until they become soft and the oil separates.",
+      "Put oil in a karahi (wok) on high heat. Add mutton and fry for 8-10 minutes until the meat turns brown.",
+      "Add ginger strips, chopped garlic, and green chilies. Cook for 2-3 minutes until they smell good.",
+      "Add chopped tomatoes and cook for 8-10 minutes until they become soft and oil starts to separate.",
       "Add cumin seeds, red chili flakes, black pepper powder, and salt. Mix well.",
-      "Cook on high heat for 10-15 minutes, stirring frequently, until the oil comes on top and the mutton is tender.",
-      "The gravy should be thick and clinging to the mutton pieces.",
-      "Turn off the heat. Sprinkle lemon juice and garnish with fresh coriander leaves.",
-      "Serve immediately with hot naan or roti."
+      "Cook on high heat for 10-15 minutes while stirring often until the oil comes on top and the meat is soft.",
+      "The gravy should be thick and stick to the meat.",
+      "Turn off the heat. Add lemon juice and put fresh coriander leaves on top.",
+      "Serve right away with hot naan or roti."
     ],
     difficulty: "Hard",
     cookingTime: 60,
@@ -118,30 +118,30 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/mutton-handi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
+      "1 kg mutton - cut into pieces",
       "1 cup plain yogurt - beaten until smooth",
-      "2 medium onions - finely chopped",
+      "2 medium onions - chopped small",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
       "1 teaspoon turmeric powder",
       "2 teaspoons red chili powder",
       "1 teaspoon garam masala",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1/4 cup heavy cream",
       "Fresh coriander leaves for garnish",
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a handi or heavy-bottomed pot over medium heat. Add cumin seeds and let them crackle for 30 seconds.",
-      "Add finely chopped onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton pieces and fry for 8-10 minutes until the mutton is well-browned.",
+      "Put oil in a handi or heavy pot on medium heat. Add cumin seeds and cook for 30 seconds until they pop.",
+      "Add chopped onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton pieces and fry for 8-10 minutes until the meat is brown.",
       "Add turmeric powder, red chili powder, and salt. Mix well and cook for 2-3 minutes.",
-      "Reduce heat to low. Add beaten yogurt slowly, stirring continuously to prevent curdling.",
-      "Add 1 cup of warm water. Cover and cook on low heat for 45-50 minutes until the mutton is tender and the gravy has thickened.",
-      "Add cream and garam masala. Simmer for 5-7 minutes on low heat.",
-      "Garnish with fresh coriander leaves and serve hot with naan or roti."
+      "Turn the heat to low. Add beaten yogurt slowly while stirring all the time so it doesn't curdle.",
+      "Add 1 cup of warm water. Cover and cook on low heat for 45-50 minutes until the meat is soft and the gravy is thick.",
+      "Add cream and garam masala. Cook for 5-7 minutes on low heat.",
+      "Put fresh coriander leaves on top and serve hot with naan or roti."
     ],
     difficulty: "Hard",
     cookingTime: 70,
@@ -172,32 +172,32 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/mutton-qorma.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
+      "1 kg mutton - cut into pieces",
       "1 cup plain yogurt - beaten until smooth",
-      "2 medium onions - thinly sliced",
+      "2 medium onions - sliced thin",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
       "1 teaspoon turmeric powder",
       "2 teaspoons red chili powder",
       "1 teaspoon garam masala",
       "1/2 cup cooking oil or ghee",
-      "Salt to taste",
+      "Salt as needed",
       "4 whole cloves",
       "2 green cardamom pods",
       "1 small cinnamon stick",
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil or ghee in a pan over medium heat. Add whole spices (cloves, cardamom, cinnamon) and let them crackle for 30 seconds.",
+      "Put oil or ghee in a pan on medium heat. Add whole spices (cloves, cardamom, cinnamon) and cook for 30 seconds until they pop.",
       "Add sliced onions and fry for 7-8 minutes until dark golden brown.",
-      "Remove half of the fried onions and set aside for garnish.",
-      "Add ginger-garlic paste to the remaining onions and cook for 2 minutes until fragrant.",
-      "Add mutton pieces and fry for 8-10 minutes until well-browned on all sides.",
+      "Take out half of the fried onions and keep aside for later.",
+      "Add ginger-garlic paste to the remaining onions and cook for 2 minutes until it smells good.",
+      "Add mutton pieces and fry for 8-10 minutes until brown on all sides.",
       "Add turmeric powder, red chili powder, and salt. Mix well and cook for 2-3 minutes.",
-      "Reduce heat to low. Add beaten yogurt slowly, stirring continuously to prevent curdling.",
-      "Add 1 cup of warm water. Cover and cook on low heat for 50-60 minutes until the mutton is completely tender.",
-      "Sprinkle garam masala and garnish with reserved fried onions.",
-      "Serve hot with naan or steamed rice."
+      "Turn the heat to low. Add beaten yogurt slowly while stirring all the time so it doesn't curdle.",
+      "Add 1 cup of warm water. Cover and cook on low heat for 50-60 minutes until the meat is very soft.",
+      "Sprinkle garam masala and put the saved fried onions on top.",
+      "Serve hot with naan or rice."
     ],
     difficulty: "Hard",
     cookingTime: 80,
@@ -228,8 +228,8 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/mutton-rogan-josh.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
-      "2 medium onions - finely chopped",
+      "1 kg mutton - cut into pieces",
+      "2 medium onions - chopped small",
       "2 medium tomatoes - blended into smooth puree",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
@@ -238,19 +238,19 @@ const recipesToMigrate = [
       "1 teaspoon fennel powder",
       "1 teaspoon garam masala",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1/2 cup plain yogurt - beaten",
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle for 30 seconds.",
-      "Add finely chopped onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton pieces and fry for 8-10 minutes until well-browned.",
-      "Add tomato puree and cook for 6-7 minutes until the oil separates from the masala.",
-      "Add turmeric powder, red chili powder, fennel powder, and salt. Mix well and cook for 2-3 minutes.",
+      "Put oil in a pan on medium heat. Add cumin seeds and cook for 30 seconds until they pop.",
+      "Add chopped onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton pieces and fry for 8-10 minutes until brown.",
+      "Add tomato puree and cook for 6-7 minutes until the oil separates from the mixture.",
+      "Add turmeric, red chili powder, fennel powder, and salt. Mix well and cook for 2-3 minutes.",
       "Add beaten yogurt and stir well. Cook for 5 minutes.",
-      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the mutton is tender.",
+      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the meat is soft.",
       "Sprinkle garam masala and serve hot with naan or rice."
     ],
     difficulty: "Hard",
@@ -282,28 +282,28 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/mutton-do-pyaz.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
-      "3 medium onions - thinly sliced (divided use)",
-      "2 medium tomatoes - finely chopped",
+      "1 kg mutton - cut into pieces",
+      "3 medium onions - sliced thin (divided)",
+      "2 medium tomatoes - chopped small",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
       "1 teaspoon turmeric powder",
       "2 teaspoons red chili powder",
       "1 teaspoon garam masala",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle for 30 seconds.",
-      "Add half of the sliced onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton pieces and fry for 8-10 minutes until well-browned.",
+      "Put oil in a pan on medium heat. Add cumin seeds and cook for 30 seconds until they pop.",
+      "Add half of the sliced onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton pieces and fry for 8-10 minutes until brown.",
       "Add chopped tomatoes and cook for 6-7 minutes until soft.",
-      "Add turmeric powder, red chili powder, and salt. Mix well and cook for 2-3 minutes.",
-      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the mutton is tender.",
+      "Add turmeric, red chili powder, and salt. Mix well and cook for 2-3 minutes.",
+      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the meat is soft.",
       "Add the remaining raw sliced onions and garam masala.",
-      "Cook for 5-7 minutes until the onions are slightly soft but still crunchy.",
+      "Cook for 5-7 minutes until the onions are a little soft but still crunchy.",
       "Serve hot with naan or roti."
     ],
     difficulty: "Hard",
@@ -335,28 +335,28 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/mutton-bhuna.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
-      "2 medium onions - finely chopped",
-      "2 medium tomatoes - finely chopped",
+      "1 kg mutton - cut into pieces",
+      "2 medium onions - chopped small",
+      "2 medium tomatoes - chopped small",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
       "1 teaspoon turmeric powder",
       "2 teaspoons red chili powder",
       "1 teaspoon coriander powder",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1/2 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle for 30 seconds.",
-      "Add finely chopped onions and sauté for 7-8 minutes until dark golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton pieces and fry for 10-12 minutes until well-browned on all sides.",
+      "Put oil in a pan on medium heat. Add cumin seeds and cook for 30 seconds until they pop.",
+      "Add chopped onions and fry for 7-8 minutes until dark golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton pieces and fry for 10-12 minutes until brown on all sides.",
       "Add chopped tomatoes and cook for 6-7 minutes until they become dry and the oil separates.",
-      "Add turmeric powder, red chili powder, coriander powder, and salt. Mix well and cook for 2-3 minutes.",
-      "Add 1/2 cup of warm water. Cover and cook on low heat for 45-50 minutes until the mutton is tender.",
-      "Cook uncovered for the last 10 minutes to dry out the gravy.",
-      "The final dish should have a thick, dry consistency with the masala clinging to the mutton.",
+      "Add turmeric, red chili powder, coriander powder, and salt. Mix well and cook for 2-3 minutes.",
+      "Add 1/2 cup of warm water. Cover and cook on low heat for 45-50 minutes until the meat is soft.",
+      "Cook without the lid for the last 10 minutes to dry out the gravy.",
+      "The final dish should be thick and dry with the spices sticking to the meat.",
       "Serve hot with naan or roti."
     ],
     difficulty: "Hard",
@@ -389,9 +389,9 @@ const recipesToMigrate = [
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - boneless, cut into cubes",
-      "2 medium onions - finely chopped",
-      "2 medium tomatoes - finely chopped",
-      "2 medium capsicum - sliced into strips",
+      "2 medium onions - chopped small",
+      "2 medium tomatoes - chopped small",
+      "2 medium capsicum - cut into strips",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
       "1 teaspoon turmeric powder",
@@ -399,18 +399,18 @@ const recipesToMigrate = [
       "1 teaspoon coriander powder",
       "1 teaspoon garam masala",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle for 30 seconds.",
-      "Add finely chopped onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton cubes and fry for 8-10 minutes until well-browned.",
+      "Put oil in a pan on medium heat. Add cumin seeds and cook for 30 seconds until they pop.",
+      "Add chopped onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton cubes and fry for 8-10 minutes until brown.",
       "Add chopped tomatoes and cook for 6-7 minutes until soft.",
-      "Add turmeric powder, red chili powder, coriander powder, and salt. Mix well and cook for 2-3 minutes.",
-      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the mutton is tender.",
-      "Add capsicum strips and cook for 5-7 minutes on high heat until the capsicum is tender-crisp.",
+      "Add turmeric, red chili powder, coriander powder, and salt. Mix well and cook for 2-3 minutes.",
+      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the meat is soft.",
+      "Add capsicum strips and cook for 5-7 minutes on high heat until the capsicum is tender but still crunchy.",
       "Sprinkle garam masala and serve hot with naan or roti."
     ],
     difficulty: "Hard",
@@ -442,11 +442,11 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/white-mutton-karahi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
+      "1 kg mutton - cut into pieces",
       "1 cup plain yogurt - beaten until smooth",
       "2 tablespoons ginger paste",
       "2 tablespoons garlic paste",
-      "4 green chilies - slit",
+      "4 green chilies - cut long",
       "1 teaspoon white pepper powder",
       "1 teaspoon black pepper powder",
       "1 teaspoon salt",
@@ -455,13 +455,13 @@ const recipesToMigrate = [
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a wok (karahi) over medium heat. Add mutton pieces and fry for 8-10 minutes until well-browned.",
-      "Add ginger paste, garlic paste, and green chilies. Cook for 2-3 minutes until fragrant.",
+      "Put oil in a karahi (wok) on medium heat. Add mutton pieces and fry for 8-10 minutes until brown.",
+      "Add ginger paste, garlic paste, and green chilies. Cook for 2-3 minutes until they smell good.",
       "Add beaten yogurt and cook on high heat for 5-7 minutes until the oil separates.",
       "Add white pepper powder, black pepper powder, and salt. Mix well.",
-      "Add 1 cup of warm water. Cover and cook for 35-40 minutes until the mutton is tender.",
+      "Add 1 cup of warm water. Cover and cook for 35-40 minutes until the meat is soft.",
       "The gravy should be thick and white in color.",
-      "Garnish with fresh coriander leaves and serve hot with naan."
+      "Put fresh coriander leaves on top and serve hot with naan."
     ],
     difficulty: "Hard",
     cookingTime: 60,
@@ -492,10 +492,10 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/peshawari-mutton-karahi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
+      "1 kg mutton - cut into pieces",
       "4 medium tomatoes - chopped",
-      "2 tablespoons ginger - julienned",
-      "2 tablespoons garlic - chopped",
+      "2 tablespoons ginger - cut into thin strips",
+      "2 tablespoons garlic - chopped small",
       "4 green chilies - whole",
       "1 teaspoon cumin seeds",
       "1 teaspoon red chili flakes",
@@ -504,12 +504,12 @@ const recipesToMigrate = [
       "1/2 cup cooking oil"
     ],
     stepsRaw: [
-      "Heat oil in a karahi over high heat. Add mutton pieces and fry for 8-10 minutes until well-browned.",
-      "Add ginger juliennes, chopped garlic, and whole green chilies. Cook for 2-3 minutes.",
+      "Put oil in a karahi on high heat. Add mutton pieces and fry for 8-10 minutes until brown.",
+      "Add ginger strips, chopped garlic, and whole green chilies. Cook for 2-3 minutes.",
       "Add chopped tomatoes and cook for 8-10 minutes until they become soft and the oil separates.",
       "Add cumin seeds, red chili flakes, black pepper powder, and salt. Mix well.",
-      "Cook on high heat for 15-20 minutes until the oil separates and the mutton is tender.",
-      "Do not add water - the tomatoes provide enough moisture.",
+      "Cook on high heat for 15-20 minutes until the oil separates and the meat is soft.",
+      "Do not add water - the tomatoes are enough.",
       "Serve hot with naan or roti."
     ],
     difficulty: "Hard",
@@ -541,25 +541,25 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/spicy-mutton-karahi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
+      "1 kg mutton - cut into pieces",
       "4 medium tomatoes - chopped",
       "2 tablespoons ginger-garlic paste",
-      "4 green chilies - slit",
+      "4 green chilies - cut long",
       "2 teaspoons red chili powder",
       "1 teaspoon cumin seeds",
       "1 teaspoon black pepper powder",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1/2 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a karahi over high heat. Add mutton pieces and fry for 8-10 minutes until well-browned.",
+      "Put oil in a karahi on high heat. Add mutton pieces and fry for 8-10 minutes until brown.",
       "Add ginger-garlic paste and green chilies. Cook for 2-3 minutes.",
       "Add chopped tomatoes and cook for 8-10 minutes until soft and oil separates.",
       "Add red chili powder, cumin seeds, black pepper powder, and salt. Mix well.",
-      "Add 1/2 cup warm water and cook for 35-40 minutes until the mutton is tender.",
+      "Add 1/2 cup warm water and cook for 35-40 minutes until the meat is soft.",
       "The gravy should be thick and very spicy.",
-      "Serve hot with naan and raita."
+      "Serve hot with naan and yogurt sauce (raita)."
     ],
     difficulty: "Hard",
     cookingTime: 65,
@@ -590,22 +590,22 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/dry-mutton-karahi.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
-      "2 medium tomatoes - finely chopped",
+      "1 kg mutton - cut into pieces",
+      "2 medium tomatoes - chopped small",
       "2 tablespoons ginger-garlic paste",
-      "4 green chilies - slit",
+      "4 green chilies - cut long",
       "1 teaspoon cumin seeds",
       "2 teaspoons red chili powder",
       "1/2 cup cooking oil",
-      "Salt to taste"
+      "Salt as needed"
     ],
     stepsRaw: [
-      "Heat oil in a karahi over high heat. Add mutton pieces and fry for 10-12 minutes until golden brown.",
+      "Put oil in a karahi on high heat. Add mutton pieces and fry for 10-12 minutes until golden brown.",
       "Add ginger-garlic paste and green chilies. Cook for 2-3 minutes.",
       "Add chopped tomatoes and cook for 8-10 minutes until completely dry and the oil separates.",
       "Add cumin seeds, red chili powder, and salt. Mix well.",
-      "Cook on high heat for 20-25 minutes until the mutton is tender and the dish is completely dry.",
-      "The masala should coat the mutton pieces evenly.",
+      "Cook on high heat for 20-25 minutes until the meat is soft and the dish is completely dry.",
+      "The spices should cover the meat pieces evenly.",
       "Serve hot with naan and onion salad."
     ],
     difficulty: "Hard",
@@ -637,8 +637,8 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/mutton-masala.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
-      "2 medium onions - finely chopped",
+      "1 kg mutton - cut into pieces",
+      "2 medium onions - chopped small",
       "2 medium tomatoes - blended into smooth puree",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
@@ -647,20 +647,20 @@ const recipesToMigrate = [
       "1 teaspoon coriander powder",
       "1 teaspoon garam masala",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "Fresh coriander leaves for garnish",
       "1.5 cups warm water"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle for 30 seconds.",
-      "Add finely chopped onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton pieces and fry for 8-10 minutes until well-browned.",
-      "Add tomato puree and cook for 6-7 minutes until the oil separates from the masala.",
-      "Add turmeric powder, red chili powder, coriander powder, and salt. Mix well and cook for 2-3 minutes.",
-      "Add 1.5 cups of warm water. Cover and cook for 45-50 minutes until the mutton is tender.",
-      "Sprinkle garam masala and garnish with fresh coriander leaves.",
-      "Serve hot with naan or steamed rice."
+      "Put oil in a pan on medium heat. Add cumin seeds and cook for 30 seconds until they pop.",
+      "Add chopped onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton pieces and fry for 8-10 minutes until brown.",
+      "Add tomato puree and cook for 6-7 minutes until the oil separates from the mixture.",
+      "Add turmeric, red chili powder, coriander powder, and salt. Mix well and cook for 2-3 minutes.",
+      "Add 1.5 cups of warm water. Cover and cook for 45-50 minutes until the meat is soft.",
+      "Sprinkle garam masala and put fresh coriander leaves on top.",
+      "Serve hot with naan or rice."
     ],
     difficulty: "Hard",
     cookingTime: 75,
@@ -691,8 +691,8 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/mutton-tikka-masala.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "500g mutton tikka pieces - pre-cooked",
-      "2 medium onions - finely chopped",
+      "500g mutton tikka pieces - already cooked",
+      "2 medium onions - chopped small",
       "2 medium tomatoes - blended into smooth puree",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
@@ -701,18 +701,18 @@ const recipesToMigrate = [
       "1 teaspoon kasuri methi (dried fenugreek leaves)",
       "1/2 cup heavy cream",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle for 30 seconds.",
-      "Add finely chopped onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add tomato puree and cook for 6-7 minutes until the oil separates from the masala.",
-      "Add turmeric powder, red chili powder, and salt. Mix well and cook for 2-3 minutes.",
-      "Add 1 cup of warm water and bring to a simmer.",
-      "Add the mutton tikka pieces and cook for 20-25 minutes until well combined.",
-      "Add cream and kasuri methi. Simmer for 5-7 minutes on low heat.",
+      "Put oil in a pan on medium heat. Add cumin seeds and cook for 30 seconds until they pop.",
+      "Add chopped onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add tomato puree and cook for 6-7 minutes until the oil separates from the mixture.",
+      "Add turmeric, red chili powder, and salt. Mix well and cook for 2-3 minutes.",
+      "Add 1 cup of warm water and bring to a gentle boil.",
+      "Add the mutton tikka pieces and cook for 20-25 minutes until well mixed.",
+      "Add cream and kasuri methi. Cook for 5-7 minutes on low heat.",
       "Serve hot with naan or roti."
     ],
     difficulty: "Hard",
@@ -745,7 +745,7 @@ const recipesToMigrate = [
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton - boneless, cut into cubes",
-      "2 medium onions - finely chopped",
+      "2 medium onions - chopped small",
       "2 medium tomatoes - blended into smooth puree",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
@@ -754,18 +754,18 @@ const recipesToMigrate = [
       "2 tablespoons butter",
       "1 teaspoon kasuri methi",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Pressure cook the mutton with salt and 1 cup of water until tender. Set aside.",
-      "Heat butter and oil in a pan over medium heat. Add cumin seeds and let them crackle for 30 seconds.",
-      "Add finely chopped onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add tomato puree and cook for 6-7 minutes until the butter separates from the masala.",
+      "Cook the mutton in a pressure cooker with salt and 1 cup of water until soft. Keep aside.",
+      "Put butter and oil in a pan on medium heat. Add cumin seeds and cook for 30 seconds until they pop.",
+      "Add chopped onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add tomato puree and cook for 6-7 minutes until the butter separates from the mixture.",
       "Add red chili powder and salt. Mix well and cook for 2 minutes.",
-      "Add the cooked mutton along with the stock. Simmer for 15-20 minutes.",
-      "Add cream and kasuri methi. Simmer for 5-7 minutes on low heat.",
+      "Add the cooked mutton with the water. Cook for 15-20 minutes.",
+      "Add cream and kasuri methi. Cook for 5-7 minutes on low heat.",
       "Serve hot with butter naan."
     ],
     difficulty: "Hard",
@@ -797,8 +797,8 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/mutton-lababdar.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
-      "2 medium onions - finely chopped",
+      "1 kg mutton - cut into pieces",
+      "2 medium onions - chopped small",
       "2 medium tomatoes - blended into smooth puree",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
@@ -806,18 +806,18 @@ const recipesToMigrate = [
       "1 teaspoon garam masala",
       "1/4 cup heavy cream",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Pressure cook the mutton with salt until tender. Set aside.",
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle for 30 seconds.",
-      "Add finely chopped onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add tomato puree and cook for 6-7 minutes until the oil separates from the masala.",
+      "Cook the mutton in a pressure cooker with salt until soft. Keep aside.",
+      "Put oil in a pan on medium heat. Add cumin seeds and cook for 30 seconds until they pop.",
+      "Add chopped onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add tomato puree and cook for 6-7 minutes until the oil separates from the mixture.",
       "Add red chili powder and salt. Mix well and cook for 2 minutes.",
-      "Add the cooked mutton and 1 cup of water. Simmer for 15-20 minutes.",
-      "Add cream and garam masala. Simmer for 5-7 minutes.",
+      "Add the cooked mutton and 1 cup of water. Cook for 15-20 minutes.",
+      "Add cream and garam masala. Cook for 5-7 minutes.",
       "Serve hot with naan or roti."
     ],
     difficulty: "Hard",
@@ -849,26 +849,26 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/mutton-kolhapuri.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
-      "2 medium onions - finely chopped",
-      "2 medium tomatoes - finely chopped",
+      "1 kg mutton - cut into pieces",
+      "2 medium onions - chopped small",
+      "2 medium tomatoes - chopped small",
       "2 tablespoons ginger-garlic paste",
       "2 teaspoons red chili powder",
       "1 teaspoon turmeric powder",
       "1 teaspoon garam masala",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1 tablespoon grated coconut",
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add finely chopped onions and sauté for 6-7 minutes until dark brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton pieces and fry for 8-10 minutes until well-browned.",
+      "Put oil in a pan on medium heat. Add chopped onions and fry for 6-7 minutes until dark brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton pieces and fry for 8-10 minutes until brown.",
       "Add chopped tomatoes and cook for 6-7 minutes until soft.",
       "Add red chili powder, turmeric powder, garam masala, salt, and grated coconut. Mix well.",
-      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the mutton is tender.",
-      "Serve hot with steamed rice or roti."
+      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the meat is soft.",
+      "Serve hot with rice or roti."
     ],
     difficulty: "Hard",
     cookingTime: 70,
@@ -899,8 +899,8 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/mutton-rogan-josh.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
-      "2 medium onions - thinly sliced",
+      "1 kg mutton - cut into pieces",
+      "2 medium onions - sliced thin",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
       "1 teaspoon fennel powder",
@@ -909,18 +909,18 @@ const recipesToMigrate = [
       "1 teaspoon garam masala",
       "1/2 cup plain yogurt - beaten",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle for 30 seconds.",
-      "Add sliced onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton pieces and fry for 8-10 minutes until well-browned.",
+      "Put oil in a pan on medium heat. Add cumin seeds and cook for 30 seconds until they pop.",
+      "Add sliced onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton pieces and fry for 8-10 minutes until brown.",
       "Add fennel powder, dry ginger powder, red chili powder, and salt. Mix well and cook for 2-3 minutes.",
       "Add beaten yogurt and stir well. Cook for 5-7 minutes.",
-      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the mutton is tender.",
-      "Sprinkle garam masala and serve hot with naan or steamed rice."
+      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the meat is soft.",
+      "Sprinkle garam masala and serve hot with naan or rice."
     ],
     difficulty: "Hard",
     cookingTime: 75,
@@ -951,25 +951,25 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/easy-rogan-josh.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
-      "2 medium onions - finely chopped",
+      "1 kg mutton - cut into pieces",
+      "2 medium onions - chopped small",
       "2 medium tomatoes - blended into smooth puree",
       "2 tablespoons ginger-garlic paste",
       "2 teaspoons rogan josh masala powder",
       "1 teaspoon turmeric powder",
       "1/2 cup plain yogurt - beaten",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add finely chopped onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton pieces and fry for 8-10 minutes until well-browned.",
+      "Put oil in a pan on medium heat. Add chopped onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton pieces and fry for 8-10 minutes until brown.",
       "Add tomato puree and cook for 6-7 minutes until the oil separates.",
       "Add rogan josh masala, turmeric powder, and salt. Mix well and cook for 2-3 minutes.",
       "Add beaten yogurt and stir well. Cook for 5 minutes.",
-      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the mutton is tender.",
+      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the meat is soft.",
       "Serve hot with naan or rice."
     ],
     difficulty: "Hard",
@@ -1001,25 +1001,25 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/pressure-cooker-rogan-josh.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
-      "2 medium onions - finely chopped",
-      "2 medium tomatoes - finely chopped",
+      "1 kg mutton - cut into pieces",
+      "2 medium onions - chopped small",
+      "2 medium tomatoes - chopped small",
       "2 tablespoons ginger-garlic paste",
       "2 teaspoons rogan josh masala",
       "1/2 cup plain yogurt - beaten",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1/2 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a pressure cooker over medium heat. Add finely chopped onions and sauté for 5-6 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton pieces and fry for 8-10 minutes until well-browned.",
+      "Put oil in a pressure cooker on medium heat. Add chopped onions and fry for 5-6 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton pieces and fry for 8-10 minutes until brown.",
       "Add chopped tomatoes and cook for 5-6 minutes until soft.",
       "Add rogan josh masala and salt. Mix well and cook for 2 minutes.",
       "Add beaten yogurt and 1/2 cup of warm water. Stir well.",
-      "Close the pressure cooker lid and cook for 20-25 minutes (4-5 whistles) until the mutton is tender.",
-      "Let the pressure release naturally. Serve hot with naan or rice."
+      "Close the pressure cooker lid and cook for 20-25 minutes (4-5 whistles) until the meat is soft.",
+      "Let the pressure go down by itself. Serve hot with naan or rice."
     ],
     difficulty: "Hard",
     cookingTime: 50,
@@ -1051,7 +1051,7 @@ const recipesToMigrate = [
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g mutton mince (keema)",
-      "1 medium onion - finely chopped",
+      "1 medium onion - chopped small",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin powder",
       "1 teaspoon coriander powder",
@@ -1061,20 +1061,20 @@ const recipesToMigrate = [
       "2 tablespoons breadcrumbs",
       "For gravy: 2 onions, 2 tomatoes",
       "Oil for shallow frying",
-      "Salt to taste",
+      "Salt as needed",
       "1 cup warm water"
     ],
     stepsRaw: [
       "In a bowl, mix mutton mince with chopped onion, ginger-garlic paste, cumin powder, coriander powder, red chili powder, garam masala, egg, breadcrumbs, and salt.",
-      "Mix everything well until combined. Shape the mixture into small lemon-sized balls (kofta).",
-      "Heat oil in a shallow pan over medium heat. Shallow fry the kofta for 5-7 minutes until golden brown on all sides. Remove and set aside.",
-      "For gravy: In the same pan, add more oil if needed. Add chopped onions and sauté until golden brown.",
+      "Mix everything well. Make small lemon-sized balls (kofta).",
+      "Put oil in a shallow pan on medium heat. Fry the kofta for 5-7 minutes until golden brown on all sides. Take out and keep aside.",
+      "For gravy: In the same pan, add more oil if needed. Add chopped onions and fry until golden brown.",
       "Add ginger-garlic paste and cook for 2 minutes.",
       "Add chopped tomatoes and cook until soft.",
       "Add red chili powder, coriander powder, and salt. Cook for 2-3 minutes.",
-      "Add 1 cup of warm water and bring to a boil. Simmer for 5-7 minutes.",
-      "Add the fried kofta to the gravy and simmer for 10-12 minutes.",
-      "Sprinkle garam masala and serve hot with naan or steamed rice."
+      "Add 1 cup of warm water and bring to a boil. Cook for 5-7 minutes.",
+      "Add the fried kofta to the gravy and cook for 10-12 minutes.",
+      "Sprinkle garam masala and serve hot with naan or rice."
     ],
     difficulty: "Hard",
     cookingTime: 60,
@@ -1106,27 +1106,27 @@ const recipesToMigrate = [
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g mutton mince",
-      "1 medium onion - finely chopped",
+      "1 medium onion - chopped small",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin powder",
       "1 teaspoon garam masala",
       "1 large egg",
       "For gravy: 1 cup plain yogurt - beaten",
-      "2 medium onions - finely chopped",
+      "2 medium onions - chopped small",
       "2 medium tomatoes - blended into puree",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1/2 cup warm water"
     ],
     stepsRaw: [
-      "Prepare kofta using the method above and fry until golden. Set aside.",
-      "Heat oil in a pan over medium heat. Add finely chopped onions and sauté until golden brown.",
+      "Make kofta using the method above and fry until golden. Keep aside.",
+      "Put oil in a pan on medium heat. Add chopped onions and fry until golden brown.",
       "Add ginger-garlic paste and cook for 2 minutes.",
       "Add tomato puree and cook for 5-6 minutes until the oil separates.",
       "Add cumin powder, red chili powder, and salt. Mix well.",
-      "Reduce heat to low. Add beaten yogurt slowly, stirring continuously to prevent curdling.",
+      "Turn the heat to low. Add beaten yogurt slowly while stirring all the time so it doesn't curdle.",
       "Add 1/2 cup of warm water and bring to a gentle simmer.",
-      "Add the fried kofta and simmer for 10-12 minutes.",
+      "Add the fried kofta and cook for 10-12 minutes.",
       "Sprinkle garam masala and serve hot with naan or rice."
     ],
     difficulty: "Hard",
@@ -1159,28 +1159,28 @@ const recipesToMigrate = [
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g mutton mince",
-      "4 large eggs - hard boiled and peeled",
-      "1 medium onion - finely chopped",
+      "4 large eggs - boiled and peeled",
+      "1 medium onion - chopped small",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin powder",
       "1 teaspoon garam masala",
       "1 large raw egg",
       "For gravy: 2 onions, 2 tomatoes",
       "Oil for shallow frying",
-      "Salt to taste"
+      "Salt as needed"
     ],
     stepsRaw: [
       "In a bowl, mix mutton mince with chopped onion, ginger-garlic paste, cumin powder, garam masala, raw egg, and salt.",
-      "Divide the mince mixture into 4 equal portions.",
-      "Take one portion and flatten it in your palm. Place a boiled egg in the center and wrap the mince around it completely, sealing all sides.",
+      "Divide the mince mixture into 4 equal parts.",
+      "Take one part and flatten it in your hand. Put a boiled egg in the center and wrap the mince around it completely.",
       "Repeat with the remaining eggs and mince.",
-      "Heat oil in a shallow pan. Shallow fry the stuffed kofta for 8-10 minutes until golden brown on all sides. Remove and set aside.",
-      "For gravy: In the same pan, add chopped onions and sauté until golden brown.",
+      "Put oil in a shallow pan. Fry the stuffed kofta for 8-10 minutes until golden brown on all sides. Take out and keep aside.",
+      "For gravy: In the same pan, add chopped onions and fry until golden brown.",
       "Add ginger-garlic paste and cook for 2 minutes.",
       "Add chopped tomatoes and cook until soft.",
       "Add red chili powder, coriander powder, and salt. Cook for 2-3 minutes.",
-      "Add 1 cup of warm water and bring to a boil. Simmer for 5 minutes.",
-      "Add the kofta and simmer for 10-12 minutes.",
+      "Add 1 cup of warm water and bring to a boil. Cook for 5 minutes.",
+      "Add the kofta and cook for 10-12 minutes.",
       "Serve hot with naan or rice."
     ],
     difficulty: "Hard",
@@ -1213,7 +1213,7 @@ const recipesToMigrate = [
     cuisine: "Pakistani",
     ingredientsRaw: [
       "500g mutton mince",
-      "1 medium onion - finely chopped",
+      "1 medium onion - chopped small",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin powder",
       "1 teaspoon garam masala",
@@ -1222,18 +1222,18 @@ const recipesToMigrate = [
       "For gravy: 2 onions, 2 tomatoes",
       "1/4 cup heavy cream",
       "1/2 cup cooking oil",
-      "Salt to taste"
+      "Salt as needed"
     ],
     stepsRaw: [
-      "Prepare kofta by mixing mince with onion, ginger-garlic, cumin, garam masala, 1/4 cup cream, egg, and salt.",
-      "Shape into balls and shallow fry until golden. Set aside.",
-      "For gravy: Heat oil in a pan. Add chopped onions and sauté until golden brown.",
+      "Make kofta by mixing mince with onion, ginger-garlic, cumin, garam masala, 1/4 cup cream, egg, and salt.",
+      "Shape into balls and shallow fry until golden. Keep aside.",
+      "For gravy: Put oil in a pan. Add chopped onions and fry until golden brown.",
       "Add ginger-garlic paste and cook for 2 minutes.",
       "Add tomato puree and cook until oil separates.",
       "Add red chili powder and salt. Mix well.",
       "Add 1/2 cup of warm water and bring to a simmer.",
       "Add the remaining 1/4 cup cream and stir well.",
-      "Add the fried kofta and simmer for 10 minutes.",
+      "Add the fried kofta and cook for 10 minutes.",
       "Serve hot with naan."
     ],
     difficulty: "Hard",
@@ -1267,25 +1267,25 @@ const recipesToMigrate = [
     ingredientsRaw: [
       "500g mutton pieces - with bones",
       "250g mutton mince (keema)",
-      "2 medium onions - finely chopped",
-      "2 medium tomatoes - finely chopped",
+      "2 medium onions - chopped small",
+      "2 medium tomatoes - chopped small",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
       "2 teaspoons red chili powder",
       "1 teaspoon garam masala",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle for 30 seconds.",
-      "Add finely chopped onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton pieces and fry for 8-10 minutes until well-browned.",
+      "Put oil in a pan on medium heat. Add cumin seeds and cook for 30 seconds until they pop.",
+      "Add chopped onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton pieces and fry for 8-10 minutes until brown.",
       "Add mutton mince and fry for 5-7 minutes until it changes color.",
       "Add chopped tomatoes and cook for 6-7 minutes until soft.",
       "Add red chili powder and salt. Mix well and cook for 2-3 minutes.",
-      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the mutton is tender.",
+      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the meat is soft.",
       "Sprinkle garam masala and serve hot with naan or rice."
     ],
     difficulty: "Hard",
@@ -1319,25 +1319,25 @@ const recipesToMigrate = [
     ingredientsRaw: [
       "500g mutton - boneless cubes",
       "250g mutton mince",
-      "2 medium onions - finely chopped",
+      "2 medium onions - chopped small",
       "2 medium tomatoes - blended into smooth puree",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
       "2 teaspoons red chili powder",
       "1 teaspoon garam masala",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle for 30 seconds.",
-      "Add finely chopped onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton cubes and fry for 8-10 minutes until well-browned.",
+      "Put oil in a pan on medium heat. Add cumin seeds and cook for 30 seconds until they pop.",
+      "Add chopped onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton cubes and fry for 8-10 minutes until brown.",
       "Add mutton mince and fry for 5-7 minutes.",
       "Add tomato puree and cook for 6-7 minutes until the oil separates.",
       "Add red chili powder and salt. Mix well and cook for 2-3 minutes.",
-      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the mutton is tender.",
+      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the meat is soft.",
       "Sprinkle garam masala and serve hot with naan."
     ],
     difficulty: "Hard",
@@ -1369,28 +1369,28 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/hyderabadi-mutton.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
-      "2 medium onions - finely chopped",
-      "2 medium tomatoes - finely chopped",
+      "1 kg mutton - cut into pieces",
+      "2 medium onions - chopped small",
+      "2 medium tomatoes - chopped small",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
       "2 teaspoons red chili powder",
       "1 teaspoon garam masala",
       "1/2 cup plain yogurt - beaten",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle for 30 seconds.",
-      "Add finely chopped onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton pieces and fry for 8-10 minutes until well-browned.",
+      "Put oil in a pan on medium heat. Add cumin seeds and cook for 30 seconds until they pop.",
+      "Add chopped onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton pieces and fry for 8-10 minutes until brown.",
       "Add chopped tomatoes and cook for 6-7 minutes until soft.",
       "Add red chili powder, garam masala, and salt. Mix well and cook for 2-3 minutes.",
       "Add beaten yogurt and stir well. Cook for 5 minutes.",
-      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the mutton is tender.",
-      "Serve hot with naan or steamed rice."
+      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the meat is soft.",
+      "Serve hot with naan or rice."
     ],
     difficulty: "Hard",
     cookingTime: 70,
@@ -1421,8 +1421,8 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/punjabi-mutton.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
-      "2 medium onions - finely chopped",
+      "1 kg mutton - cut into pieces",
+      "2 medium onions - chopped small",
       "2 medium tomatoes - blended into smooth puree",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
@@ -1431,17 +1431,17 @@ const recipesToMigrate = [
       "1 teaspoon garam masala",
       "2 tablespoons butter",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil and butter in a pan over medium heat. Add cumin seeds and let them crackle for 30 seconds.",
-      "Add finely chopped onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton pieces and fry for 8-10 minutes until well-browned.",
+      "Put oil and butter in a pan on medium heat. Add cumin seeds and cook for 30 seconds until they pop.",
+      "Add chopped onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton pieces and fry for 8-10 minutes until brown.",
       "Add tomato puree and cook for 6-7 minutes until the oil separates.",
-      "Add turmeric powder, red chili powder, and salt. Mix well and cook for 2-3 minutes.",
-      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the mutton is tender.",
+      "Add turmeric, red chili powder, and salt. Mix well and cook for 2-3 minutes.",
+      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the meat is soft.",
       "Sprinkle garam masala and serve hot with naan."
     ],
     difficulty: "Hard",
@@ -1473,29 +1473,29 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/karela-mutton-curry.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
+      "1 kg mutton - cut into pieces",
       "1 cup thick coconut milk",
-      "2 medium onions - finely chopped",
-      "2 medium tomatoes - finely chopped",
+      "2 medium onions - chopped small",
+      "2 medium tomatoes - chopped small",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon mustard seeds",
       "1 teaspoon turmeric powder",
       "2 teaspoons red chili powder",
       "Few curry leaves",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1/2 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add mustard seeds and curry leaves. Let them crackle for 30 seconds.",
-      "Add finely chopped onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton pieces and fry for 8-10 minutes until well-browned.",
+      "Put oil in a pan on medium heat. Add mustard seeds and curry leaves. Cook for 30 seconds until they pop.",
+      "Add chopped onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton pieces and fry for 8-10 minutes until brown.",
       "Add chopped tomatoes and cook for 6-7 minutes until soft.",
-      "Add turmeric powder, red chili powder, and salt. Mix well and cook for 2-3 minutes.",
+      "Add turmeric, red chili powder, and salt. Mix well and cook for 2-3 minutes.",
       "Add coconut milk and 1/2 cup of warm water. Bring to a gentle simmer.",
-      "Cover and cook for 35-40 minutes until the mutton is tender.",
-      "Serve hot with steamed rice or appam."
+      "Cover and cook for 35-40 minutes until the meat is soft.",
+      "Serve hot with rice or appam."
     ],
     difficulty: "Hard",
     cookingTime: 70,
@@ -1526,9 +1526,9 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/Chettinad-Mutton.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
-      "2 medium onions - finely chopped",
-      "2 medium tomatoes - finely chopped",
+      "1 kg mutton - cut into pieces",
+      "2 medium onions - chopped small",
+      "2 medium tomatoes - chopped small",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon fennel seeds",
       "1 teaspoon cumin seeds",
@@ -1536,18 +1536,18 @@ const recipesToMigrate = [
       "1 teaspoon black pepper powder",
       "1/2 cup grated coconut",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Dry roast fennel seeds, cumin seeds, and grated coconut in a pan until fragrant. Grind into a fine paste with a little water. Set aside.",
-      "Heat oil in a pan over medium heat. Add finely chopped onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton pieces and fry for 8-10 minutes until well-browned.",
+      "Dry roast fennel seeds, cumin seeds, and grated coconut in a pan until they smell good. Grind into a fine paste with a little water. Keep aside.",
+      "Put oil in a pan on medium heat. Add chopped onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton pieces and fry for 8-10 minutes until brown.",
       "Add chopped tomatoes and cook for 6-7 minutes until soft.",
       "Add the ground paste, red chili powder, black pepper powder, and salt. Mix well and cook for 2-3 minutes.",
-      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the mutton is tender.",
-      "Serve hot with steamed rice or roti."
+      "Add 1 cup of warm water. Cover and cook for 45-50 minutes until the meat is soft.",
+      "Serve hot with rice or roti."
     ],
     difficulty: "Hard",
     cookingTime: 75,
@@ -1578,29 +1578,29 @@ const recipesToMigrate = [
     image: "http://localhost:5000/uploads/goan-mutton-curry.jpg",
     cuisine: "Pakistani",
     ingredientsRaw: [
-      "1 kg mutton - curry cut pieces",
+      "1 kg mutton - cut into pieces",
       "1 cup thick coconut milk",
-      "2 medium onions - finely chopped",
-      "2 medium tomatoes - finely chopped",
+      "2 medium onions - chopped small",
+      "2 medium tomatoes - chopped small",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
       "2 teaspoons red chili powder",
       "1 teaspoon turmeric powder",
       "1 tablespoon vinegar",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1/2 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle for 30 seconds.",
-      "Add finely chopped onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton pieces and fry for 8-10 minutes until well-browned.",
+      "Put oil in a pan on medium heat. Add cumin seeds and cook for 30 seconds until they pop.",
+      "Add chopped onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton pieces and fry for 8-10 minutes until brown.",
       "Add chopped tomatoes and cook for 6-7 minutes until soft.",
-      "Add turmeric powder, red chili powder, and salt. Mix well and cook for 2-3 minutes.",
+      "Add turmeric, red chili powder, and salt. Mix well and cook for 2-3 minutes.",
       "Add coconut milk, vinegar, and 1/2 cup of warm water. Bring to a gentle simmer.",
-      "Cover and cook for 40-45 minutes until the mutton is tender.",
-      "Serve hot with steamed rice."
+      "Cover and cook for 40-45 minutes until the meat is soft.",
+      "Serve hot with rice."
     ],
     difficulty: "Hard",
     cookingTime: 70,
@@ -1632,7 +1632,7 @@ const recipesToMigrate = [
     cuisine: "Pakistani",
     ingredientsRaw: [
       "1 kg mutton chops",
-      "2 medium onions - finely chopped",
+      "2 medium onions - chopped small",
       "2 medium tomatoes - blended into smooth puree",
       "2 tablespoons ginger-garlic paste",
       "1 teaspoon cumin seeds",
@@ -1640,17 +1640,17 @@ const recipesToMigrate = [
       "2 teaspoons red chili powder",
       "1 teaspoon garam masala",
       "1/2 cup cooking oil",
-      "Salt to taste",
+      "Salt as needed",
       "1 cup warm water"
     ],
     stepsRaw: [
-      "Heat oil in a pan over medium heat. Add cumin seeds and let them crackle for 30 seconds.",
-      "Add finely chopped onions and sauté for 6-7 minutes until golden brown.",
-      "Add ginger-garlic paste and cook for 2 minutes until fragrant.",
-      "Add mutton chops and fry for 8-10 minutes until well-browned.",
+      "Put oil in a pan on medium heat. Add cumin seeds and cook for 30 seconds until they pop.",
+      "Add chopped onions and fry for 6-7 minutes until golden brown.",
+      "Add ginger-garlic paste and cook for 2 minutes until it smells good.",
+      "Add mutton chops and fry for 8-10 minutes until brown.",
       "Add tomato puree and cook for 6-7 minutes until the oil separates.",
-      "Add turmeric powder, red chili powder, and salt. Mix well and cook for 2-3 minutes.",
-      "Add 1 cup of warm water. Cover and cook for 35-40 minutes until the chops are tender.",
+      "Add turmeric, red chili powder, and salt. Mix well and cook for 2-3 minutes.",
+      "Add 1 cup of warm water. Cover and cook for 35-40 minutes until the chops are soft.",
       "Sprinkle garam masala and serve hot with naan or rice."
     ],
     difficulty: "Hard",
@@ -1685,19 +1685,19 @@ const recipesToMigrate = [
       "1 kg mutton chops",
       "4 medium tomatoes - chopped",
       "2 tablespoons ginger-garlic paste",
-      "4 green chilies - slit",
+      "4 green chilies - cut long",
       "1 teaspoon cumin seeds",
       "2 teaspoons red chili powder",
       "1 teaspoon black pepper powder",
       "1/2 cup cooking oil",
-      "Salt to taste"
+      "Salt as needed"
     ],
     stepsRaw: [
-      "Heat oil in a karahi over high heat. Add mutton chops and fry for 8-10 minutes until well-browned.",
+      "Put oil in a karahi on high heat. Add mutton chops and fry for 8-10 minutes until brown.",
       "Add ginger-garlic paste and green chilies. Cook for 2-3 minutes.",
       "Add chopped tomatoes and cook for 8-10 minutes until soft and the oil separates.",
       "Add cumin seeds, red chili powder, black pepper powder, and salt. Mix well.",
-      "Cook on high heat for 20-25 minutes until the chops are tender.",
+      "Cook on high heat for 20-25 minutes until the chops are soft.",
       "Serve hot with naan."
     ],
     difficulty: "Hard",
@@ -1736,18 +1736,18 @@ const recipesToMigrate = [
       "1 teaspoon cumin powder",
       "1 teaspoon garam masala",
       "2 tablespoons cooking oil",
-      "Salt to taste"
+      "Salt as needed"
     ],
     stepsRaw: [
-      "Wash the mutton chops and pat dry. Make shallow slits on both sides.",
+      "Wash the mutton chops and dry them with a cloth. Make small cuts on both sides.",
       "In a bowl, mix yogurt, ginger-garlic paste, red chili powder, cumin powder, garam masala, oil, and salt.",
-      "Add the mutton chops and coat well with the marinade.",
-      "Cover and refrigerate for 4-6 hours or overnight for best results.",
-      "Preheat oven to 180°C (350°F).",
-      "Place the marinated chops on a baking tray lined with foil.",
-      "Bake for 25-30 minutes, turning once halfway through.",
-      "For a charred effect, switch to broil/grill mode for the last 5 minutes.",
-      "Serve hot with mint chutney and onion rings."
+      "Add the mutton chops and coat well with the mixture.",
+      "Cover and keep in the fridge for 4-6 hours or overnight for best results.",
+      "Heat oven to 180°C (350°F).",
+      "Put the marinated chops on a baking tray with foil.",
+      "Bake for 25-30 minutes, turning once in between.",
+      "For a charred look, use the broil/grill setting for the last 5 minutes.",
+      "Serve hot with mint sauce and onion rings."
     ],
     difficulty: "Hard",
     cookingTime: 60,
@@ -1779,24 +1779,24 @@ async function migrate() {
   try {
     const mongoURI = process.env.MONGO_URI || process.env.MONGODB_URI || process.env.MONGOURI;
     
-    console.log('🔍 MONGODB_URI:', process.env.MONGODB_URI);
-    console.log('🔍 MONGOURI:', process.env.MONGOURI);
-    console.log('🔍 MONGO_URI:', process.env.MONGO_URI);
-    console.log('🔍 Using URI:', mongoURI ? 'Found' : 'NOT FOUND');
-    console.log('🔍 Current directory:', __dirname);
+    console.log(' MONGODB_URI:', process.env.MONGODB_URI);
+    console.log(' MONGOURI:', process.env.MONGOURI);
+    console.log(' MONGO_URI:', process.env.MONGO_URI);
+    console.log(' Using URI:', mongoURI ? 'Found' : 'NOT FOUND');
+    console.log(' Current directory:', __dirname);
     
     if (!mongoURI) {
       throw new Error('MongoDB URI not found in environment variables. Please check your .env file');
     }
     
-    console.log('🔌 Connecting to MongoDB...');
+    console.log(' Connecting to MongoDB...');
     
     await mongoose.connect(mongoURI, {
       serverSelectionTimeoutMS: 10000,
       family: 4
     });
     
-    console.log('✅ Connected to MongoDB!');
+    console.log(' Connected to MongoDB!');
     let added = 0;
     let skipped = 0;
 
@@ -1804,19 +1804,19 @@ async function migrate() {
       const existing = await Recipe.findOne({ title: recipe.title });
       if (!existing) {
         await Recipe.create(recipe);
-        console.log(`✅ Added: ${recipe.title}`);
+        console.log(` Added: ${recipe.title}`);
         added++;
       } else {
-        console.log(`⚠️ Skipped: ${recipe.title} (already exists)`);
+        console.log(` Skipped: ${recipe.title} (already exists)`);
         skipped++;
       }
     }
 
-    console.log('\n🎉 Migration Complete!');
-    console.log(`📊 Added: ${added}, Skipped: ${skipped}`);
+    console.log('\n Migration Complete!');
+    console.log(` Added: ${added}, Skipped: ${skipped}`);
     process.exit(0);
   } catch (error) {
-    console.error('❌ Error:', error);
+    console.error(' Error:', error);
     process.exit(1);
   }
 }

@@ -1,4 +1,3 @@
-// 11-quick.js
 const mongoose = require('mongoose');
 const Recipe = require('../models/Recipe');
 require('dotenv').config({ path: '../.env' });
